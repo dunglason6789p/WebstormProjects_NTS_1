@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c26ce93a-2910-4908-bb7b-94d43d4d6c8b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1Wz8AR0urrfoqYzhIWiXV3pQhDM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="ts.external.directory.path" value="C:\Users\ASUS\WebstormProjects\fullstack_typescript_master\server\node_modules\typescript\lib" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c26ce93a-2910-4908-bb7b-94d43d4d6c8b" name="Default Changelist" comment="" />
+      <created>1580140919231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580140919231</updated>
+      <workItem from="1580140923331" duration="2231000" />
+      <workItem from="1580145277119" duration="1846000" />
+      <workItem from="1580167724645" duration="5100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="24" key="#Plugins" timestamp="1580167702538">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="24" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1580167702538" />
+    <state x="586" y="310" key="#com.intellij.ide.util.TreeDirectoryChooserDialog" timestamp="1580167534996">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="586" y="310" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1580167534996" />
+    <state x="409" y="0" key="#server/Dockerfile" timestamp="1580145313492">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="409" y="0" key="#server/Dockerfile/0.0.1366.728@0.0.1366.728" timestamp="1580145313492" />
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1580167281366">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580167281366" />
+    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1580167281366">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580167281366" />
+    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1580167281366">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580167281366" />
+    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1580167281366">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580167281366" />
+    <state x="186" y="0" key="SettingsEditor" timestamp="1580144884902">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580144884902" />
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1580141526523">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1580141526523" />
+    <state width="1070" height="167" key="javadoc.popup.new" timestamp="1580172334522">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1070" height="167" key="javadoc.popup.new/0.0.1366.728@0.0.1366.728" timestamp="1580172334522" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580167675094">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580167675094" />
+  </component>
+</project>

@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "myapp1",
+      "script": "./dist/bundle.js",
+      "node_args": "['--debug=7000']"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <HTMLCodeStyleSettings>
+      <option name="HTML_KEEP_LINE_BREAKS" value="false" />
+      <option name="HTML_KEEP_LINE_BREAKS_IN_TEXT" value="false" />
+      <option name="HTML_ALIGN_TEXT" value="true" />
+      <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="body,div,p,form,h1,h2,h3,h4,a,ul,ol,li,form,input,hr" />
+      <option name="HTML_KEEP_WHITESPACES_INSIDE" value="" />
+      <option name="HTML_INLINE_ELEMENTS" value="" />
+      <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="" />
+    </HTMLCodeStyleSettings>
+    <JSCodeStyleSettings version="0">
+      <option name="FORCE_SEMICOLON_STYLE" value="true" />
+      <option name="FORCE_QUOTE_STYlE" value="true" />
+    </JSCodeStyleSettings>
+  </code_scheme>
+</component>

@@ -1,0 +1,12 @@
+.bordered{
+    border-style: solid;
+    margin-left: 10px;
+}
+#my-scrollbar-seletable-text{
+    height: 300px;
+    width:  700px;
+    overflow: scroll;
+}
+.selectable-text.selected{
+    background-color: yellow;
+}

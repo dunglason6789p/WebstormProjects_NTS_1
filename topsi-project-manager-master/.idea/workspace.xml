@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6fabdee-f633-4886-a6d8-cd49b89f5bce" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1XO0o6tZd9OCvzJhpF2fILodok2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RunManager" selected="npm.run3">
+    <configuration name="run2" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="run3" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="nts" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.run2" />
+      <item itemvalue="npm.run3" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6fabdee-f633-4886-a6d8-cd49b89f5bce" name="Default Changelist" comment="" />
+      <created>1580902005574</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580902005574</updated>
+      <workItem from="1580902006879" duration="2518000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="24" key="#Inspections" timestamp="1580907487121">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="24" key="#Inspections/0.0.1366.728/1366.0.1280.1024@0.0.1366.728" timestamp="1580907487121" />
+    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580903166796">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1280.1024@0.0.1366.728" timestamp="1580903166796" />
+    <state width="926" height="58" key="GridCell.Tab.0.bottom" timestamp="1580908093903">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="926" height="58" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.1024@0.0.1366.728" timestamp="1580908093903" />
+    <state width="926" height="58" key="GridCell.Tab.0.center" timestamp="1580908093903">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="926" height="58" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.1024@0.0.1366.728" timestamp="1580908093903" />
+    <state width="926" height="58" key="GridCell.Tab.0.left" timestamp="1580908093903">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="926" height="58" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.1024@0.0.1366.728" timestamp="1580908093903" />
+    <state width="926" height="58" key="GridCell.Tab.0.right" timestamp="1580908093903">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="926" height="58" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.1024@0.0.1366.728" timestamp="1580908093903" />
+  </component>
+</project>

@@ -1,0 +1,22 @@
+{
+   "name": "new-typeorm-project",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "ts-node": "^8.6.2",
+      "@types/node": "^13.7.0",
+      "typescript": "^3.7.5"
+   },
+   "dependencies": {
+      "typeorm": "0.2.22",
+      "reflect-metadata": "^0.1.10",
+      "mysql": "^2.14.1"
+   },
+   "scripts": {
+      "startby_ts-node": "ts-node src/index.ts",
+      "start": "tsc && node src/index.js",
+      "compile-run": "tsc && node src/index.js",
+      "run_only": "node src/index.js",
+      "typeorm": "./node_modules/.bin/typeorm "
+   }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "try_ant_design_vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "test": "npm run unit",
+    "lint": "eslint --ext .js,.vue src test/unit",
+    "build": "node build/build.js",
+    "nts": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "ant-design-vue": "1.4.10",
+    "moment": "2.24.0",
+    "vue": "2.6.11",
+    "vue-template-compiler": "^2.6.11",
+    "vue-router": "^3.1.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-unused-vars": "warn"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "keywords": []
+}

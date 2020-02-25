@@ -1,0 +1,12 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ES6MissingAwait" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="JSUndeclaredVariable" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="JSUnresolvedFunction" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="JSUnresolvedVariable" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="TypeScriptUnresolvedFunction" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="TypeScriptUnresolvedVariable" enabled="true" level="ERROR" enabled_by_default="true" />
+  </profile>
+</component>

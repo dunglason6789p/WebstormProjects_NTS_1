@@ -1,0 +1,20 @@
+{
+  "name": "try_mongoose_1_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "compileandrun": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.1"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.7.1"
+  }
+}

@@ -1,0 +1,390 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/mystylesheet.css">
+
+    <script src="../js/jquery-3.4.1.js"></script>
+
+    <script !src="">
+        <!--GLOBAL VARIABLES-->
+        var arrowAboveIsOn = true;
+    </script>
+
+
+    <script !src="">
+        const arrayOfTextInfoObjects = [];
+        function setTextScrollbar() {
+            const MY_TOTAL_TEXT = `Nếu\ttôi\tgặp\tngười\tlớn tuổi\ttrên\txe buýt\tthì\tphải\tcư xử\tnhư thế nào
+Gặp\tngười\tlớn tuổi\ttrên\txe buýt\tthì\tphải\tcư xử\tnhư thế nào
+Có\tngười\tlớn tuổi\ttrên\txe buýt\tthì\tphải\tcư xử\tnhư thế nào
+Gặp\tngười\tlớn tuổi\ttrên\txe buýt\tphải\tcư xử\tnhư thế nào
+Có\tngười\tlớn tuổi\ttrên\txe buýt\tphải\tcư xử\tnhư thế nào`;
+            const myTotalTextAsArray = MY_TOTAL_TEXT.split("\n");
+
+
+            const myScrollbarSeletableText = $('#my-scrollbar-seletable-text');
+            for (let i = 0; i < myTotalTextAsArray.length; i++) {
+                myScrollbarSeletableText.append("<div class='selectable-text' order='"+i+"'>"+myTotalTextAsArray[i]+"</div>");
+                const textonly = myTotalTextAsArray[i];
+                const textonly_splitedByTab = textonly.split("\t");
+                arrayOfTextInfoObjects.push({
+                    order: i,
+                    //textonly: textonly,
+                    arrayOfTextTabSeparated: textonly_splitedByTab,
+                    arrayOfArrow: new Array(textonly_splitedByTab.length).fill(""),
+                });
+            }
+            /*for (let i = 0; i < myTotalTextAsArray.length; i++) {
+                const textInfoObject = arrayOfTextInfoObjects[i];
+            }*/
+        }
+    </script>
+
+    <script type="application/x-javascript">
+        <!--DRAWING PART-->
+
+        /**NTS: get id of all span*/
+        function generateNodeSet() {
+            var spans = document.getElementsByTagName("span");
+            var retarr = [];
+            for (var i = 0; i < spans.length; i++) {
+                retarr[retarr.length] = spans[i].id;
+            }
+            return retarr;
+        }
+
+        function generateLinks(nodeIds) {
+            var retarr = [];
+            for (var i = 0; i < nodeIds.length; i++) {
+                var id = nodeIds[i];
+                var span = document.getElementById(id);
+                var atts = span.attributes;
+                var ids_str = false;
+                if ((atts.getNamedItem) && (atts.getNamedItem('ids'))) {
+                    ids_str = atts.getNamedItem('ids').value;
+                }
+                if (ids_str) {
+                    retarr[id] = ids_str.split(" ");
+                }
+            }
+            return retarr;
+        }
+
+        // degrees to radians, because most people think in degrees
+        function degToRad(angle_degrees) {
+            return angle_degrees / 180 * Math.PI;
+        }
+
+        // draw a horizontal arc
+        //   ctx: canvas context;
+        //   inax: first x point
+        //   inbx: second x point
+        //   y: y value of start and end
+        //   alpha_degrees: (tangential) angle of start and end
+        //   upside: true for arc above y, false for arc below y.
+        function drawHorizArc(ctx, inax, inbx, y, alpha_degrees, upside) {
+            var alpha = degToRad(alpha_degrees);
+            var startangle = (upside ? ((3.0 / 2.0) * Math.PI + alpha) : ((1.0 / 2.0) * Math.PI - alpha));
+            var endangle = (upside ? ((3.0 / 2.0) * Math.PI - alpha) : ((1.0 / 2.0) * Math.PI + alpha));
+
+            var ax = Math.min(inax, inbx);
+            var bx = Math.max(inax, inbx);
+
+            //      if(upside) {
+            //        var startangle = (3.0/2.0)*Math.PI + alpha; //North plus alpha west
+            //        var endangle = (3.0/2.0)*Math.PI - alpha; //North minus alpha east
+            //      } else {
+            //        var startangle = (1.0/2.0)*Math.PI - alpha; //South minus alpha west
+            //        var endangle = (1.0/2.0)*Math.PI + alpha; //North plus alpha east
+            //      }
+
+            // tan(alpha) = o/a = ((bx-ax)/2) / o
+            // o = ((bx-ax)/2/tan(alpha))
+            // centre of circle is (bx+ax)/2, y-o
+
+            var circleyoffset = ((bx - ax) / 2) / Math.tan(alpha);
+            var circlex = (ax + bx) / 2.0;
+            var circley = y + (upside ? 1 : -1) * circleyoffset;
+            var radius = Math.sqrt(Math.pow(circlex - ax, 2) + Math.pow(circley - y, 2));
+
+            ctx.beginPath();
+            if (upside) {
+                ctx.moveTo(bx, y);
+                ctx.arc(circlex, circley, radius, startangle, endangle, 1);
+            } else {
+                ctx.moveTo(bx, y);
+                ctx.arc(circlex, circley, radius, startangle, endangle, 0);
+            }
+            ctx.stroke();
+        }
+
+
+        // draw the head of an arrow (not the main line)
+        //  ctx: canvas context
+        //  x,y: coords of arrow point
+        //  angle_from_north_clockwise: angle of the line of the arrow from horizontal
+        //  upside: true=above the horizontal, false=below
+        //  barb_angle: angle between barb and line of the arrow
+        //  filled: fill the triangle? (true or false)
+        function drawArrowHead(ctx, x, y, angle_from_horizontal_degrees, upside, //mandatory
+                               barb_length, barb_angle_degrees, filled) {        //optional
+            (barb_length == undefined) && (barb_length = 13);
+            (barb_angle_degrees == undefined) && (barb_angle_degrees = 20);
+            (filled == undefined) && (filled = true);
+            var alpha_degrees = (upside ? -1 : 1) * angle_from_horizontal_degrees;
+
+            //first point is end of one barb
+            var plus = degToRad(alpha_degrees - barb_angle_degrees);
+            a = x + (barb_length * Math.cos(plus));
+            b = y + (barb_length * Math.sin(plus));
+
+            //final point is end of the second barb
+            var minus = degToRad(alpha_degrees + barb_angle_degrees);
+            c = x + (barb_length * Math.cos(minus));
+            d = y + (barb_length * Math.sin(minus));
+
+            ctx.beginPath();
+            ctx.moveTo(a, b);
+            ctx.lineTo(x, y);
+            ctx.lineTo(c, d);
+            if (filled) {
+                ctx.fill();
+            } else {
+                ctx.stroke();
+            }
+            return true;
+        }
+
+        // draw a horizontal arcing arrow
+        //  ctx: canvas context
+        //  inax: start x value
+        //  inbx: end x value
+        //  y: y value
+        //  alpha_degrees: angle of ends to horizontal (30=shallow, >90=silly)
+        function drawHorizArcArrow(ctx, inax, inbx, y,                 //mandatory
+                                   alpha_degrees, upside, barb_length) { //optional
+            (alpha_degrees == undefined) && (alpha_degrees = 45);
+            (upside == undefined) && (upside = true);
+            drawHorizArc(ctx, inax, inbx, y, alpha_degrees, upside);
+            if (inax > inbx) {
+                drawArrowHead(ctx, inbx, y, alpha_degrees * 0.9, upside, barb_length);
+            } else {
+                drawArrowHead(ctx, inbx, y, (180 - alpha_degrees * 0.9), upside, barb_length);
+            }
+            return true;
+        }
+
+
+        function drawArrow(ctx, fromelem, toelem,    //mandatory
+                           above, angle) {        //optional
+            (above == undefined) && (above = true);
+            (angle == undefined) && (angle = 45); //degrees
+            midfrom = fromelem.offsetLeft + (fromelem.offsetWidth / 2) - left - tofromseparation / 2;
+            midto = toelem.offsetLeft + (toelem.offsetWidth / 2) - left + tofromseparation / 2;
+            //var y = above ? (fromelem.offsetTop - top) : (fromelem.offsetTop + fromelem.offsetHeight - top);
+            var y = fromelem.offsetTop + (above ? 0 : fromelem.offsetHeight) - canvasTop;
+            drawHorizArcArrow(ctx, midfrom, midto, y, angle, above);
+        }
+
+        var canvasTop = 0;
+
+
+        var ctx;
+        function draw() {
+            var canvasdiv = document.getElementById("canvas");
+            var spanboxdiv = document.getElementById("spanbox");
+            ctx = canvasdiv.getContext("2d");
+
+            nodeset = generateNodeSet();
+            linkset = generateLinks(nodeset);
+            tofromseparation = 20;
+
+            left = canvasdiv.offsetLeft - spanboxdiv.offsetLeft;
+            canvasTop = canvasdiv.offsetTop - spanboxdiv.offsetTop;
+            for (var key in linkset) {
+                for (var i = 0; i < linkset[key].length; i++) {
+                    /*fromid = key;
+                    toid = linkset[key][i];*/
+                    fromid = linkset[key][i];
+                    toid = key;
+                    var above = true;
+                    drawArrow(ctx, document.getElementById(fromid), document.getElementById(toid), above);
+                }
+            }
+        }
+    </script>
+
+    <script !src="">
+        var clear1ArrowMode = false;
+
+        var firstClickedWordId = null;
+        $(document).ready(()=>{
+            attachOnClick_words();
+            tabableOnTextarea();
+            setTextScrollbar();
+            scrollbarTextOnDoubleClick();
+        });
+        function attachOnClick_words(){
+            $('.bordered').click(function(event) {
+                //alert(event.target.id);
+                if( ! event.shiftKey){
+                    firstClickedWordId = event.target.id;
+                }else if (firstClickedWordId != null){
+                    const currentElement = $(event.target);
+                    const currentIDS = currentElement.attr('ids'); //$(event.target).attr('ids');
+                    if( ! clear1ArrowMode){ //if NOT in clear 1 arrow mode
+                        if(currentIDS.includes(firstClickedWordId)){}
+                        else{
+                            currentElement.attr('ids',
+                                ((currentIDS === null || currentIDS.trim().length === 0) ? "" : (currentIDS + " "))
+                                +firstClickedWordId );
+                        }
+                    }else{ //if in clear 1 arrow mode
+                        console.log('currentIDS=');
+                        console.log(currentIDS);
+                        if(currentIDS === null || currentIDS.trim().length === 0){}
+                        else{
+                            let newAttr = currentIDS.replace(firstClickedWordId,'');
+                            if(newAttr.trim().length === 0) newAttr = "";
+                            currentElement.attr('ids',newAttr.trim());
+                        }
+                    }
+
+                    //then at last:
+                    firstClickedWordId = null; //RESET.
+                    redraw();
+                }
+            });
+        }
+        function redraw() {
+            ctx.clearRect(0, 0, 700, 150);
+            draw();
+        }
+        function clearAll() {
+            ctx.clearRect(0, 0, 700, 150);
+            $('span').attr('ids','');
+            firstClickedWordId = -1;
+        }
+        function toggle_normalOrClear1ArrowMode() {
+            if(clear1ArrowMode){
+                clear1ArrowMode = false;
+                $('#myButton_toggle_normalOrClear1ArrowMode').text('Normal mode(/Clear 1 arrow mode)');
+            }else{
+                clear1ArrowMode = true;
+                $('#myButton_toggle_normalOrClear1ArrowMode').text('Clear 1 arrow mode(/Normal mode)');
+            }
+        }
+        //---------------------------------------------------------------------------
+        function updateSentenceInCanvas(orderInt) {
+            const textInfoObject = arrayOfTextInfoObjects[orderInt];
+
+            const arrayOfTextTabSeparated = textInfoObject.arrayOfTextTabSeparated;
+            const arrayOfArrow = textInfoObject.arrayOfArrow;
+            //remove current spans:
+            $('span').remove();
+
+            const spanbox = $('#spanbox');
+            //console.log(spanbox);
+            for (let i = 0; i < arrayOfTextTabSeparated.length; i++) {
+                const ids = arrayOfArrow[i];
+                //console.log(ids);
+                spanbox.append(`<span id="T`+i+`" ids="`+ids+`" class="bordered">`+arrayOfTextTabSeparated[i]+`</span>`)
+            }
+            attachOnClick_words();
+            redraw();
+        }
+        function updateFromTextInput() {
+            const inputText = $('#myinput').val();
+            updateSentenceInCanvas(inputText);
+        }
+
+        function toggleAboveOrBelowArrow() {
+            arrowAboveIsOn = !arrowAboveIsOn;
+        }
+        //--------------------------------------------------------
+        function tabableOnTextarea() {
+            $('#myinput, #mytextarea').on('keydown', function(e) {
+                var keyCode = e.key;
+                if (keyCode === 'Tab') {
+                    e.preventDefault();
+                    var start = this.selectionStart;
+                    var end = this.selectionEnd;
+                    // set textarea value to: text before caret + tab + text after caret
+                    $(this).val($(this).val().substring(0, start)
+                        + "\t"
+                        + $(this).val().substring(end));
+                    // put caret at right position again
+                    this.selectionStart = this.selectionEnd = start + 1;
+                }
+            });
+        }
+        //---------------------------------------------------------
+        function updateFromTextAreaToSelectableTextScroll() {
+            $('#my-scrollbar-seletable-text > div').remove();
+            const mySeletableTextScroll = $('#my-scrollbar-seletable-text');
+            var lineList = $('#mytextarea').val().split('\n');
+            for(var i = 0;i < lineList.length;i++){
+                const currentLineTrimmed = lineList[i].trim();
+                if(currentLineTrimmed.length > 0){
+                    mySeletableTextScroll.append("<div class='selectable-text'>"+currentLineTrimmed+"</div>");
+                }
+            }
+            //newly selectable text must be assigned double click handler:
+            scrollbarTextOnDoubleClick();
+        }
+        function scrollbarTextOnDoubleClick() {
+            $('.selectable-text').on('dblclick',(e)=>{
+                $('.selectable-text').removeClass('selected');
+                $(e.target).addClass('selected');
+                const order = $(e.target).attr('order');
+                updateSentenceInCanvas(order);
+            });
+        }
+        function saveArrow() {
+            //Get current sentence order:int from seletec (highlighting) sentence in scrollbar:
+            const currentSentenceOrderAsString = $('.selectable-text.selected').first().attr('order');
+            const currentSentenceOrderAsInt = parseInt(currentSentenceOrderAsString, 10);
+
+            const textInfoObject = arrayOfTextInfoObjects[currentSentenceOrderAsInt];
+            const arrayOfArrow = textInfoObject.arrayOfArrow;
+            $('.bordered').each((index,item)=>{
+                const $item = $(item);
+                const wordIndexAsString_without_T = $item.attr('id').split("T")[1];
+                const wordIndexAsInt = parseInt(wordIndexAsString_without_T, 10);
+                const ids = $item.attr('ids');
+
+                arrayOfArrow[wordIndexAsInt] = ids;
+            })
+        }
+    </script>
+
+
+
+</head>
+<body onload="draw();">
+<canvas style='border:1px solid red' id="canvas" width="700" height="150"></canvas>
+<br/>
+<div id="spanbox" style='float:left; position:absolute; top:75px; left:50px'>
+    <span id="T1" ids="" class="bordered">recruitment</span>
+    <span id="T2" ids="" class="bordered">recruitment</span>
+    <span id="T3" ids="" class="bordered">recruitment</span>
+    <span id="T4" ids="" class="bordered">recruitment</span>
+    <span id="T5" ids="" class="bordered">recruitment</span>
+</div>
+<div id="debug"></div>
+<button type="button" onclick="clearAll()">Clear all arrows</button>
+<button type="button" onclick="toggle_normalOrClear1ArrowMode()" id="myButton_toggle_normalOrClear1ArrowMode">Normal mode(/Clear 1 arrow mode)</button>
+<br/>
+<input type="text" name="myinput" id="myinput">
+<br/>
+<button type="button" onclick="updateFromTextInput()">Update text</button>
+<button type="button" onclick="toggleAboveOrBelowArrow()">Above</button>
+<button type="button" onclick="saveArrow()">Save</button>
+<br/>
+<div id="my-scrollbar-seletable-text"></div>
+<br/>
+<button type="button" onclick="updateFromTextAreaToSelectableTextScroll()">Update scrollbar from textarea</button>
+<br/>
+<textarea name="mytextarea" id="mytextarea" cols="180" rows="200"></textarea>
+</body>
+</html> 

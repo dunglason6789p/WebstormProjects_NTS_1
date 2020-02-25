@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="mathquill-0.10.1/mathquill.css"/>
+    <script src="jquery/jquery.min.js"></script>
+    <script src="mathquill-0.10.1/mathquill.js"></script>
+    <script>
+        var MQ = MathQuill.getInterface(2);
+    </script>
+</head>
+<body>
+<p><span id="answer">x=</span></p>
+
+<script>
+    var answerSpan = document.getElementById('answer');
+    var answerMathField = MQ.MathField(answerSpan, {
+        handlers: {
+            edit: function() {
+                var enteredMath = answerMathField.latex(); // Get entered math in LaTeX format
+                //checkAnswer(enteredMath);
+            }
+        }
+    });
+</script>
+</body>
+</html>

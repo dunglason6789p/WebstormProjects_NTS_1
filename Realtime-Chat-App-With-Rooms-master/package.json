@@ -1,0 +1,31 @@
+{
+  "name": "current-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/bundle.js",
+    "devStart": "nodemon dist/bundle.js",
+    "nts-pm2": "pm2 start dist/bundle.js",
+    "nts": "npm start",
+    "nts-ts": "tsc --incremental && npm start",
+    "nts-ts-nonincremental": "tsc && npm start",
+    "nts-webpack": "webpack",
+    "nts-webpack--run": "webpack && npm start",
+    "nts-webpack-dev-server--run": "webpack-dev-server",
+    "nts-webpack--pm2": "webpack && pm2 start dist/bundle.js",
+    "nts-webpack--pm2--2": "webpack && pm2 start my_pm2_1_.json",
+    "nts-webpack--pm2--3": "webpack && pm2 start ecosystem.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": ">=0.0.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKEditor 5 classic example with math plugin</title>
+  </head>
+
+  <body>
+    <h2>Preview editor</h2>
+    <div id="editor">
+      <p>Lorem... <span class="math-tex"> \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} \) </span> ...ipsum</p>
+      <p>Lorem... <span class="math-tex"> \[ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a} \] </span> ...ipsum</p>
+      <p>Lorem... <script type="math/tex">x+\sqrt{1-x^2}</script> ...ipsum</p>
+      <p>Lorem... <script type="math/tex; mode=display">x+\sqrt{1-x^2}</script> ...ipsum</p>
+    </div>
+
+    <h2>Preview editor data in HTML</h2>
+    <div id="editor-preview"></div>
+
+    <h2>Preview editor data in text</h2>
+    <pre id="editor-preview-html" style="word-wrap: break-word; white-space: pre-wrap;"></pre>
+
+    <script type="text/javascript" src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script>
+      MathJax.Ajax.config.path["external_libs_path"] = "try-external";
+      MathJax.Hub.Config({
+        showMathMenu: false,
+        TeX: {
+          extensions: [ "[external_libs_path]/mhchem.js" ]
+        },
+        messageStyle: "none",
+          tex2jax: {
+          preview: "none"
+        }
+      });
+    </script>
+    <script src="try-external/ckeditor.js"></script>
+    <script src="try-external/inspector.js"></script>
+    <script>
+      ClassicEditor.create(document.querySelector('#editor'), {
+          math: {
+            engine: 'mathjax',
+            outputType: 'script',
+            forceOutputType: false,
+            enablePreview: true
+          }
+        })
+        .then(editor => {
+          CKEditorInspector.attach(editor);
+          window.ckeditor = editor;
+          getAndSetData();
+          editor.model.document.on('change:data', () => {
+            getAndSetData();
+          });
+        })
+        .catch(err => {
+          console.error(err);
+        });
+
+      function getAndSetData() {
+        const data = window.ckeditor.getData();
+        // HTML
+        const preview = document.getElementById('editor-preview');
+        preview.innerHTML = data;
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, preview]); // MathJax 2
+        // Text
+        document.getElementById('editor-preview-html').innerText = data;
+      }
+    </script>
+  </body>
+
+</html>

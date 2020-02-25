@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+
+</head>
+<body>
+
+
+<div id="app">
+</div>
+
+<div id="child">
+</div>
+
+<script>
+    /*Vue.component('child', {
+        template: '#child',
+
+        //The child has a prop named 'value'. v-model will automatically bind to this prop
+        props: ['value'],
+        methods: {
+            updateValue: function (value) {
+                this.$emit('input', value);
+            }
+        }
+    });
+
+    new Vue({
+        el: '#app',
+        data: {
+            parentValue: 'hello'
+        }
+    });*/
+
+    Vue.component('child', {
+        template: '<input type="text" v-bind:value="value" v-on:input="updateValue($event.target.value)">',
+
+        //The child has a prop named 'value'. v-model will automatically bind to this prop
+        props: ['value'],
+        methods: {
+            updateValue: function (value) {
+                this.$emit('input', value);
+            }
+        }
+    });
+
+    new Vue({
+        el: '#app',
+        template: `
+<div>
+    <p>Parent value: {{ parentValue }}</p>
+    <child v-model="parentValue"/>
+</div>
+        `,
+        data: {
+            parentValue: 'hello'
+        }
+    });
+</script>
+
+</body>
+</html>
