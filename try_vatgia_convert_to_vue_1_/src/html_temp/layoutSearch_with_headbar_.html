@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Blank Template for Bootstrap</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/SideBar1_.css" rel="stylesheet">
+        <link href="css/F_SearchResult.css" rel="stylesheet">
+        <link href="css/F_HeadBar.css" rel="stylesheet">
+        <link href="css/comp.stackoverflow.QuestionPost_withComment.css" rel="stylesheet">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="container_header" class="nav_header box_fix_top" data-pgc="F_HeadBar"><div id="vatgia_new_home_1190x90_header" class="banner_header"></div><style type="text/css">#header_bar { position: relative; z-index: 4; } .header_bar_hover #overlay_body { opacity: 0.6; visibility: visible; } .header_bar_hover #overlay_body { transition: all .6s .1s; } .header_bar_hover #header_bar { z-index: 4; transition: all 0s 0s; } .header_bar_hover #header_content, .header_bar_hover #header_navigate, .header_bar_hover #menu_link, .header_bar_hover #mega_menu, .header_bar_hover #mini_bar { z-index: 3; transition: all 0s 0s; } .mega_menu_hover #container_header { z-index: 4; transition: all 0s 0s; position: relative; } .header_bar .span_hotline i { margin-top: -3px; } #simple_tip .hotline_tooltip { border-radius: 3px; padding: 10px; } #simple_tip .hotline_tooltip div { color: #666666; font-size: 11px; line-height: 16px; } #simple_tip .hotline_tooltip div b { font-size: 12px; } .container_body_resize .header_bar a span { display: none; } /* Chưa thay logo */.header_content .logo img { width: 190px; height: auto !important; } .header_content { padding: 18px 0 18px; height: inherit; } #header_history_keyword, #header_hot_keyword { white-space: nowrap; text-overflow: ellipsis; }</style><div class="header_bar"><div class="container_width"><div class="fl"><a href="https://vatgia.com/home/" class="simple_tip" js="loadAjaxContent('/ajax_v4/load_menu.php?module=product', 'menuProduct')" hidearrow="1" addclass="header_bar_simple_tip" onshow="initMenu('product')">Gian hàng bán</a><a href="https://vatgia.com/raovat/" class="simple_tip" js="loadAjaxContent('/ajax_v4/load_menu.php?module=raovat', 'menuRaovat')" hidearrow="1" addclass="header_bar_simple_tip" onshow="initMenu('raovat')">Rao vặt</a><a href="https://vatgia.com/tu-van/" class="simple_tip" js="loadAjaxContent('/ajax_v4/load_menu.php?module=tuvan', 'menuTuVan')" hidearrow="1" addclass="header_bar_simple_tip" onshow="initMenu('tuvan')">Tư vấn</a><a class="simple_tip" onclick="return false" href="http://help.vatgia.com/" target="_blank" rel="nofollow" hidearrow="1" addclass="header_bar_simple_tip" onshow="showButton()" js="loadAjaxContent('/ajax_v4/load_support_online.php', 'supportOnline')">Hỗ trợ</a><a href="javascript:;" class="simple_tip arrow" rel="#header_bar_menu_extra" hidearrow="1" addclass="header_bar_simple_tip header_bar_menu_extra">Thêm<b class="arrow_down"></b></a><div id="hotline_tooltip" class="hidden"><div style="margin-bottom: 8px;"><b>Từ 8h30 đến 17h30</b> (thứ 2 đến thứ 6)</div><div><b>Từ 8h đến 12h</b> (thứ 7)</div></div><div id="header_bar_menu_extra" class="hidden"><a class="image baokim" href="https://www.baokim.vn/" target="_blank" rel="nofollow">BaoKim.vn</a><a class="image nhanh" href="http://www.nhanh.vn/" target="_blank" rel="nofollow">Nhanh.vn</a></div></div><style type="text/css">.header_support_online .chat { padding: 6px 12px 0 12px; } .header_support_online .chat b { cursor: pointer; } .header_support_online .chat i { margin: 0 10px; } .header_support_online .button button { background: #f44f00; padding: 6px 25px; margin-left: 10px; } .header_support_online .button button i { margin-right: 10px; }</style><div class="fr"><a href="https://vatgia.com/cart" class="simple_tip" js="loadAjaxContent('/ajax_v5/load_group_product_show.php?type_show=my_cart', 'tabUserCart');" hidearrow="1" addclass="header_simple_tip"><i class="flaticon-cart" style="font-size: 13px;margin-top: 1px;float: left;"></i>&nbsp; <span>Giỏ hàng</span></a><a href="javascript:;" class="simple_tip" js="loadAjaxContent('/ajax_v5/load_group_product_show.php?type_show=user_save', 'tabUserSave');" hidearrow="1" addclass="header_simple_tip"><i class="flaticon-eye-outline" style="font-size: 16px;margin-top: 1px;float: left;"></i>&nbsp; <span>Đã xem</span></a><a class="simple_tip" onclick="return false" href="javascript:;" rel="nofollow" hidearrow="1" addclass="header_bar_simple_tip" js="loadAjaxContent('/ajax_v4/load_notify.php', 'notifyHeader')"><i class="flaticon-global"></i>&nbsp; <span>Thông báo</span></a><a href="https://id.vatgia.com/v2/dang-ky/vatgia/tai-khoan-thuong?service=vatgia&amp;_cont=http://www.vatgia.com" rel="nofollow" target="_blank"><i class="flaticon-user-plus" style="font-size: 14px;float: left;margin-top: 1px;"></i>&nbsp; Đăng ký</a><a class="simple_tip" event="click" href="javascript:;" rel="#header_login" hidearrow="1" addclass="header_bar_simple_tip" onshow="simpleTipLoginOnShow()" oncleanup="simpleTipLoginOnCleanup()"><i class="flaticon-user"></i>&nbsp; Đăng nhập</a><div id="header_login" class="hidden"><form class="header_login" name="header_login" action="/home/act_login.php?redirect=aHR0cHM6Ly92YXRnaWEuY29tL2hvaWRhcC9pbmRleC5waHA/" method="post" onsubmit="return checkForm(this.name, vatgiaConfig.login_config.array_check_form);"><div class="login_other"><a class="facebook" href="https://vnid.net/login/facebook?return_url=aHR0cHM6Ly92YXRnaWEuY29tL2hvaWRhcC9pbmRleC5waHA/" rel="nofollow"></a></div><div class="login_other"><a class="google" href="https://vnid.net/login/google?return_url=aHR0cHM6Ly92YXRnaWEuY29tL2hvaWRhcC9pbmRleC5waHA/" rel="nofollow"></a></div><div class="text">Hoặc đăng nhập bằng tài khoản <a style="color: #0C81F6;" href="https://vnid.net/login?return_url=aHR0cHM6Ly92YXRnaWEuY29tL2hvaWRhcC9pbmRleC5waHA/">VNID.NET</a></div><div class="floginname"><i class="icon_sprite icon_sprite_floginname"></i> <input type="text" class="form_control" name="loginname" autocomplete="off" placeholder="Tên đăng nhập"></div><div class="fpassword"><i class="icon_sprite icon_sprite_fpassword"></i> <input type="password" class="form_control" name="password" placeholder="Mật khẩu"></div><div><input type="checkbox" name="remember_password" value="1"><span class="text" onclick="$(this).prev().click()">Nhớ mật khẩu</span><a class="text_link fr" href="https://vnid.net/forgot-password" target="_blank" rel="nofollow">Quên mật khẩu?</a><span class="clear"></span></div><div class="text" style="width: 220px;">Hotline hỗ trợ: <b style="color: #0C81F6; font-size:12px;">024 710 78 999</b></div><div class="text" style="width: 220px;">Sử dụng <a style="color: #0C81F6;" href="https://vatgia.com/home/oldlogin.php">Đăng nhập</a> theo cách cũ</div><div><input type="submit" class="form_button" value="Đăng nhập"></div><input type="hidden" name="user_login" value="login"></form></div></div><div class="clear"></div></div></div><div class="bg_header_tet"><div id="header_content"><div class="header_content container_width" style="overflow: visible;"><div class="logo"><a style="display: block;" href="/hoidap/"><img src="https://vatgia.com/static/20190715//themes/v1/images/hoidap_logo_v3.svg" style="height: 60px;" alt="Vatgia.com"></a></div><style type="text/css">.header_simple_tip { width: 100%; overflow: hidden; } .group_like_cart_hover #overlay_body { opacity: 0.6; visibility: visible; } .group_like_cart_hover #overlay_body { transition: all .6s .1s; } .group_like_cart_hover #mega_menu { z-index: 3; } #group_product_show .product_thumb_view .picture_main a.picture_link { width: 170px; height: 170px; } #group_product_show .product_thumb_view .picture_main img { max-width: 170px; max-height: 170px; } #group_product_show .product_thumb_view .wrapper { height: auto; } #group_product_show .product_wrapper { border: 0; } #group_product_show .group_rating_order { display: none; } #group_product_show .product_thumb_view { padding-left: 40px; } .post_hd { padding: 0 10px; width: auto !important; margin-top: 0; } .post_hd i { margin-right: 10px; } .group_like_cart>div.fr { width: 50%; } #header_search { width: 71%; }</style><div class="group_like_cart"><div class="fr"><a class="post_hd" href="/hoidap/post.php"><i class="flaticon-edit"></i> Đăng câu hỏi</a></div><div class="clear"></div></div><div class="search"><form id="header_search" name="header_search" action="https://vatgia.com/hoidap/quicksearch.php" method="get" onsubmit="return checkHeaderSearch(this, event);">
+    <div class="border" id="home_search_control">
+        <a id="header_search_text" class="simple_tip" href="javascript:;" rel="#header_search_option">Hỏi đáp<b class="arrow_down"></b></a><button class="button" type="submit" aria-label="Tìm kiếm"><i class="flaticon-search"></i></button>
+        <div class="keyword">
+            <div style="height: 30px !important;"><input aria-label="Từ khóa tìm kiếm" type="text" id="header_search_keyword" name="keyword" value="" placeholder="Hỏi ngay cộng đồng triệu người dùng!" maxlength="100" autocomplete="off" style="height: 25px !important;"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <input type="hidden" id="search_shop" name="view" value="search" disabled="disabled"><input type="hidden" id="search_category" name="iCat" disabled="disabled">
+    <div id="header_history_keyword"><a title="nike" href="/home/nike.spvg" target="_blank">nike</a> &nbsp; | &nbsp; <a title="giay the thao" href="/home/giay+the+thao.spvg" target="_blank">giay the thao</a> &nbsp; | &nbsp; <a title="air max" href="/home/air+max.spvg" target="_blank">air max</a> &nbsp; | &nbsp; <a title="thùng xốp" href="/home/th%C3%B9ng+x%E1%BB%91p.spvg" target="_blank">thùng xốp</a> &nbsp; | &nbsp; <a title="phím set" href="/home/ph%C3%ADm+set.spvg" target="_blank">phím set</a> &nbsp; | &nbsp; <a title="bàn ghế gỗ mun" href="/home/b%C3%A0n+gh%E1%BA%BF+g%E1%BB%97+mun.spvg" target="_blank">bàn ghế gỗ mun</a></div>
+    <div class="history-search">
+        <ul class="history-item"></ul>
+        <ul class="search-item"></ul>
+    </div>
+</form><div id="header_search_option" class="hidden"><ul class="header_search_option"><li class="list"><a href="javascript:;" rel="nofollow" onclick="changeSearchOption('module', 0, $(this))">Sản phẩm</a></li><li class="list"><a href="javascript:;" rel="nofollow" onclick="changeSearchOption('module', 1, $(this))">Rao vặt</a></li><li class="list"><a href="javascript:;" rel="nofollow" onclick="changeSearchOption('module', 2, $(this))">Hỏi đáp</a></li></ul></div></div><div class="clear"></div></div></div></div><style type="text/css">#banner_premium_990x160 { background: #EDECEA; font-size: 0; }</style></div>
+            </div><div class="row">
+                <div class="col-md-3">
+                    <ul class="main_left v-2" data-pgc="MySidebar">
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/5037/hoi-dap-ve-vatgia-com.html"> <span>Hỏi đáp về vatgia.com</span><em>5.353</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/9831/y-tuong-phat-trien-vatgia-com.html" title="Ý tưởng phát triển Vatgia.com">Ý tưởng phát triển...<em><span>(</span>210<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5039/ban-hang-gian-hang-tren-vatgia-com.html" title="Bán hàng (gian hàng) trên vatgia.com">Bán hàng (gian hàng)...<em><span>(</span>693<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4556/mua-hang-tren-vatgia-com.html" title="Mua hàng trên vatgia.com">Mua hàng trên...<em><span>(</span>606<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5507/ban-hang-online-hieu-qua.html" title="Bán hàng online hiệu quả ">Bán hàng online hiệu...<em><span>(</span>169<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5442/cac-dich-vu-moi-cua-vat-gia.html" title="Các dịch vụ mới của Vật Giá">Các dịch vụ mới của Vật...<em><span>(</span>93<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5443/cac-tinh-nang-moi-cua-vat-gia.html" title="Các tính năng mới của Vật Giá">Các tính năng mới của...<em><span>(</span>225<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5734/giai-thuong-tren-vatgia-com.html" title="Giải thưởng trên vatgia.com">Giải thưởng trên...<em><span>(</span>58<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5044/hoi-dap-binh-chon-tren-vatgia-com.html" title="Hỏi đáp, bình chọn, trên vatgia.com">Hỏi đáp, bình chọn,...<em><span>(</span>481<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5043/rao-vat-tren-vatgia-com.html" title="Rao vặt trên vatgia.com">Rao vặt trên vatgia.com<em><span>(</span>539<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5046/lam-viec-tai-vatgia-com.html" title="Làm việc tại vatgia.com">Làm việc tại vatgia.com<em><span>(</span>44<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5040/lich-su-mo-hinh-kinh-doanh-cua-vatgia-com.html" title="Lịch sử, mô hình kinh doanh của vatgia.com">Lịch sử, mô hình kinh...<em><span>(</span>31<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5038/quang-cao-lien-ket-tren-vatgia-com.html" title="Quảng cáo, liên kết trên vatgia.com">Quảng cáo, liên kết...<em><span>(</span>100<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5042/quy-dinh-chinh-sach-cua-vatgia-com.html" title="Quy định, chính sách của vatgia.com">Quy định, chính sách...<em><span>(</span>105<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5045/thanh-vien-he-thong-diem-tren-vatgia-com.html" title="Thành viên, hệ thống điểm trên vatgia.com">Thành viên, hệ thống...<em><span>(</span>137<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5047/hoi-dap-ve-vatgia-com-khac.html" title="Hỏi đáp về vatgia.com khác">Hỏi đáp về vatgia.com...<em><span>(</span>1.862<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/5865/bao-ve-nguoi-tieu-dung.html"> <span>Bảo vệ người tiêu dùng</span><em>2.326</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5430/bao-ve-nguoi-tieu-dung.html" title="Bảo vệ Người Tiêu Dùng">Bảo vệ Người Tiêu Dùng<em><span>(</span>1.811<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5866/giao-luu-giua-cac-gian-hang.html" title="Giao lưu giữa các gian hàng">Giao lưu giữa các gian...<em><span>(</span>196<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5872/giao-luu-ket-ban-online-tu-vatgia-com.html" title="  Giao lưu kết bạn Online từ vatgia.com">  Giao lưu kết bạn...<em><span>(</span>100<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5875/dau-gia-giao-luu.html" title="Đấu giá - Giao lưu">Đấu giá - Giao lưu<em><span>(</span>13<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/6102/khuyen-mai-giam-gia.html" title="Khuyến mãi - Giảm Giá">Khuyến mãi - Giảm Giá<em><span>(</span>206<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3849/may-tinh-internet.html"> <span>Máy tính, Internet</span><em>105.497</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3943/may-vi-tinh.html" title="Máy vi tính">Máy vi tính<em><span>(</span>63.409<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3875/bao-mat-virus.html" title="Bảo mật, virus">Bảo mật, virus<em><span>(</span>1.978<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4088/co-so-du-lieu.html" title="Cơ sở dữ liệu">Cơ sở dữ liệu<em><span>(</span>330<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3882/games.html" title="Games">Games<em><span>(</span>1.773<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3870/internet.html" title="Internet">Internet<em><span>(</span>6.688<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3872/lap-trinh.html" title="Lập trình">Lập trình<em><span>(</span>1.055<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3871/mang-may-tinh.html" title="Mạng máy tính">Mạng máy tính<em><span>(</span>2.687<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3874/phan-cung.html" title="Phần cứng">Phần cứng<em><span>(</span>17.719<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3873/thiet-ke-bien-tap.html" title="Thiết kế, biên tập">Thiết kế, biên tập<em><span>(</span>1.011<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3944/may-tinh-internet-khac.html" title="Máy tính &amp; internet - Khác">Máy tính &amp; internet -...<em><span>(</span>8.847<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/4228/may-anh-may-quay-phim.html"> <span>Máy ảnh, máy quay phim</span><em>13.184</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3878/may-anh.html" title="Máy ảnh">Máy ảnh<em><span>(</span>10.535<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3876/may-quay-phim.html" title="Máy quay phim">Máy quay phim<em><span>(</span>997<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4232/dich-vu-in-an-rua-anh.html" title="Dịch vụ in ấn, rửa ảnh">Dịch vụ in ấn, rửa ảnh<em><span>(</span>253<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4233/dich-vu-quay-phim-chup-anh.html" title="Dịch vụ quay phim, chụp ảnh">Dịch vụ quay phim, chụp...<em><span>(</span>86<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4237/may-anh-may-quay-phim-khac.html" title="Máy ảnh, máy quay phim - Khác">Máy ảnh, máy quay phim...<em><span>(</span>1.313<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3863/dien-thoai-vien-thong.html"> <span>Điện thoại, viễn thông</span><em>109.641</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3886/mobile.html" title="Mobile">Mobile<em><span>(</span>66.388<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3885/pda-phone-smart-phone.html" title="PDA Phone, Smart Phone">PDA Phone, Smart Phone<em><span>(</span>7.719<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/6073/smartphone-dien-thoai-co-he-dieu-hanh.html" title="Smartphone - Điện thoại có hệ điều hành ">Smartphone - Điện thoại...<em><span>(</span>13.999<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/6080/dien-thoai-pho-thong-khong-he-dieu-hanh.html" title="Điện thoại phổ thông, Không hệ điều hành">Điện thoại phổ thông,...<em><span>(</span>2.687<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5896/sms-nhac-chuong-hinh-anh.html" title="SMS - Nhạc chuông - Hình ảnh">SMS - Nhạc chuông -...<em><span>(</span>134<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5951/3g-4g-gps.html" title="3G, 4G - GPS">3G, 4G - GPS<em><span>(</span>1.445<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3884/dien-thoai-co-dinh.html" title="Điện thoại cố định">Điện thoại cố định<em><span>(</span>456<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3887/cuoc-vien-thong-mang-di-dong.html" title="Cước viễn thông - Mạng di động">Cước viễn thông - Mạng...<em><span>(</span>557<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3946/dien-thoai-vien-thong-khac.html" title="Điện thoại, viễn thông - Khác">Điện thoại, viễn thông...<em><span>(</span>16.256<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3861/dien-tu-gia-dung.html"> <span>Điện tử gia dụng</span><em>32.720</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3880/am-thanh.html" title="Âm thanh">Âm thanh<em><span>(</span>7.195<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3879/hinh-anh.html" title="Hình ảnh">Hình ảnh<em><span>(</span>7.708<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3883/thiet-bi-ra-vao-am-thanh-hinh-anh.html" title="Thiết bị ra vào âm thanh, hình ảnh">Thiết bị ra vào âm...<em><span>(</span>677<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/6567/dien-tu-dien-lanh.html" title="Điện tử, điện lạnh">Điện tử, điện lạnh<em><span>(</span>9.108<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3941/do-dien-tu-phong-khach.html" title="Đồ điện tử phòng khách">Đồ điện tử phòng khách<em><span>(</span>374<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3942/do-dien-tu-phong-ngu.html" title="Đồ điện tử phòng ngủ">Đồ điện tử phòng ngủ<em><span>(</span>155<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3945/dien-tu-gia-dung-khac.html" title="Điện tử gia dụng - Khác">Điện tử gia dụng - Khác<em><span>(</span>7.503<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3866/oto-xe-may-xe-dap.html"> <span>Ôtô, xe máy, xe đạp</span><em>48.809</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4168/oto-xe-may-xe-dap.html" title="Ôtô, xe máy, xe đạp">Ôtô, xe máy, xe đạp<em><span>(</span>42.112<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3895/hang-khong.html" title="Hàng không">Hàng không<em><span>(</span>119<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3896/duong-sat.html" title="Đường sắt">Đường sắt<em><span>(</span>42<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3897/duong-thuy.html" title="Đường thủy">Đường thủy<em><span>(</span>23<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3889/an-toan.html" title="An toàn">An toàn<em><span>(</span>381<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3898/bao-hiem-dang-ky.html" title="Bảo hiểm &amp; Đăng ký">Bảo hiểm &amp; Đăng ký<em><span>(</span>377<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3891/bao-tri-sua-chua.html" title="Bảo trì &amp; Sửa chữa">Bảo trì &amp; Sửa chữa<em><span>(</span>786<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3899/mua-ban.html" title="Mua &amp; Bán">Mua &amp; Bán<em><span>(</span>746<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3947/oto-xe-may-khac.html" title="Ôtô &amp; Xe máy - Khác">Ôtô &amp; Xe máy - Khác<em><span>(</span>4.223<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/4536/cong-nghiep-xay-dung.html"> <span>Công nghiệp, xây dựng</span><em>5.806</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4539/co-khi-o-to.html" title="Cơ khí ô tô">Cơ khí ô tô<em><span>(</span>93<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4540/cong-nghe-ban-dan-vi-xu-ly.html" title="Công nghệ bán dẫn, vi xử lý">Công nghệ bán dẫn, vi...<em><span>(</span>55<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4537/dung-cu-sua-chua-gia-cong.html" title="Dụng cụ sửa chữa, gia công">Dụng cụ sửa chữa, gia...<em><span>(</span>224<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4538/may-co-khi-cong-nghiep.html" title="Máy cơ khí, công nghiệp">Máy cơ khí, công nghiệp<em><span>(</span>1.100<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5911/may-cong-nghiep-xay-dung.html" title="Máy công nghiệp, xây dựng">Máy công nghiệp, xây...<em><span>(</span>733<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4543/thiet-bi-cam-bien.html" title="Thiết bị cảm biến">Thiết bị cảm biến<em><span>(</span>81<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4544/thiet-bi-cam-tay.html" title="Thiết bị cầm tay">Thiết bị cầm tay<em><span>(</span>439<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4542/thiet-bi-cong-nghiep.html" title="Thiết bị công nghiệp">Thiết bị công nghiệp<em><span>(</span>976<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4545/thiet-bi-cong-nghiep-tong-hop.html" title="Thiết bị công nghiệp tổng hợp">Thiết bị công nghiệp...<em><span>(</span>286<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4546/thiet-bi-do-kiem-tra.html" title="Thiêt bị đo, kiểm tra">Thiêt bị đo, kiểm tra<em><span>(</span>182<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4541/thiet-bi-linh-kien-thay-the.html" title="Thiết bị, linh kiện thay thế">Thiết bị, linh kiện...<em><span>(</span>137<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5915/nguyen-vat-lieu.html" title="Nguyên vật liệu">Nguyên vật liệu<em><span>(</span>428<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5917/day-chuyen-cong-nghe.html" title="Dây chuyền công nghệ">Dây chuyền công nghệ<em><span>(</span>79<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5918/xay-dung-cong-nghiep-khac.html" title="Xây dựng, công nghiệp khác">Xây dựng, công nghiệp...<em><span>(</span>993<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3856/thuc-pham-an-uong.html"> <span>Thực phẩm, ăn uống</span><em>15.691</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4160/an-uong.html" title="Ăn uống">Ăn uống<em><span>(</span>9.464<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4161/thuc-pham.html" title="Thực phẩm">Thực phẩm<em><span>(</span>2.107<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4618/dia-chi-am-thuc.html" title="Địa chỉ ẩm thực">Địa chỉ ẩm thực<em><span>(</span>796<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3917/bar-cafe-night-club.html" title="Bar, cafe, night club">Bar, cafe, night club<em><span>(</span>241<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3911/nha-hang.html" title="Nhà hàng">Nhà hàng<em><span>(</span>234<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3912/khach-san.html" title="Khách sạn">Khách sạn<em><span>(</span>75<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3949/thuc-pham-an-uong-khac.html" title="Thực phẩm, ăn uống - Khác">Thực phẩm, ăn uống -...<em><span>(</span>2.774<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3868/do-dung-sinh-hoat.html"> <span>Đồ dùng sinh hoạt</span><em>8.487</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3907/do-dung-ca-nhan.html" title="Đồ dùng cá nhân">Đồ dùng cá nhân<em><span>(</span>653<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3908/do-dung-nha-bep.html" title="Đồ dùng nhà bếp">Đồ dùng nhà bếp<em><span>(</span>3.991<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3910/do-dung-phong-khach.html" title="Đồ dùng phòng khách">Đồ dùng phòng khách<em><span>(</span>303<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4572/do-dung-phong-ngu.html" title="Đồ dùng phòng ngủ">Đồ dùng phòng ngủ<em><span>(</span>577<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3909/do-dung-phong-ve-sinh.html" title="Đồ dùng phòng vệ sinh">Đồ dùng phòng vệ sinh<em><span>(</span>355<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3906/do-dung-sinh-hoat-chung.html" title="Đồ dùng sinh hoạt chung">Đồ dùng sinh hoạt chung<em><span>(</span>700<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3948/do-dung-sinh-hoat-khac.html" title="Đồ dùng sinh hoạt - Khác">Đồ dùng sinh hoạt -...<em><span>(</span>1.908<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3857/suc-khoe-sac-dep.html"> <span>Sức khỏe, sắc đẹp</span><em>40.767</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4202/cac-benh-thuong-gap.html" title="Các bệnh thường gặp">Các bệnh thường gặp<em><span>(</span>6.935<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4195/cham-soc-suc-khoe.html" title="Chăm sóc sức khỏe">Chăm sóc sức khỏe<em><span>(</span>12.670<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4199/my-pham-lam-dep.html" title="Mỹ phẩm &amp; Làm đẹp">Mỹ phẩm &amp; Làm đẹp<em><span>(</span>14.596<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3933/suc-khoe-tinh-than.html" title="Sức khỏe tinh thần">Sức khỏe tinh thần<em><span>(</span>512<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3950/suc-khoe-sac-dep-khac.html" title="Sức khỏe &amp; Sắc đẹp - Khác">Sức khỏe &amp; Sắc đẹp -...<em><span>(</span>6.054<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3934/thoi-trang-hang-hieu.html"> <span>Thời trang, hàng hiệu</span><em>15.733</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4219/thoi-trang-bon-mua.html" title="Thời trang bốn mùa">Thời trang bốn mùa<em><span>(</span>883<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4587/giay-dep.html" title="Giầy, dép">Giầy, dép<em><span>(</span>1.252<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4629/meo-vat.html" title="Mẹo vặt">Mẹo vặt<em><span>(</span>367<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4780/phu-kien-thoi-trang.html" title="Phụ kiện thời trang">Phụ kiện thời trang<em><span>(</span>1.150<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4190/thoi-trang-nam.html" title="Thời trang nam">Thời trang nam<em><span>(</span>1.709<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4191/thoi-trang-nu.html" title="Thời trang nữ">Thời trang nữ<em><span>(</span>4.466<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4192/thoi-trang-tre-em.html" title="Thời trang trẻ em">Thời trang trẻ em<em><span>(</span>221<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4565/trang-suc.html" title="Trang sức">Trang sức<em><span>(</span>709<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5179/tu-van-mac-dep.html" title="Tư Vấn Mặc Đẹp">Tư Vấn Mặc Đẹp<em><span>(</span>3.357<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4415/thoi-trang-hang-hieu-khac.html" title="Thời trang, hàng hiệu - Khác">Thời trang, hàng hiệu -...<em><span>(</span>1.619<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/7092/gia-dinh.html"> <span>Gia đình</span><em>9.908</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3852/me-va-be.html" title="Mẹ và Bé">Mẹ và Bé<em><span>(</span>8.364<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4181/nguoi-cao-tuoi.html" title="Người cao tuổi">Người cao tuổi<em><span>(</span>525<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3981/kien-truc-noi-ngoai-that.html"> <span>Kiến trúc, nội ngoại thất</span><em>8.258</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3854/cham-soc-nha-cua.html" title="Chăm sóc nhà cửa">Chăm sóc nhà cửa<em><span>(</span>1.902<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4570/an-toan-phong-chong-trom.html" title="An toàn, phòng chống trộm">An toàn, phòng chống...<em><span>(</span>189<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3982/chon-huong-nha.html" title="Chọn hướng nhà">Chọn hướng nhà<em><span>(</span>56<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3983/chon-vi-tri-manh-dat.html" title="Chọn vị trí mảnh đất">Chọn vị trí mảnh đất<em><span>(</span>48<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3990/kho-xuong-van-phong-cho-thue.html" title="Kho, xưởng. văn phòng cho thuê">Kho, xưởng. văn phòng...<em><span>(</span>67<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3991/nha-tro-sinh-vien.html" title="Nhà trọ sinh viên">Nhà trọ sinh viên<em><span>(</span>82<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4571/noi-that.html" title="Nội thất">Nội thất<em><span>(</span>3.221<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3992/phong-hop-hoi-nghi.html" title="Phòng họp, hội nghị">Phòng họp, hội nghị<em><span>(</span>62<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4188/thu-tuc-giay-to-nha-dat.html" title="Thủ tục, giấy tờ nhà đất">Thủ tục, giấy tờ nhà...<em><span>(</span>259<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/5352/tu-van-kien-truc.html" title="Tư vấn Kiến trúc">Tư vấn Kiến trúc<em><span>(</span>618<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3994/kien-truc-nha-cua-khac.html" title="Kiến trúc, nhà cửa - Khác">Kiến trúc, nhà cửa -...<em><span>(</span>1.754<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/3850/kinh-te-tai-chinh.html"> <span>Kinh tế, tài chính</span><em>8.180</em><i></i></a>
+                <ul class="main_lv2 " style="min-height: 548px;">
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3993/chung-khoan-otc.html" title="Chứng khoán OTC">Chứng khoán OTC<em><span>(</span>45<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3966/thi-truong-chung-khoan.html" title="Thị trường chứng khoán">Thị trường chứng khoán<em><span>(</span>454<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3962/dau-tu-tai-chinh.html" title="Đầu tư tài chính">Đầu tư tài chính<em><span>(</span>439<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3961/bao-hiem.html" title="Bảo hiểm">Bảo hiểm<em><span>(</span>213<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3963/cho-thue-can-thue.html" title="Cho thuê, cần thuê">Cho thuê, cần thuê<em><span>(</span>65<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4491/kinh-doanh-cong-viec.html" title="Kinh doanh, công việc">Kinh doanh, công việc<em><span>(</span>1.819<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/4441/kinh-te.html" title="Kinh tế">Kinh tế<em><span>(</span>1.253<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3965/quang-cao-tiep-thi.html" title="Quảng cáo &amp; tiếp thị">Quảng cáo &amp; tiếp thị<em><span>(</span>378<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3964/quy-tin-dung-the-tin-dung.html" title="Quỹ tín dụng- Thẻ tín dụng">Quỹ tín dụng- Thẻ tín...<em><span>(</span>295<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3968/vay-no.html" title="Vay, nợ">Vay, nợ<em><span>(</span>285<span>)</span></em></a>
+                    </li>
+                    <li> 
+                        <i class="icon-plus">+</i>
+                        <a class="" href="/hoidap/3969/chinh-tri-kinh-te-tai-chinh-khac.html" title="Chính trị, kinh tế, tài chính - Khác">Chính trị, kinh tế, tài...<em><span>(</span>2.049<span>)</span></em></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=""> 
+                <i class="icon-list-menu"></i>
+                <a href="/hoidap/15326/tu-van-tieu-dung.html"> <span>Tư vấn tiêu dùng</span><em>21.854</em></a>
+            </li>
+        </ul>                     
+                </div>
+                <div class="col-md-7">
+                    <div class="overflow-auto" style="height: 700px;">
+                        <div class="qa_item item_706561 " id="item_706561" data-pgc="F_SearchResult">
+                            <div class="top_qa_item">
+                                <div class="img_qua_item">
+                                    <a class="tooltip_user" idata="706561" iuse="7041466" href="/hoidap/type_user.php?iUse=7041466"> <img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                </div>
+                                <div class="info">
+                                    <h2 title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?">  <a href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?" target="_blank">Nên mua máy sưởi dầu hay
+                            quạt sưởi dầu ạ?</a></h2>
+                                    <p> Hôm qua, lúc 10:15 <span>•</span> trong <a class="text_link_pale" href="/hoidap/3945/dien-tu-gia-dung-khac.html"> Điện tử gia dụng - Khác </a></p>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="teaser show_706561 no-image">Trời vào giữa đông rồi, ngày càng lạnh nên em muốn tìm mua loại
+                                    máy sưởi cho gia đình. Cân nhắc mãi mới ưng được 2 mẫu máy sưởi dầu và quạt sưởi dầu nhưng không
+                                    biết cái nào tốt hơn. Nhà em còn có bé mới sinh nữa, mong các bác...
+                                    <a class="" href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html">(Xem thêm)</a>
+                                </div>
+                            </div>
+                            <div class="bot_qa_item">
+                                <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="706561" status="1"><i class="flaticon-pencil"></i><span>Trả lời</span></a>
+                                <a class="btn_condone" onclick="condone(this)" record_id="706561"><span>Bỏ qua</span></a>
+                                <a class=""><span>Lượt xem</span> <span>21</span></a>
+                                <div class="box_share">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook"> <i class="flaticon-facebook"></i></a>
+                                    <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter"> <i class="flaticon-twitter"></i></a>
+                                    <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" target="_blank" title="Chia sẻ lên Google+"> <i class="flaticon-ggplus"></i></a>
+                                    <a><i class="flaticon-three-dots" onclick="moreActionList(this)"> <ul class="box-more">
+                                                <li onclick="windowPrompt({ href: '/ajax_v2/load_send_error_hoidap.php?record_id=706561', iframe: true, width: '50%', height: '80%' });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm</li>
+                                                <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn câu hỏi</li>
+                                            </ul> </i></a>
+                                </div>
+                            </div>
+                            <div class="box_comment show_comment_706561" id="show_comment_706561" record_id="706561" last_up="1576568715">
+                                <div class="comment_description">
+                                    <textarea id="conten_reply_706561" class="conten_reply conten_reply_706561" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
+                                    <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
+                                    <div class="box_capcha">
+                                        <div class="box_capcha_706561" id="box_capcha_706561"></div>
+                                        <img class="img_loading" src="https://vatgia.com/static/20190715/css/multi_css_v3/loading.gif">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_reply_hoidap" onclick="window.location.href = '/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html';">
+                                <div class="reply_comment_box">
+                                    <div class="avatar_reply">
+                                        <a href="/home/detail_user.php?iUse=7580952"><img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                    </div>
+                                    <div class="description_reply">
+                                        <div class="info_user_reply">
+                                            <p>Lê Hương</p>
+                                            <div class="text_comment_reply"> Highly recommend may suoi dau nha. Minh da dung roi, cuc ky
+                                                thuyet phuc luon, cong suat lon, an toan, lam am khong gian qua thanh nhiet nen khong bi
+                                                kho da luon 
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qa_item item_706561 " id="item_706561" data-pgc="F_SearchResult">
+                            <div class="top_qa_item">
+                                <div class="img_qua_item">
+                                    <a class="tooltip_user" idata="706561" iuse="7041466" href="/hoidap/type_user.php?iUse=7041466"> <img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                </div>
+                                <div class="info">
+                                    <h2 title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?">  <a href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?" target="_blank">Nên mua máy sưởi dầu hay
+                            quạt sưởi dầu ạ?</a></h2>
+                                    <p> Hôm qua, lúc 10:15 <span>•</span> trong <a class="text_link_pale" href="/hoidap/3945/dien-tu-gia-dung-khac.html"> Điện tử gia dụng - Khác </a></p>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="teaser show_706561 no-image">Trời vào giữa đông rồi, ngày càng lạnh nên em muốn tìm mua loại
+                                    máy sưởi cho gia đình. Cân nhắc mãi mới ưng được 2 mẫu máy sưởi dầu và quạt sưởi dầu nhưng không
+                                    biết cái nào tốt hơn. Nhà em còn có bé mới sinh nữa, mong các bác...
+                                    <a class="" href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html">(Xem thêm)</a>
+                                </div>
+                            </div>
+                            <div class="bot_qa_item">
+                                <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="706561" status="1"><i class="flaticon-pencil"></i><span>Trả lời</span></a>
+                                <a class="btn_condone" onclick="condone(this)" record_id="706561"><span>Bỏ qua</span></a>
+                                <a class=""><span>Lượt xem</span> <span>21</span></a>
+                                <div class="box_share">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook"> <i class="flaticon-facebook"></i></a>
+                                    <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter"> <i class="flaticon-twitter"></i></a>
+                                    <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" target="_blank" title="Chia sẻ lên Google+"> <i class="flaticon-ggplus"></i></a>
+                                    <a><i class="flaticon-three-dots" onclick="moreActionList(this)"> <ul class="box-more">
+                                                <li onclick="windowPrompt({ href: '/ajax_v2/load_send_error_hoidap.php?record_id=706561', iframe: true, width: '50%', height: '80%' });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm</li>
+                                                <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn câu hỏi</li>
+                                            </ul> </i></a>
+                                </div>
+                            </div>
+                            <div class="box_comment show_comment_706561" id="show_comment_706561" record_id="706561" last_up="1576568715">
+                                <div class="comment_description">
+                                    <textarea id="conten_reply_706561" class="conten_reply conten_reply_706561" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
+                                    <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
+                                    <div class="box_capcha">
+                                        <div class="box_capcha_706561" id="box_capcha_706561"></div>
+                                        <img class="img_loading" src="https://vatgia.com/static/20190715/css/multi_css_v3/loading.gif">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_reply_hoidap" onclick="window.location.href = '/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html';">
+                                <div class="reply_comment_box">
+                                    <div class="avatar_reply">
+                                        <a href="/home/detail_user.php?iUse=7580952"><img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                    </div>
+                                    <div class="description_reply">
+                                        <div class="info_user_reply">
+                                            <p>Lê Hương</p>
+                                            <div class="text_comment_reply"> Highly recommend may suoi dau nha. Minh da dung roi, cuc ky
+                                                thuyet phuc luon, cong suat lon, an toan, lam am khong gian qua thanh nhiet nen khong bi
+                                                kho da luon 
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qa_item item_706561 " id="item_706561" data-pgc="F_SearchResult">
+                            <div class="top_qa_item">
+                                <div class="img_qua_item">
+                                    <a class="tooltip_user" idata="706561" iuse="7041466" href="/hoidap/type_user.php?iUse=7041466"> <img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                </div>
+                                <div class="info">
+                                    <h2 title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?">  <a href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?" target="_blank">Nên mua máy sưởi dầu hay
+                            quạt sưởi dầu ạ?</a></h2>
+                                    <p> Hôm qua, lúc 10:15 <span>•</span> trong <a class="text_link_pale" href="/hoidap/3945/dien-tu-gia-dung-khac.html"> Điện tử gia dụng - Khác </a></p>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="teaser show_706561 no-image">Trời vào giữa đông rồi, ngày càng lạnh nên em muốn tìm mua loại
+                                    máy sưởi cho gia đình. Cân nhắc mãi mới ưng được 2 mẫu máy sưởi dầu và quạt sưởi dầu nhưng không
+                                    biết cái nào tốt hơn. Nhà em còn có bé mới sinh nữa, mong các bác...
+                                    <a class="" href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html">(Xem thêm)</a>
+                                </div>
+                            </div>
+                            <div class="bot_qa_item">
+                                <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="706561" status="1"><i class="flaticon-pencil"></i><span>Trả lời</span></a>
+                                <a class="btn_condone" onclick="condone(this)" record_id="706561"><span>Bỏ qua</span></a>
+                                <a class=""><span>Lượt xem</span> <span>21</span></a>
+                                <div class="box_share">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook"> <i class="flaticon-facebook"></i></a>
+                                    <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter"> <i class="flaticon-twitter"></i></a>
+                                    <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" target="_blank" title="Chia sẻ lên Google+"> <i class="flaticon-ggplus"></i></a>
+                                    <a><i class="flaticon-three-dots" onclick="moreActionList(this)"> <ul class="box-more">
+                                                <li onclick="windowPrompt({ href: '/ajax_v2/load_send_error_hoidap.php?record_id=706561', iframe: true, width: '50%', height: '80%' });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm</li>
+                                                <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn câu hỏi</li>
+                                            </ul> </i></a>
+                                </div>
+                            </div>
+                            <div class="box_comment show_comment_706561" id="show_comment_706561" record_id="706561" last_up="1576568715">
+                                <div class="comment_description">
+                                    <textarea id="conten_reply_706561" class="conten_reply conten_reply_706561" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
+                                    <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
+                                    <div class="box_capcha">
+                                        <div class="box_capcha_706561" id="box_capcha_706561"></div>
+                                        <img class="img_loading" src="https://vatgia.com/static/20190715/css/multi_css_v3/loading.gif">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_reply_hoidap" onclick="window.location.href = '/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html';">
+                                <div class="reply_comment_box">
+                                    <div class="avatar_reply">
+                                        <a href="/home/detail_user.php?iUse=7580952"><img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                    </div>
+                                    <div class="description_reply">
+                                        <div class="info_user_reply">
+                                            <p>Lê Hương</p>
+                                            <div class="text_comment_reply"> Highly recommend may suoi dau nha. Minh da dung roi, cuc ky
+                                                thuyet phuc luon, cong suat lon, an toan, lam am khong gian qua thanh nhiet nen khong bi
+                                                kho da luon 
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qa_item item_706561 " id="item_706561" data-pgc="F_SearchResult">
+                            <div class="top_qa_item">
+                                <div class="img_qua_item">
+                                    <a class="tooltip_user" idata="706561" iuse="7041466" href="/hoidap/type_user.php?iUse=7041466"> <img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                </div>
+                                <div class="info">
+                                    <h2 title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?">  <a href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?" target="_blank">Nên mua máy sưởi dầu hay
+                            quạt sưởi dầu ạ?</a></h2>
+                                    <p> Hôm qua, lúc 10:15 <span>•</span> trong <a class="text_link_pale" href="/hoidap/3945/dien-tu-gia-dung-khac.html"> Điện tử gia dụng - Khác </a></p>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="teaser show_706561 no-image">Trời vào giữa đông rồi, ngày càng lạnh nên em muốn tìm mua loại
+                                    máy sưởi cho gia đình. Cân nhắc mãi mới ưng được 2 mẫu máy sưởi dầu và quạt sưởi dầu nhưng không
+                                    biết cái nào tốt hơn. Nhà em còn có bé mới sinh nữa, mong các bác...
+                                    <a class="" href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html">(Xem thêm)</a>
+                                </div>
+                            </div>
+                            <div class="bot_qa_item">
+                                <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="706561" status="1"><i class="flaticon-pencil"></i><span>Trả lời</span></a>
+                                <a class="btn_condone" onclick="condone(this)" record_id="706561"><span>Bỏ qua</span></a>
+                                <a class=""><span>Lượt xem</span> <span>21</span></a>
+                                <div class="box_share">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook"> <i class="flaticon-facebook"></i></a>
+                                    <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter"> <i class="flaticon-twitter"></i></a>
+                                    <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" target="_blank" title="Chia sẻ lên Google+"> <i class="flaticon-ggplus"></i></a>
+                                    <a><i class="flaticon-three-dots" onclick="moreActionList(this)"> <ul class="box-more">
+                                                <li onclick="windowPrompt({ href: '/ajax_v2/load_send_error_hoidap.php?record_id=706561', iframe: true, width: '50%', height: '80%' });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm</li>
+                                                <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn câu hỏi</li>
+                                            </ul> </i></a>
+                                </div>
+                            </div>
+                            <div class="box_comment show_comment_706561" id="show_comment_706561" record_id="706561" last_up="1576568715">
+                                <div class="comment_description">
+                                    <textarea id="conten_reply_706561" class="conten_reply conten_reply_706561" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
+                                    <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
+                                    <div class="box_capcha">
+                                        <div class="box_capcha_706561" id="box_capcha_706561"></div>
+                                        <img class="img_loading" src="https://vatgia.com/static/20190715/css/multi_css_v3/loading.gif">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_reply_hoidap" onclick="window.location.href = '/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html';">
+                                <div class="reply_comment_box">
+                                    <div class="avatar_reply">
+                                        <a href="/home/detail_user.php?iUse=7580952"><img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                    </div>
+                                    <div class="description_reply">
+                                        <div class="info_user_reply">
+                                            <p>Lê Hương</p>
+                                            <div class="text_comment_reply"> Highly recommend may suoi dau nha. Minh da dung roi, cuc ky
+                                                thuyet phuc luon, cong suat lon, an toan, lam am khong gian qua thanh nhiet nen khong bi
+                                                kho da luon 
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qa_item item_706561 " id="item_706561" data-pgc="F_SearchResult">
+                            <div class="top_qa_item">
+                                <div class="img_qua_item">
+                                    <a class="tooltip_user" idata="706561" iuse="7041466" href="/hoidap/type_user.php?iUse=7041466"> <img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                </div>
+                                <div class="info">
+                                    <h2 title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?">  <a href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" title="Nên mua máy sưởi dầu hay quạt sưởi dầu ạ?" target="_blank">Nên mua máy sưởi dầu hay
+                            quạt sưởi dầu ạ?</a></h2>
+                                    <p> Hôm qua, lúc 10:15 <span>•</span> trong <a class="text_link_pale" href="/hoidap/3945/dien-tu-gia-dung-khac.html"> Điện tử gia dụng - Khác </a></p>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="teaser show_706561 no-image">Trời vào giữa đông rồi, ngày càng lạnh nên em muốn tìm mua loại
+                                    máy sưởi cho gia đình. Cân nhắc mãi mới ưng được 2 mẫu máy sưởi dầu và quạt sưởi dầu nhưng không
+                                    biết cái nào tốt hơn. Nhà em còn có bé mới sinh nữa, mong các bác...
+                                    <a class="" href="/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html">(Xem thêm)</a>
+                                </div>
+                            </div>
+                            <div class="bot_qa_item">
+                                <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="706561" status="1"><i class="flaticon-pencil"></i><span>Trả lời</span></a>
+                                <a class="btn_condone" onclick="condone(this)" record_id="706561"><span>Bỏ qua</span></a>
+                                <a class=""><span>Lượt xem</span> <span>21</span></a>
+                                <div class="box_share">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook"> <i class="flaticon-facebook"></i></a>
+                                    <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter"> <i class="flaticon-twitter"></i></a>
+                                    <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html" target="_blank" title="Chia sẻ lên Google+"> <i class="flaticon-ggplus"></i></a>
+                                    <a><i class="flaticon-three-dots" onclick="moreActionList(this)"> <ul class="box-more">
+                                                <li onclick="windowPrompt({ href: '/ajax_v2/load_send_error_hoidap.php?record_id=706561', iframe: true, width: '50%', height: '80%' });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm</li>
+                                                <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn câu hỏi</li>
+                                            </ul> </i></a>
+                                </div>
+                            </div>
+                            <div class="box_comment show_comment_706561" id="show_comment_706561" record_id="706561" last_up="1576568715">
+                                <div class="comment_description">
+                                    <textarea id="conten_reply_706561" class="conten_reply conten_reply_706561" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
+                                    <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
+                                    <div class="box_capcha">
+                                        <div class="box_capcha_706561" id="box_capcha_706561"></div>
+                                        <img class="img_loading" src="https://vatgia.com/static/20190715/css/multi_css_v3/loading.gif">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list_reply_hoidap" onclick="window.location.href = '/hoidap/3945/706561/nen-mua-may-suoi-dau-hay-quat-suoi-dau-a.html';">
+                                <div class="reply_comment_box">
+                                    <div class="avatar_reply">
+                                        <a href="/home/detail_user.php?iUse=7580952"><img src="https://vatgia.com/static/20190618/css/multi_css_v3/avatar.jpg"></a>
+                                    </div>
+                                    <div class="description_reply">
+                                        <div class="info_user_reply">
+                                            <p>Lê Hương</p>
+                                            <div class="text_comment_reply"> Highly recommend may suoi dau nha. Minh da dung roi, cuc ky
+                                                thuyet phuc luon, cong suat lon, an toan, lam am khong gian qua thanh nhiet nen khong bi
+                                                kho da luon 
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                     
+                </div>
+                <div class="col-md-2">
+                    <h3>Column title</h3> 
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+    </body>
+</html>

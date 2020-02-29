@@ -1,0 +1,47 @@
+<!DOCTYPE html><!--
+	Copyright (c) 2014-2020, CKSource - Frederico Knabben. All rights reserved.
+	This file is licensed under the terms of the MIT License (see LICENSE.md).
+-->
+
+<html lang="en" dir="ltr"></html>
+<head>
+	<title>CKEditor 5 ClassicEditor build</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="https://c.cksource.com/a/1/logos/ckeditor5.png">
+<!--	<link rel="stylesheet" type="text/css" href="styles.css">-->
+</head>
+<body data-editor="ClassicEditor" data-collaboration="false">
+
+	<div>
+		<h1>Hello</h1>
+		<div>
+			<div id="app"></div>
+		</div>
+		<div>
+			Bye
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script>
+		MathJax.Ajax.config.path["external_libs_path"] = "./try-external";
+		MathJax.Hub.Config({
+			showMathMenu: false,
+			TeX: {
+				extensions: [ "[external_libs_path]/mhchem.js" ]
+			},
+			messageStyle: "none",
+			tex2jax: {
+				preview: "none"
+			}
+		});
+	</script>
+	<script src="./build/ckeditor.js"></script>
+	<script src="jquery/jquery.js"></script>
+	<script>
+		$jq = $;
+		$.noConflict();
+		window.globalVars = {};
+	</script>
+</body>

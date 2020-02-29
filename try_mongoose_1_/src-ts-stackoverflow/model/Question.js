@@ -1,30 +1,34 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var User_1 = require("./User");
 var mongoose = require('mongoose');
 var _a = mongoose.Schema.Types, Mixed = _a.Mixed, ObjectId = _a.ObjectId;
 var Commons_1 = require("../common/Commons");
-var Comment = /** @class */ (function () {
-    function Comment() {
-    }
-    return Comment;
-}());
-exports.Comment = Comment;
-var Answer = /** @class */ (function () {
-    function Answer() {
-    }
-    return Answer;
-}());
-exports.Answer = Answer;
+var KnownClasses_1 = require("../common/KnownClasses");
 var Question = /** @class */ (function () {
     function Question() {
+        this.featuredList = [];
+        this.tagList = [];
+        this.commentList = [];
+        this.answerList = [];
+        this.answerIdList = [];
     }
+    Question.prototype.setAuthor = function (author) {
+        this.author = author;
+        this.authorId = author._id;
+    };
+    Question.prototype.addAnswers = function (answerArr) {
+        Commons_1.$array(this.answerList).pushAll(answerArr);
+        for (var _i = 0, answerArr_1 = answerArr; _i < answerArr_1.length; _i++) {
+            var a = answerArr_1[_i];
+            this.answerIdList.push(a._id);
+        }
+    };
     return Question;
 }());
 exports.Question = Question;
 (function (Question) {
     Question.schema = new mongoose.Schema(Commons_1.schemaFromTypeWithExclude({
-        answerList: Mixed,
+        answerIdList: [ObjectId],
         commentList: Mixed,
         content: String,
         featuredList: Mixed,
@@ -36,14 +40,20 @@ exports.Question = Question;
         toObject: { virtuals: true }
     });
     Question.schema.virtual(Commons_1.$$("author"), {
-        ref: User_1.User.name,
+        ref: KnownClasses_1.$cn("User"),
         localField: Commons_1.$$("authorId"),
-        foreignField: '_id',
-        // If `justOne` is true, 'members' will be a single doc as opposed to
-        // an array. `justOne` is false by default.
+        foreignField: Commons_1.$$("_id"),
         justOne: true,
-        options: { /*sort: { name: -1 }, limit: 5*/} // Query options, see http://bit.ly/mongoose-query-options
+        options: {}
     });
+    Question.schema.virtual(Commons_1.$$("answerList"), {
+        ref: KnownClasses_1.$cn("Answer"),
+        localField: Commons_1.$$("answerIdList"),
+        foreignField: Commons_1.$$("_id"),
+        justOne: false,
+        options: {}
+    });
+    //region scemx
     Question.MonModel = mongoose.model(Question.name, Question.schema);
     function buildDocPartial(v) { return new Question.MonModel(v); }
     Question.buildDocPartial = buildDocPartial;
@@ -55,11 +65,8 @@ exports.Question = Question;
     Question.buildDoc = buildDoc;
     function $buildExcluded(v) { return v; }
     Question.$buildExcluded = $buildExcluded;
+    function $buildNewExcluded(v) { return Object.assign(new Question(), v); }
+    Question.$buildNewExcluded = $buildNewExcluded;
+    //endregion
 })(Question = exports.Question || (exports.Question = {}));
 exports.Question = Question;
-/*function buildit<T>(ModelType:Model<Document>,v:T){return new Model(v)}
-buildit<Question>(Question.Modelx,{title: "thetitle"});
-const que1 = new Question.Modelx({});
-const que2 = Question.Modelx();*/
-//Question.MonModel.find({title:"abc"},"",((err, res) => {}));
-//const abc: Model<Document> = Question.MonModel;

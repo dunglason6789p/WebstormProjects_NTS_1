@@ -36,64 +36,128 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Question_1 = require("../model/Question");
 var Commons_1 = require("../common/Commons");
+var Mgoose_1 = require("../common/Mgoose");
+var Question_1 = require("../model/Question");
 var User_1 = require("../model/User");
-var mongoose = require('mongoose');
+var Answer_1 = require("../model/Answer");
 var l = new Commons_1.MyLogger();
-mongoose.connect('mongodb://localhost/qax3', { useNewUrlParser: true /*, useUnifiedTopology: true*/ })
-    .then(function (r) { return __awaiter(void 0, void 0, void 0, function () {
-    var user1, question1, _a, _b;
-    return __generator(this, function (_c) {
-        switch (_c.label) {
-            case 0:
-                console.log("connected");
-                if (!true) return [3 /*break*/, 3];
-                user1 = User_1.User.buildDocExcluded({
-                    _id: new mongoose.Types.ObjectId(),
-                    userName: "ntson9x",
-                    passwordEncrypted: "123",
-                });
-                question1 = Question_1.Question.buildDoc({
-                    authorId: user1._id,
-                    title: "cau hoi 1",
-                    content: "noi dung cau hoi 1",
-                    tagList: [
-                        Commons_1.$build("a tag")
-                    ],
-                    commentList: [
-                        Commons_1.$build({
-                            content: "a comment"
-                        })
-                    ],
-                    answerList: [
-                        Commons_1.$build({
-                            content: "a answer",
-                        })
-                    ]
-                });
-                _a = l;
-                return [4 /*yield*/, user1.save()];
-            case 1:
-                _a.log = _c.sent();
-                _b = l;
-                return [4 /*yield*/, question1.save()];
-            case 2:
-                _b.log = _c.sent();
-                _c.label = 3;
-            case 3:
-                Question_1.Question.MonModel.find({ /*all*/})
-                    .populate(Commons_1.$$("author"))
-                    .exec(function (error, questions) {
-                    // console.log("[INFO]founds:");
-                    // console.log(bands);
-                    for (var _i = 0, questions_1 = questions; _i < questions_1.length; _i++) {
-                        var quest = questions_1[_i];
-                        console.log("[INFO]a found:");
-                        console.log(quest);
-                    }
-                });
-                return [2 /*return*/];
-        }
+var mongoose = require('mongoose');
+var fs = require('fs');
+var util = require('util');
+var readFileAsync = util.promisify(fs.readFile);
+var writeFileAsync = util.promisify(fs.writeFile);
+(function topLevel() {
+    return __awaiter(this, void 0, void 0, function () {
+        var num, pathToDbInfoFile, _a, err_1;
+        var _this = this;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    _b.trys.push([0, 3, , 4]);
+                    pathToDbInfoFile = "./dbInfo/dbinfo.txt";
+                    _a = parseInt;
+                    return [4 /*yield*/, readFileAsync(pathToDbInfoFile)];
+                case 1:
+                    num = _a.apply(void 0, [(_b.sent())]) + 1;
+                    console.log("num=" + num);
+                    return [4 /*yield*/, writeFileAsync(pathToDbInfoFile, num)];
+                case 2:
+                    _b.sent();
+                    return [3 /*break*/, 4];
+                case 3:
+                    err_1 = _b.sent();
+                    console.log(err_1);
+                    return [3 /*break*/, 4];
+                case 4:
+                    mongoose.connect('mongodb://localhost/ndb' + num, { useNewUrlParser: true /*, useUnifiedTopology: true*/ })
+                        .then(function (r) { return __awaiter(_this, void 0, void 0, function () {
+                        var user1_1, user2_1, question1_1, answer1, answer2, _a, _b, _c, _d, _e;
+                        return __generator(this, function (_f) {
+                            switch (_f.label) {
+                                case 0:
+                                    console.log("connected to db...num=" + num);
+                                    if (!true) return [3 /*break*/, 6];
+                                    user1_1 = Commons_1.$create(User_1.User, {
+                                        _id: new mongoose.Types.ObjectId(),
+                                        userName: "user_1",
+                                        passwordEncrypted: "111",
+                                    });
+                                    user2_1 = Commons_1.$create(User_1.User, {
+                                        _id: new mongoose.Types.ObjectId(),
+                                        userName: "user_2",
+                                        passwordEncrypted: "222",
+                                    });
+                                    question1_1 = Commons_1.$createThenExec(Question_1.Question, {
+                                        _id: new mongoose.Types.ObjectId(),
+                                        authorId: undefined,
+                                        title: "cau hoi 1",
+                                        content: "noi dung cau hoi 1",
+                                        tagList: ["a tag"]
+                                    }, function (thiz) {
+                                        thiz.setAuthor(user1_1);
+                                    });
+                                    answer1 = Commons_1.$createThenExec(Answer_1.Answer, {
+                                        _id: new mongoose.Types.ObjectId(),
+                                        authorId: undefined, questionId: undefined,
+                                        content: "tra loi 1",
+                                    }, function (thiz) {
+                                        thiz.setAuthor(user1_1);
+                                        thiz.setQuestion(question1_1, true);
+                                    });
+                                    answer2 = Commons_1.$createThenExec(Answer_1.Answer, {
+                                        _id: new mongoose.Types.ObjectId(),
+                                        authorId: undefined, questionId: undefined,
+                                        content: "tra loi 2",
+                                    }, function (thiz) {
+                                        thiz.setAuthor(user2_1);
+                                        thiz.setQuestion(question1_1, true);
+                                    });
+                                    //question1.addAnswers(answer1);
+                                    _a = l;
+                                    return [4 /*yield*/, User_1.User.buildDocExcluded(user1_1).save()];
+                                case 1:
+                                    //question1.addAnswers(answer1);
+                                    _a.log = _f.sent();
+                                    _b = l;
+                                    return [4 /*yield*/, User_1.User.buildDocExcluded(user2_1).save()];
+                                case 2:
+                                    _b.log = _f.sent();
+                                    _c = l;
+                                    return [4 /*yield*/, Question_1.Question.buildDocExcluded(question1_1).save()];
+                                case 3:
+                                    _c.log = _f.sent();
+                                    _d = l;
+                                    return [4 /*yield*/, Answer_1.Answer.buildDocExcluded(answer1).save()];
+                                case 4:
+                                    _d.log = _f.sent();
+                                    _e = l;
+                                    return [4 /*yield*/, Answer_1.Answer.buildDocExcluded(answer2).save()];
+                                case 5:
+                                    _e.log = _f.sent();
+                                    _f.label = 6;
+                                case 6:
+                                    Mgoose_1.Mgoose.find(Question_1.Question, {
+                                        title: /hoi/i
+                                    }, {
+                                        populateSimple: ["author", "answerList"],
+                                        lean: true,
+                                    }).exec(function (err, questionResults) {
+                                        console.log("[DEBUG]populateSimple():");
+                                        for (var _i = 0, questionResults_1 = questionResults; _i < questionResults_1.length; _i++) {
+                                            var questionResult = questionResults_1[_i];
+                                            console.log("[INFO]a found <populateSimple()>:");
+                                            //console.log(questionResult);
+                                            var quest = questionResult;
+                                            Commons_1.$logKeyValue(quest, true);
+                                        }
+                                    });
+                                    return [2 /*return*/];
+                            }
+                        });
+                    }); });
+                    return [2 /*return*/];
+            }
+        });
     });
-}); });
+})(); //Execute top level async function.

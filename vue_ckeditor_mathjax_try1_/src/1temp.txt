@@ -1,0 +1,749 @@
+    #header_bar {
+        position: relative;
+        z-index: 4;
+    }
+
+    .header_bar_hover #overlay_body {
+        opacity: 0.6;
+        visibility: visible;
+    }
+
+    .header_bar_hover #overlay_body {
+        transition: all .6s .1s;
+    }
+
+    .header_bar_hover #header_bar {
+        z-index: 4;
+        transition: all 0s 0s;
+    }
+
+    .header_bar_hover #header_content, .header_bar_hover #header_navigate, .header_bar_hover #menu_link, .header_bar_hover #mega_menu, .header_bar_hover #mini_bar {
+        z-index: 3;
+        transition: all 0s 0s;
+    }
+
+    .mega_menu_hover #container_header {
+        z-index: 4;
+        transition: all 0s 0s;
+        position: relative;
+    }
+
+    .header_bar .span_hotline i {
+        margin-top: -3px;
+    }
+
+    #simple_tip .hotline_tooltip {
+        border-radius: 3px;
+        padding: 10px;
+    }
+
+    #simple_tip .hotline_tooltip div {
+        color: #666666;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    #simple_tip .hotline_tooltip div b {
+        font-size: 12px;
+    }
+
+    .container_body_resize .header_bar a span {
+        display: none;
+    }
+
+    /* Chưa thay logo */
+    .header_content .logo img {
+        width: 190px;
+        height: auto !important;
+    }
+
+    .header_content {
+        padding: 18px 0 18px;
+        height: inherit;
+    }
+
+    #header_history_keyword, #header_hot_keyword {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    /*-------------------------------------------------------------------*/
+
+    .header_support_online .chat {
+        padding: 6px 12px 0 12px;
+    }
+
+    .header_support_online .chat b {
+        cursor: pointer;
+    }
+
+    .header_support_online .chat i {
+        margin: 0 10px;
+    }
+
+    .header_support_online .button button {
+        background: #f44f00;
+        padding: 6px 25px;
+        margin-left: 10px;
+    }
+
+    .header_support_online .button button i {
+        margin-right: 10px;
+    }
+
+    /*-------------------------------------------------------------------*/
+
+    .header_simple_tip {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .group_like_cart_hover #overlay_body {
+        opacity: 0.6;
+        visibility: visible;
+    }
+
+    .group_like_cart_hover #overlay_body {
+        transition: all .6s .1s;
+    }
+
+    .group_like_cart_hover #mega_menu {
+        z-index: 3;
+    }
+
+    #group_product_show .product_thumb_view .picture_main a.picture_link {
+        width: 170px;
+        height: 170px;
+    }
+
+    #group_product_show .product_thumb_view .picture_main img {
+        max-width: 170px;
+        max-height: 170px;
+    }
+
+    #group_product_show .product_thumb_view .wrapper {
+        height: auto;
+    }
+
+    #group_product_show .product_wrapper {
+        border: 0;
+    }
+
+    #group_product_show .group_rating_order {
+        display: none;
+    }
+
+    #group_product_show .product_thumb_view {
+        padding-left: 40px;
+    }
+
+    .post_hd {
+        padding: 0 10px;
+        width: auto !important;
+        margin-top: 0;
+    }
+
+    .post_hd i {
+        margin-right: 10px;
+    }
+
+    .group_like_cart > div.fr {
+        width: 50%;
+    }
+
+    #header_search {
+        width: 71%;
+    }
+
+    /*-------------------------------------------------------------------*/
+
+    #banner_premium_990x160 {
+        background: #EDECEA;
+        font-size: 0;
+    }
+
+    /*-----------------------------------------------------------------------*/
+
+    /* ! CSS Used from: https://vatgia.com/static/20190715//css/v4/style_all_hoidap_v1.css */
+    :active,
+    :focus {
+        outline: 0;
+    }
+
+    form,
+    input,
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+    }
+
+    input[type=checkbox] {
+        margin-right: 3px;
+        vertical-align: text-top;
+    }
+
+    input[type=submit] {
+        cursor: pointer;
+    }
+
+    .clear {
+        background: 0 0;
+        display: block;
+        clear: both;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .fl {
+        float: left;
+    }
+
+    .fr {
+        float: right;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .icon_sprite {
+        background: url(https://vatgia.com/static/20190715/css/v4/beacon_sprite.png) no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .icon_sprite_floginname {
+        background-position: -11px -3668px;
+        height: 14px;
+        width: 14px;
+    }
+
+    .icon_sprite_fpassword {
+        background-position: -11px -3698px;
+        height: 14px;
+        width: 14px;
+    }
+
+    .container_width {
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .arrow_down {
+        position: absolute;
+        right: 9px;
+        width: 0;
+        height: 0;
+    }
+
+    .arrow_down {
+        border-top: 4px solid #BBB;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    }
+
+    .banner_header {
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+        text-align: center;
+        width: 1190px;
+        overflow: hidden;
+        z-index: 5;
+    }
+
+    .banner_header {
+        width: auto;
+    }
+
+    .form_button {
+        border: 0;
+        border-radius: 3px;
+        color: #FFF;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 6px 9px;
+        text-align: center;
+    }
+
+    .form_control {
+        background: #FFF;
+        border: 1px solid #E5E5E5;
+        border-radius: 1px;
+        font-weight: 400;
+        margin: 0;
+        padding: 6px 9px;
+    }
+
+    .header_bar {
+        background: #fff;
+        border-bottom: 1px solid #E5E5E5;
+        height: 30px;
+        line-height: 30px;
+        white-space: nowrap;
+    }
+
+    .header_bar a {
+        color: #767676;
+        float: left;
+        padding: 0 8px;
+        position: relative;
+        font-size: 13px;
+        border-left: 1px solid #FFF;
+        border-right: 1px solid #FFF;
+    }
+
+    .header_bar .arrow {
+        padding-right: 21px;
+    }
+
+    .header_bar a .arrow_down {
+        top: 11px;
+    }
+
+    .header_bar a i {
+        margin-top: -3px;
+    }
+
+    .header_bar .facebook {
+        background: url(https://vatgia.com/static/20190715/css/v4/beacon_sprite_other.png) no-repeat 0 -320px;
+        font-size: 0;
+        width: 74px;
+        height: 22px;
+        margin-top: 2px;
+    }
+
+    .header_login,
+    .header_login div {
+        padding: 6px;
+    }
+
+    .header_login .text {
+        color: #999;
+        cursor: default;
+        font-size: 11px;
+    }
+
+    .header_login .floginname,
+    .header_login .fpassword {
+        position: relative;
+    }
+
+    .header_login .floginname i,
+    .header_login .fpassword i {
+        left: 16px;
+        position: absolute;
+        top: 14px;
+    }
+
+    .header_login .form_control {
+        padding-left: 32px;
+        width: 177px;
+    }
+
+    .header_login .form_button {
+        width: 100%;
+    }
+
+    .header_login .text_link {
+        font-size: 11px;
+    }
+
+    .header_login .login_other a {
+        background-image: url(https://vatgia.com/static/20190715/css/v4/beacon_sprite_other.png);
+        background-repeat: no-repeat;
+        display: block;
+        width: 220px;
+        height: 35px;
+    }
+
+    .header_login .login_other .facebook {
+        background-position: 0 -320px;
+    }
+
+    .header_login .login_other .google {
+        background-position: 0 -360px;
+    }
+
+    .header_content {
+        height: inherit;
+        padding: 15px 0;
+    }
+
+    .header_content .logo {
+        float: left;
+        font-size: 0;
+        overflow: hidden;
+        text-align: center;
+        width: 200px;
+    }
+
+    #header_search {
+        font-size: 13px;
+        margin: 0 auto;
+    }
+
+    #header_search .border {
+        border: 2px solid #365DB5;
+        position: relative;
+        border-radius: 3px;
+        margin-left: 1px;
+    }
+
+    #header_search .border a {
+        float: left;
+    }
+
+    #header_search #header_search_text,
+    #header_search .button {
+        background: #365DB5;
+        color: #FFF;
+        height: 34px;
+        line-height: 34px;
+        padding: 0 25px 0 12px;
+        position: relative;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    #header_search .button i.flaticon-search {
+        font-size: 16px;
+    }
+
+    #header_search #header_search_text {
+        background: #EEE;
+        color: #333!important;
+    }
+
+    #header_search #header_search_text .arrow_down {
+        border-color: #333 transparent transparent!important;
+        right: 12px;
+        top: 15px;
+    }
+
+    #header_search .keyword {
+        overflow: hidden;
+        padding: 0px;
+    }
+
+    #header_search .keyword div,
+    #header_search .keyword input {
+        height: 16px;
+        overflow: hidden;
+    }
+
+    #header_search .keyword div {
+        position: relative;
+    }
+
+    #header_search .keyword input {
+        border: 0 transparent;
+        font-size: 13px;
+        width: 100%;
+    }
+
+    #header_search .button {
+        border: 0;
+        float: right;
+        font-weight: 700;
+        line-height: 28px;
+        padding: 0 25px;
+        margin: 0;
+    }
+
+    .header_search_option {
+        min-width: 100px;
+        max-width: 200px;
+    }
+
+    .header_search_option li a {
+        border-top: 1px solid #E5E5E5;
+        display: block;
+        padding: 9px 12px;
+    }
+
+    .header_search_option .list:first-child a {
+        border-top: 0;
+    }
+
+    #header_history_keyword {
+        color: #CCC;
+        font-size: 12px;
+        height: 15px;
+        margin-top: 6px;
+        overflow: hidden;
+    }
+
+    #header_history_keyword a {
+        color: #999;
+        white-space: nowrap;
+    }
+
+    #header_history_keyword a:hover {
+        color: #0C81F6;
+    }
+
+    .text_link {
+        cursor: pointer;
+    }
+
+    .text_link:hover {
+        text-decoration: underline;
+    }
+
+    [class^=flaticon-]:after,
+    [class^=flaticon-]:before {
+        font-family: Flaticon;
+        font-size: inherit!important;
+        font-style: normal!important;
+        margin-left: inherit!important;
+    }
+
+    .header_bar a [class*=flaticon-],
+    .header_bar a [class^=flaticon-],
+    .header_bar a:hover,
+    .text_link {
+        color: #0C81F6!important;
+    }
+
+    #header_search .button,
+    .form_button {
+        background: #f635c0 !important;
+    }
+
+    #header_search .border {
+        border-color: #0C81F6!important;
+    }
+
+    .group_like_cart {
+        position: relative;
+        float: right;
+        line-height: 38px;
+        z-index: 5;
+        margin-top: 15px;
+    }
+
+    .group_like_cart>div.fr {
+        width: 50%;
+        position: relative;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .group_like_cart>div.fr a {
+        display: inline-block;
+        position: relative;
+    }
+
+    * {
+        font-family: Arial,sans-serif,Tahoma,Helvetica;
+        margin: 0;
+        padding: 0;
+    }
+
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .container_width {
+        width: 1050px!important;
+    }
+
+    .nav_header {
+        box-shadow: 0 6px 8px #ebebeb;
+    }
+
+    .box_fix_top {
+        width: 100%;
+        background: #fff;
+        top: 0;
+        z-index: 2;
+    }
+
+    #header_search {
+        position: relative;
+        overflow: initial;
+    }
+
+    .header_content .search {
+        padding-bottom: 10px;
+        margin: 15px 195px 0;
+    }
+
+    #header_content {
+        padding-bottom: 3px;
+    }
+
+    .clear {
+        clear: both;
+        width: 0;
+        height: 0;
+        background: 0;
+    }
+
+    .group_like_cart {
+        width: 234px;
+    }
+
+    .post_hd {
+        float: right;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        width: 160px;
+        height: 36px;
+        line-height: 38px;
+        margin-top: 2px;
+        border-radius: 3px;
+    }
+
+    .post_hd:hover {
+        color: #fff;
+    }
+
+    a:hover {
+        color: #0C81F6;
+    }
+
+    .header_content {
+        padding-bottom: 15px;
+        padding-top: 5px;
+    }
+
+    .header_content .search {
+        margin-top: 15px;
+        margin-left: 269px;
+        margin-right: 261px;
+    }
+
+    #header_search {
+        width: 100%!important;
+    }
+
+    #header_history_keyword {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .post_hd {
+        background: #F44F00!important;
+        white-space: nowrap;
+    }
+
+    #header_search .border {
+        height: 34px;
+        border-right: 2px solid #365DB5;
+    }
+
+    .history-search {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-left: 84px;
+        width: 462px;
+        position: absolute;
+        background: #fff;
+        top: 39px;
+        z-index: 9999;
+        display: none;
+    }
+
+    .history-search .history-item,
+    .history-search .search-item {
+        display: none;
+    }
+
+    .header_bar .fr a:last-child {
+        max-width: 84px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    /* ! CSS Used from: https://vatgia.com/static/20190715/css/flaticon/flaticon.css?v=20190715 */
+    .flaticon-eye-outline:before {
+        content: "\f111";
+    }
+
+    .flaticon-search:before {
+        content: "\f113";
+    }
+
+    .flaticon-edit:before {
+        content: "\f126";
+    }
+
+    .flaticon-cart:before {
+        content: "\f134";
+    }
+
+    .flaticon-global:before {
+        content: "\f137";
+    }
+
+    .flaticon-user-plus:before {
+        content: "\f13e";
+    }
+
+    .flaticon-user:before {
+        content: "\f148";
+    }
+
+    /* ! CSS Used from: Embedded */
+    .header_content .logo img {
+        width: 190px;
+        height: auto!important;
+    }
+
+    .header_content {
+        padding: 18px 0 18px;
+        height: inherit;
+    }
+
+    #header_history_keyword {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    /* ! CSS Used from: Embedded */
+    .post_hd {
+        padding: 0 10px;
+        width: auto!important;
+        margin-top: 0;
+    }
+
+    .post_hd i {
+        margin-right: 10px;
+    }
+
+    .group_like_cart>div.fr {
+        width: 50%;
+    }
+
+    #header_search {
+        width: 71%;
+    }
+
+    /* ! CSS Used fontfaces */
+    @font-face{
+        font-family: Flaticon;
+        src: url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.eot);
+        src: url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.eot#iefix) format("embedded-opentype"),url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.woff) format("woff"),url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.ttf) format("truetype"),url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.svg#Flaticon) format("svg");
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face{
+        font-family: Flaticon;
+        src: url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.svg#Flaticon) format("svg");
+    }

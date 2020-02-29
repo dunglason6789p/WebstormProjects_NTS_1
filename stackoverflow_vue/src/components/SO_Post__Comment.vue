@@ -1,30 +1,30 @@
 <template>
-    <li _zx_="00103_" id="comment-55041873" class="comment js-comment " data-comment-id="55041873">
-        <div _zx_="00104_" class="js-comment-actions comment-actions">
-            <div _zx_="00105_" class="comment-score js-comment-edit-hide">
-                <span _zx_="00106_" title="number of 'useful comment' votes received" class="warm">6</span>
+    <li id="comment-55041873" class="comment js-comment " data-comment-id="55041873">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score js-comment-edit-hide">
+                <span title="number of 'useful comment' votes received" class="warm">6</span>
             </div>
-            <div _zx_="00107_" class="comment-voting mtn2 js-comment-edit-hide">
-                <a _zx_="00108_" tabindex="0" role="button" href="#" class="comment-up comment-up-off" aria-label="Upvote Comment" title="This comment adds something useful to the post"> <svg aria-hidden="true" class="svg-icon iconArrowUp" width="18" height="18" viewbox="0 0 18 18">
-                    <path _zx_="00109_" d="M1 13h16L9 5l-8 8z"></path>
+            <div class="comment-voting mtn2 js-comment-edit-hide">
+                <a tabindex="0" role="button" href="#" class="comment-up comment-up-off" aria-label="Upvote Comment" title="This comment adds something useful to the post"> <svg aria-hidden="true" class="svg-icon iconArrowUp" width="18" height="18" viewbox="0 0 18 18">
+                    <path d="M1 13h16L9 5l-8 8z"></path>
                 </svg> </a>
             </div>
-            <div _zx_="00110_" class="comment-flagging js-comment-edit-hide">
-                <button _zx_="00111_" class="js-comment-flag s-btn s-btn__unset bg-transparent c-pointer fc-black-100 h:fc-red-500" aria-label="Flag Comment" aria-pressed="false" title="Flag this comment for serious problems or moderator attention">
-                    <svg _zx_="00112_" aria-hidden="true" class="svg-icon iconFlag" width="18" height="18" viewbox="0 0 18 18">
-                        <path _zx_="00113_" d="M3 2v14h2v-6h3.6l.4 1h6V3H9.5L9 2H3z"></path>
+            <div class="comment-flagging js-comment-edit-hide">
+                <button class="js-comment-flag s-btn s-btn__unset bg-transparent c-pointer fc-black-100 h:fc-red-500" aria-label="Flag Comment" aria-pressed="false" title="Flag this comment for serious problems or moderator attention">
+                    <svg aria-hidden="true" class="svg-icon iconFlag" width="18" height="18" viewbox="0 0 18 18">
+                        <path d="M3 2v14h2v-6h3.6l.4 1h6V3H9.5L9 2H3z"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        <div _zx_="00114_" class="comment-text js-comment-text-and-form">
-            <div _zx_="00115_" class="comment-body js-comment-edit-hide">
-                <span _zx_="00116_" class="comment-copy">Being a developer with Microsoft background, I recall the semantic definition of services in the old MS SmartClientSoftwareFactory framework (now a long deprecated complex framework for distributed desktop apps). That definition (<a href="https://richnewman.wordpress.com/2007/09/08/introduction-to-services-in-the-cab-introduction-to-the-cabscsf-part-7/" rel="nofollow noreferrer">nicely documented</a> by Rich Newman) defined the services as stateless reusable objects, preferably with singleton scope, that are used to perform business logic operations on other objects passed as arguments. I tend to view Spring services the same way</span>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body js-comment-edit-hide">
+                <span class="comment-copy">Being a developer with Microsoft background, I recall the semantic definition of services in the old MS SmartClientSoftwareFactory framework (now a long deprecated complex framework for distributed desktop apps). That definition (<a href="https://richnewman.wordpress.com/2007/09/08/introduction-to-services-in-the-cab-introduction-to-the-cabscsf-part-7/" rel="nofollow noreferrer">nicely documented</a> by Rich Newman) defined the services as stateless reusable objects, preferably with singleton scope, that are used to perform business logic operations on other objects passed as arguments. I tend to view Spring services the same way</span>
                 –&nbsp;
-                <a _zx_="00117_" href="/users/795158/ivaylo-slavov" title="7,547 reputation" class="comment-user">Ivaylo Slavov</a>
-                <span _zx_="00118_" class="comment-date" dir="ltr"><a class="comment-link" href="#comment55041873_6827752"><span title="2015-11-10 15:56:52Z" class="relativetime-clean">Nov 10 '15 at 15:56</span></a></span>
-                <span _zx_="00119_" title="this comment was edited 1 time"> <svg aria-hidden="true" class="svg-icon va-text-bottom o50 iconPencilSm" width="14" height="14" viewbox="0 0 14 14">
-                    <path _zx_="00120_" d="M11.1 1.71l1.13 1.12c.2.2.2.51 0 .71L11.1 4.7 9.21 2.86l1.17-1.15c.2-.2.51-.2.71 0zM2 10.12l6.37-6.43 1.88 1.88L3.88 12H2v-1.88z"></path>
+                <a href="/users/795158/ivaylo-slavov" title="7,547 reputation" class="comment-user">Ivaylo Slavov</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="#comment55041873_6827752"><span title="2015-11-10 15:56:52Z" class="relativetime-clean">Nov 10 '15 at 15:56</span></a></span>
+                <span title="this comment was edited 1 time"> <svg aria-hidden="true" class="svg-icon va-text-bottom o50 iconPencilSm" width="14" height="14" viewbox="0 0 14 14">
+                    <path d="M11.1 1.71l1.13 1.12c.2.2.2.51 0 .71L11.1 4.7 9.21 2.86l1.17-1.15c.2-.2.51-.2.71 0zM2 10.12l6.37-6.43 1.88 1.88L3.88 12H2v-1.88z"></path>
                 </svg> </span>
             </div>
         </div>

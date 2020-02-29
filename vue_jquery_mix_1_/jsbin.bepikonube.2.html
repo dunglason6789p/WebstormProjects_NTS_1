@@ -1,0 +1,68 @@
+<!doctype html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2020 by anonymous (http://jsbin.com/bepikonube/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>
+<style id="jsbin-css">
+ label {
+    display: inline-block;
+    width: 5em;
+  }
+
+.test {
+  background-color: red;
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <date-picker @update-date="updateDate" date-format="yy-mm-dd" v-once></date-picker>
+  <p>{{ date }}</p>
+</div>
+<script id="jsbin-javascript">
+Vue.component('date-picker', {
+  template: '<input/>',
+  props: [ 'dateFormat' ],
+  mounted: function() {
+    var self = this;
+    $(this.$el).datepicker({
+      dateFormat: this.dateFormat,
+      onSelect: function(date) {
+        self.$emit('update-date', date);
+      }
+    });
+  },
+  beforeDestroy: function() {
+    $(this.$el).datepicker('hide').datepicker('destroy');
+  }
+});
+
+new Vue({
+  el: '#app',
+  data: {
+    date: null
+  },
+  methods: {
+    updateDate: function(date) {
+      this.date = date;
+    }
+  }
+});
+</script>
+</body>
+</html>

@@ -33,15 +33,17 @@ export namespace Mgoose{
     {
         return tipe.MonModel.find(
             conditions,
-            (proj.incl!=null)?
-                proj.incl.join(' ')
-                :(proj.excl!=null)?
-                    '-'+proj.excl.join(' -')
-                    :null,
+            proj!=null?
+                proj.incl!=null?
+                    proj.incl.join(' ')
+                    :proj.excl!=null?
+                        '-'+proj.excl.join(' -')
+                        :null
+                :null,
             options,
             callback);
     }
-    export function find<T>(
+    /*export function find<T>(
         tipe:{new():T} & {MonModel:Model<Document>},
         conditions:SomePropName<T>,
         moreArgs?:{
@@ -61,12 +63,56 @@ export namespace Mgoose{
                 }
             }
             if(moreArgs.populates != null) {
-                for (let propName in moreArgs.populates) {
+                for (let propName of moreArgs.populates) {
                     findQuery = findQuery.populate(propName);
                 }
             }
         }
         if(callback!=null) return findQuery.exec(callback);
+        return findQuery;
+    }*/
+    export function find<T>(
+        tipe:{new():T} & {MonModel:Model<Document>},
+        conditions:SomePropName<T>,
+        moreArgs?:{
+            proj?:{incl?:Extract<keyof T, string>[],excl?:Extract<keyof T, string>[]},
+            options?:MgooseQueryOptions,
+            populateSimple?:Extract<keyof T, string>[],
+            populates?:{
+                path:Extract<keyof T, string>[],
+                select?:any[]
+            }[],
+            lean?:boolean
+        },
+        callback?:(err:any,docs:any)=>any
+    ){
+        let findQuery =  tipe.MonModel.find(conditions,null);
+        if(moreArgs != null) {
+            if(moreArgs.proj != null){
+                if(moreArgs.proj.incl != null){
+                    findQuery = findQuery.select(moreArgs.proj.incl.join(' '));
+                }else if(moreArgs.proj.excl != null){
+                    findQuery = findQuery.select(moreArgs.proj.excl.join(' -'));
+                }
+            }
+            if(moreArgs.populateSimple != null){
+                for (let propName of moreArgs.populateSimple) {
+                    findQuery = findQuery.populate(propName);
+                }
+            }else if(moreArgs.populates != null) {
+                for (let popinfo of moreArgs.populates) {
+                    const truePopinfo:{path;select?} = {path:popinfo.path.join(" ")};
+                    if(popinfo.select!=null){
+                        truePopinfo.select = popinfo.select.join(" ");
+                    }
+                    findQuery = findQuery.populate(truePopinfo);
+                }
+            }
+            if(moreArgs.lean===true){
+                findQuery = findQuery.lean(true);
+            }
+        }
+        if(callback!=null) {findQuery.exec(callback);return findQuery}
         return findQuery;
     }
     /*export function find2<T>(

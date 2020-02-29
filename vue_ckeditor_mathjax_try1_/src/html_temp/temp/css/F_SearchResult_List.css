@@ -1,0 +1,498 @@
+/*! CSS Used from: https://vatgia.com/static/20190715//css/v4/style_all_hoidap_v1.css */
+
+:active,
+:focus {
+    outline: 0;
+}
+
+h2,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+p {
+    margin: 24px 0;
+}
+
+[class^=flaticon-]:after,
+[class^=flaticon-]:before {
+    font-family: Flaticon;
+    font-size: inherit!important;
+    font-style: normal!important;
+    margin-left: inherit!important;
+}
+
+* {
+    font-family: Arial, sans-serif, Tahoma, Helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.qa_center .qa_item {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5ecf4;
+    border-right: 1px solid #e5ecf4;
+    padding-top: 17px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 12px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.qa_item .top_qa_item {
+    overflow: hidden;
+}
+
+.qa_item .bot_qa_item,
+.qa_item .description,
+.qa_item .top_qa_item {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.top_qa_item .img_qua_item {
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+
+.top_qa_item .info {
+    float: left;
+    max-width: 433px;
+}
+
+.top_qa_item .info p,
+.top_qa_item .info p a {
+    color: #b6b6b6;
+    margin: 3px 0 0;
+}
+
+.top_qa_item .info p span {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.top_qa_item .info h2 {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .3px;
+}
+
+.qa_item .description {
+    line-height: 19px;
+    overflow: hidden;
+    margin-top: 15px;
+    font-size: 13px!important;
+    max-width: 100%!important;
+    text-align: justify;
+}
+
+.qa_item .description a,
+.text_comment_reply .more {
+    word-wrap: normal;
+}
+
+.teaser {
+    word-wrap: break-word;
+    margin-left: 110px;
+    overflow: hidden;
+}
+
+.teaser.no-image {
+    margin-left: 0;
+}
+
+.qa_item .bot_qa_item,
+.qa_item .bot_qa_item a {
+    color: #999;
+    font-size: 13px;
+}
+
+.qa_item .bot_qa_item a:hover {
+    cursor: pointer;
+}
+
+.qa_item .bot_qa_item a span {
+    margin-left: 5px;
+}
+
+.qa_item .bot_qa_item a span+span {
+    color: #999;
+    margin-left: 3px;
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 3px;
+    background: #eee;
+}
+
+.btn_reply_fast {
+    color: #95b6d6!important;
+    border: 1px solid #bbcadc;
+    border-radius: 3px;
+    background: #f8fbfd;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn_reply_fast:hover {
+    background: #f1f8fb;
+}
+
+.btn_reply_fast:hover {
+    color: #2b6dad!important;
+}
+
+.btn_reply_fast i {
+    font-size: 12px!important;
+    vertical-align: top;
+}
+
+.qa_item .bot_qa_item a i {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.qa_item .bot_qa_item {
+    color: #525252;
+    margin-top: 10px;
+    margin-bottom: 17px;
+}
+
+.qa_item .flaticon-three-dots {
+    position: relative;
+}
+
+.flaticon-three-dots .box-more {
+    display: none;
+    position: absolute;
+    width: 90px;
+    right: 0;
+    top: 12px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    padding: 3px 10px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 7px 0 #d9d9d9;
+    z-index: 9;
+    font-style: normal;
+    color: #555;
+    font-size: 13px;
+}
+
+.top_qa_item .img_qua_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img_qua_item {
+    position: relative;
+}
+
+.img_qua_item .tooltip_user img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.btn_condone,
+.btn_reply_fast {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.box_share {
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 5px;
+}
+
+.box_share a {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.box_share a i {
+    font-size: 13px!important;
+}
+
+.box_share .box-more li {
+    padding: 3px 0;
+}
+
+.flaticon-facebook:before {
+    color: #3a6cd2;
+}
+
+.flaticon-twitter:before {
+    color: #56c1ee;
+}
+
+.flaticon-ggplus:before {
+    color: #dc2734;
+}
+
+.flaticon-three-dots:before {
+    color: #c3c3c3;
+}
+
+.list_reply_hoidap {
+    background: #f4f5f7;
+}
+
+.box_comment {
+    float: left;
+    display: none;
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+}
+
+.box_comment .box_capcha {
+    margin: 5px 0;
+    display: none;
+    float: left;
+    max-width: 300px;
+}
+
+.reply_comment_box {
+    float: left;
+    width: 480px;
+    margin: 10px 20px;
+}
+
+.comment_description {
+    float: left;
+    width: 100%;
+    background: #f6f6f6;
+}
+
+.comment_description img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+
+.comment_description .conten_reply::placeholder {
+    color: #c3c3c3;
+}
+
+.comment_description a.btn_reply {
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 13px;
+    vertical-align: top;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 12px;
+}
+
+.box_capcha img {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    height: inherit;
+    width: inherit;
+    float: none;
+}
+
+.box_capcha {
+    padding-left: 20px;
+}
+
+.list_reply_hoidap {
+    float: left;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.avatar_reply img,
+.comment_description img {
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+}
+
+.avatar_reply img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.info_user_reply {
+    float: left;
+    width: 415px;
+}
+
+.info_user_reply p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.text_comment_reply {
+    color: #3c3c3c;
+    margin-top: 3px;
+    line-height: 17px;
+}
+
+.box_capcha img.img_loading {
+    display: none;
+}
+
+.reply_comment_box .description_reply p {
+    font-weight: 700;
+    color: #343434;
+    margin: 0;
+}
+
+.description_reply .text_comment_reply {
+    color: #333;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 5px 0 10px;
+}
+
+.text_comment_reply * {
+    max-width: 100%!important;
+    line-height: 18px!important;
+    font-weight: 400!important;
+    margin: 0!important;
+    font-size: 12px!important;
+    font-family: arial!important;
+    padding: 0!important;
+    white-space: initial!important;
+}
+
+.img_loading {
+    display: none;
+}
+
+.box_capcha {
+    float: left;
+    width: 100%;
+}
+
+.box_capcha div {
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 2px 0;
+}
+
+.info_user_reply {
+    position: relative;
+}
+
+a:hover {
+    color: #0C81F6;
+}
+
+.list_reply_hoidap .description_reply .text_comment_reply {
+    margin-bottom: 0;
+    margin-top: 3px;
+}
+
+.qa_item .box_comment .box_capcha div {
+    margin-top: 0;
+}
+
+.comment_description a.btn_reply {
+    background: #0C81F6!important;
+}
+
+.qa_item .description a,
+.text_comment_reply .more {
+    color: #0967c6!important;
+}
+
+.comment_description a.btn_reply:hover {
+    background: #0967c6!important;
+}
+
+.btn_condone:hover span,
+.flaticon-three-dots .box-more li:hover {
+    color: #0C81F6;
+}
+
+
+/*! CSS Used from: https://vatgia.com/static/20190715/css/flaticon/flaticon.css?v=20190715 */
+
+.flaticon-pencil:before {
+    content: "\f10f";
+}
+
+.flaticon-twitter:before {
+    content: "\f12f";
+}
+
+.flaticon-facebook:before {
+    content: "\f133";
+}
+
+.flaticon-ggplus:before {
+    content: "\f138";
+}
+
+.flaticon-three-dots:before {
+    content: "\f141";
+}
+
+
+/*! CSS Used fontfaces */
+
+@font-face {
+    font-family: Flaticon;
+    src: url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.eot);
+    src: url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.eot#iefix) format("embedded-opentype"), url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.woff) format("woff"), url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.ttf) format("truetype"), url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.svg#Flaticon) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Flaticon;
+    src: url(https://vatgia.com/static/20190715/css/flaticon/Flaticon.svg#Flaticon) format("svg");
+}

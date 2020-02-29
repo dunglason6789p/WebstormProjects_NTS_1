@@ -1,73 +1,97 @@
-import {Answer,Question,Comment} from "../model/Question";
-import {$$, $build, MyLogger} from "../common/Commons";
+import {$create, $createThenExec, $logKeyValue, MyLogger} from "../common/Commons";
 import {Mgoose} from "../common/Mgoose";
+import {Question} from "../model/Question";
 import {User} from "../model/User";
-const mongoose = require('mongoose');
+import {Answer} from "../model/Answer";
+
 const l = new MyLogger();
-mongoose.connect('mongodb://localhost/qax3', {useNewUrlParser: true/*, useUnifiedTopology: true*/})
-    .then(async r => {
-        console.log("connected");
+const mongoose = require('mongoose');
+const fs = require('fs');
+const util = require('util');
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
-        if(true){
-            const user1 = User.buildDocExcluded({
-                _id: new mongoose.Types.ObjectId(),
-                userName: "ntson9x",
-                passwordEncrypted: "123",
-            });
+(async function topLevel(){
+    let num:number;
+    try{
+        const pathToDbInfoFile = "./dbInfo/dbinfo.txt";
+        num = parseInt((await readFileAsync(pathToDbInfoFile))) + 1;
+        console.log("num="+num);
+        await writeFileAsync(pathToDbInfoFile, num);
+        // return;//TODO
+    }catch (err) {
+        console.log(err);
+        // return;//TODO
+    }
+    mongoose.connect('mongodb://localhost/ndb'+num, {useNewUrlParser: true/*, useUnifiedTopology: true*/})
+        .then(async r => {
+            console.log("connected to db...num="+num);
+            if(true){
+                const user1 = $create(User,{
+                    _id: new mongoose.Types.ObjectId(),
+                    userName: "user_1",
+                    passwordEncrypted: "111",
+                }as User);
+                const user2 = $create(User,{
+                    _id: new mongoose.Types.ObjectId(),
+                    userName: "user_2",
+                    passwordEncrypted: "222",
+                }as User);
+                const question1 = $createThenExec(Question,{
+                    _id: new mongoose.Types.ObjectId(),
+                    authorId: undefined,
+                    title: "cau hoi 1",
+                    content: "noi dung cau hoi 1",
+                    tagList:["a tag"]
+                },(thiz)=>{
+                    thiz.setAuthor(user1);
+                });
+                const answer1 = $createThenExec(Answer,{
+                    _id: new mongoose.Types.ObjectId(),
+                    authorId: undefined,questionId: undefined,
+                    content: "tra loi 1",
+                },(thiz)=>{
+                    thiz.setAuthor(user1);
+                    thiz.setQuestion(question1,true);
+                });
+                const answer2 = $createThenExec(Answer,{
+                    _id: new mongoose.Types.ObjectId(),
+                    authorId: undefined,questionId: undefined,
+                    content: "tra loi 2",
+                },(thiz)=>{
+                    thiz.setAuthor(user2);
+                    thiz.setQuestion(question1,true);
+                });
+                //question1.addAnswers(answer1);
 
-            const question1 = Question.buildDoc({
-                authorId: (user1 as User)._id,
-                title: "cau hoi 1",
-                content: "noi dung cau hoi 1",
-                tagList:[
-                    $build<string>("a tag")
-                ],
-                commentList:[
-                    $build<Comment>({
-                        content: "a comment"
-                    })
-                ],
-                answerList:[
-                    $build<Answer>({
-                        content:"a answer",
-                    })
-                ]
-            });
+                l.log = await User.buildDocExcluded(user1).save();
+                l.log = await User.buildDocExcluded(user2).save();
+                l.log = await Question.buildDocExcluded(question1).save();
+                l.log = await Answer.buildDocExcluded(answer1).save();
+                l.log = await Answer.buildDocExcluded(answer2).save();
+            }
 
-            l.log = await user1.save();
-            l.log = await question1.save();
-        }
-        Question.MonModel.find({/*all*/})
-            .populate($$<Question>("author"))
-            .exec(
-                function(error, questions){
-                    // console.log("[INFO]founds:");
-                    // console.log(bands);
-                    for(let quest of questions){
-                        console.log("[INFO]a found:");
-                        console.log(quest);
-                    }
+            Mgoose.find(
+                Question,
+                {
+                    title:/hoi/i
+                },
+                {
+                    populateSimple:["author","answerList"],
+                    lean:true,
                 }
-            );
+            ).exec((err,questionResults)=>{
+                console.log("[DEBUG]populateSimple():");
+                for(let questionResult of questionResults){
+                    console.log("[INFO]a found <populateSimple()>:");
+                    //console.log(questionResult);
+                    const quest:Question = questionResult as unknown as Question;
+                    $logKeyValue(quest,true);
+                }
+            });
+        });
+})();//Execute top level async function.
 
 
-
-        // If you call `parent.children[0].save()`, it is a no-op, it triggers middleware but
-        // does **not** actually save the subdocument. You need to save the parent doc first.
-        // But when you save parent, then child will be save too. So you just have to save parent.
-        /*question1.save((err,res)=>{
-            if(err) return err=>console.log(err);
-            console.log(res);
-
-            Mgoose.findSimple(Question,
-                {title:/hoi/i},
-                {incl:["content","commentList"]},
-                null,
-                ((err1, docs) => {
-                    console.log("[INFO] found:");
-                    console.log(docs);
-                }))
-        });*/
-    });
 
 

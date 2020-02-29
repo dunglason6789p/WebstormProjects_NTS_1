@@ -45,13 +45,107 @@ export function $build<T>(v:T){return v}
 export function $buildPartial<T>(v:Partial<T>){return v}
 export function $buildRequired<T>(v:Required<T>){return v}
 export function $buildExclude<T,Exclu extends SomePropName<T>>(v:Omit<T,keyof Exclu>){return v}
+/**NTS: Instantiate new object from given class and given object.*/
+export function $create<T>(tipe:{new():T}, v:T):T{
+    return Object.assign(new tipe(),v);
+}
+/**NTS: Instantiate new object from given class and given object,
+ * then execute the callback, then return this object.*/
+export function $createThenExec<T>(tipe:{new():T}, obj:T, callback:(thisObj:T)=>void):T {
+    const newObj = Object.assign(new tipe(),obj);
+    callback(newObj);
+    return newObj;
+}
+/*export function $buildNewExcluded<T extends {Excl}>(tipe:{new():T},v:Omit<T,keyof T["Excl"]>):T{
+    return Object.assign(new tipe(),v);
+}*/
 
 export class MyLogger{
     private _log:any;
     set log(value: any) {
+        console.log("[TRACE]log:");
         console.log(value);
     }
 }
+
+class ArrayExtended<T> extends Array<T> {
+    private constructor(items?: Array<T>) {
+        super(...items)
+    }
+    private _array:T[];
+    get array(): T[] {
+        return this._array;
+    }
+    static create<T>(arr?:T[]): ArrayExtended<T> {
+        const obj:ArrayExtended<T> = Object.create(ArrayExtended.prototype);
+        obj._array = arr ?? [];
+        return obj;
+    }
+    /**NTS:  <b>MODIFY</b> the internal array `_array` by adding all items from argument array `arr` using `for` loop
+     * to avoid `Javascript Heap out of memory` Error.*/
+    pushAll(arr:T[]){
+        for(let item of arr){
+            this._array.push(item);
+        }
+        return this;
+    }
+}
+/**NTS:Create a ArrayExtended wrapper for this array.*/
+export function $array<T>(arr:T[]) {
+    return ArrayExtended.create<T>(arr);
+}
+class ObjectExtended<T>{
+    constructor(obj: T) {
+        this._obj = obj;
+    }
+    get obj(): T {
+        return this._obj;
+    }
+    private readonly _obj:T;
+    exec(callback:(v:T)=>void):ObjectExtended<T>{
+        callback(this._obj);
+        return this;
+    }
+}
+export function $obj<T>(obj:T) {
+    return new ObjectExtended<T>(obj);
+}
+/**NTS: Execute the function on this object, then return this object*/
+export function $exec<T>(obj:T,f:Function,...argArray):T {
+    f.apply(obj,argArray);
+    return obj;
+}
+/**NTS: Execute the callback, then return this object. Example: `const x = $execCB(p1,(v)=>{v.say()});` <-- `p1` is passed into `v`.*/
+export function $execCB<T>(obj:T,callback:(thisObj:T)=>void):T {
+    callback(obj);
+    return obj;
+}
+
+export function $getKeys(obj:any,isClass=false){
+    try{
+        if(isClass){obj = new obj();}
+        return Object.keys(obj);
+    }catch (err) {
+        console.log(err);
+        return [];
+    }
+}
+export function $logKeyValue(obj:any,stringify=false){
+    try{
+        console.log("[INFO]object key-value pairs:");
+        console.log("{");
+        for(let key of Object.keys(obj)){
+            //.map(key => obj[key]);
+            console.log(`    "${key}":${stringify?JSON.stringify(obj[key]):obj[key]}`);
+        }
+        console.log("}");
+    }catch (err) {
+        console.log(err);
+    }
+}
+
+
+
 
 
 class ATest{

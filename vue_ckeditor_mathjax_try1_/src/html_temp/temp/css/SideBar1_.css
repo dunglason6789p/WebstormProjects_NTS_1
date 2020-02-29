@@ -1,0 +1,212 @@
+/* ! CSS Used from: https://vatgia.com/static/20190715//css/v4/style_all_hoidap_v1.css */
+:active,
+:focus {
+    outline: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Arial, sans-serif, Tahoma, Helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+ul.main_left {
+    position: relative;
+}
+
+ul.main_left li {
+    list-style: none;
+    margin: 0!important;
+}
+
+.main_left.v-2 li {
+    position: relative;
+}
+
+.main_left.v-2 li a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #424242;
+}
+
+ul.main_left li ul.main_lv2 {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 240px;
+    border: 1px solid #ddd;
+    display: none;
+    min-height: 525px;
+}
+
+.menu_left .v-2 li ul.main_lv2 {
+    top: -1px;
+    min-height: auto!important;
+}
+
+ul.main_left li:hover ul {
+    display: block;
+    z-index: 1;
+    padding: 5px 0;
+}
+
+ul.main_left li ul li {
+    padding: 0;
+}
+
+ul.main_left li ul li:last-child {
+    border-bottom: 0;
+}
+
+ul.main_left li ul li a {
+    display: inline-block;
+}
+
+.main_left li a span {
+    font-size: 13px;
+}
+
+.main_left li a i {
+    background-image: url(https://vatgia.com/css/multi_css_v3/1.png);
+    float: right;
+    height: 28px;
+    width: 28px;
+    margin-top: 4px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+ul.main_left li a {
+    font-size: 13px;
+}
+
+ul.main_left li:hover {
+    border-top: 1px solid #ddd!important;
+    border-bottom: 1px solid #ddd!important;
+    border-left: 1px solid #ddd!important;
+    background: #fff;
+}
+
+ul.main_left li:hover a {
+    display: block;
+    z-index: 2;
+    position: relative;
+    border-right: 1px solid #fff;
+    background: #fff;
+}
+
+ul.main_left li ul {
+    left: 236px;
+}
+
+ul.main_left li ul li a {
+    height: 24px!important;
+    line-height: 24px!important;
+    width: 83%;
+    float: left;
+    color: #333;
+}
+
+ul.main_left li ul li {
+    line-height: initial;
+    display: inline-block;
+    width: 100%;
+}
+
+ul.main_left li li:hover {
+    border: 0!important;
+}
+
+.main_left li ul.main_lv2 li .icon-plus {
+    display: none;
+    color: #ccc;
+    top: 5px;
+    position: absolute;
+    left: 20px;
+}
+
+.main_left li a em {
+    font-style: normal;
+    color: #d6d6d6;
+    display: inline-block;
+    position: absolute;
+    padding-left: 5px;
+    font-size: 12px;
+    right: 18px;
+}
+
+.main_left li ul.main_lv2 li em {
+    position: initial;
+    top: 0;
+}
+
+.main_left li a {
+    display: block;
+}
+
+.main_left li ul {
+    display: none;
+}
+
+.main_left li:hover ul {
+    display: block;
+    position: absolute;
+    left: 232px;
+    background: #fff;
+    border: 1px solid #ddd;
+    top: -1px;
+}
+
+ul.main_left li ul li,
+ul.main_left li ul li a {
+    border: 0!important;
+}
+
+ul.main_left li ul li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+}
+
+a:hover {
+    color: #0C81F6;
+}
+
+.icon-list-menu {
+    position: absolute;
+    font-size: 34px;
+    width: 5px;
+    height: 5px;
+    background: #bebebe;
+    border-radius: 100%;
+    top: 12px;
+    margin-left: 5px;
+    z-index: 3;
+}
+
+ul.main_left li:hover li a {
+    color: #333;
+}
+
+ul.main_left li li:hover a {
+    color: #9c9c9c;
+}

@@ -1,0 +1,20 @@
+.top-teen {
+}
+
+.child-ul {
+}
+
+.top-teen:hover {
+    color: red;
+}
+
+.top-teen:hover > a > span {
+    color: green !important;
+}
+
+.top-teen:hover .child-ul {
+    display: block !important;
+}
+
+.fucked {
+}

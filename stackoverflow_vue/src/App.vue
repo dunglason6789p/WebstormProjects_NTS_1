@@ -1,15 +1,15 @@
 <template>
-  <div _zx_="00001_" id="app">
-    <HelloWorld _zx_="00002_"/>
+  <div id="app">
+    <SO_Post/>
   </div></template>
 
 <script>
-import HelloWorld from './components/SO_Post.vue'
+import SO_Post from './components/SO_Post.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SO_Post
   }
 }
 </script>

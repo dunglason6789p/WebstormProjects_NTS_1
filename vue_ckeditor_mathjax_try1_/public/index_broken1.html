@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"></html>
+<head>
+    <title>CKEditor 5 ClassicEditor build</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="https://c.cksource.com/a/1/logos/ckeditor5.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+    <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script>
+        MathJax.Ajax.config.path["external_libs_path"] = "../try-external";
+        MathJax.Hub.Config({
+            showMathMenu: false,
+            TeX: {
+                extensions: [ "[external_libs_path]/mhchem.js" ]
+            },
+            messageStyle: "none",
+            tex2jax: {
+                preview: "none"
+            }
+        });
+    </script>
+    <script src="../build/ckeditor.js"></script>
+    <script>
+        window.globalVars = {};
+        //ClassicEditor was here. (NTS).
+    </script>
+    <script src="../jquery/jquery.min.js"></script>
+    <script>$.noConflict();</script>
+    <script>
+        globalVars.logCkContent = function(){
+            console.log(globalVars.editor.getData());
+        };
+        globalVars.setCkContentFromInput = function(){
+            try{
+                globalVars.editor.setData($("#setCkContentInput").val());
+            }catch(err){
+                console.log(err);
+            }
+        };
+    </script>
+
+
+</head>
+<body data-editor="ClassicEditor" data-collaboration="false">
+<header>
+    <div class="centered">
+        <h1><a href="https://ckeditor.com/ckeditor-5/" target="_blank" rel="noopener noreferrer"><img src="https://c.cksource.com/a/1/logos/ckeditor5.svg" alt="CKEditor 5 logo">CKEditor 5</a></h1>
+        <nav>
+            <ul>
+                <li><a href="https://ckeditor.com/docs/ckeditor5/" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+                <li><a href="https://ckeditor.com/" target="_blank" rel="noopener noreferrer">Website</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="message">
+        <div class="centered">
+            <h2>CKEditor 5 online builder demo - ClassicEditor build</h2>
+        </div>
+    </div>
+    <div class="centered">
+        <div class="row row-editor">
+            <div class="editor__OLD">The Editor WAS here.</div>
+            <div class="editor__NEW">
+                <div id="app"></div>
+            </div>
+        </div>
+    </div>
+    <button onclick="globalVars.logCkContent()">Log CK content</button>
+    <button onclick="globalVars.setCkContentFromInput()">Set CK content from input</button>
+    <input id="setCkContentInput" style="width: 100px"/>
+</main>
+<footer>
+    <p><a href="https://ckeditor.com/ckeditor-5/" target="_blank" rel="noopener">CKEditor 5</a>
+        – Rich text editor of tomorrow, available today
+    </p>
+    <p>Copyright © 2003-2020,
+        <a href="https://cksource.com/" target="_blank" rel="noopener">CKSource</a>
+       – Frederico Knabben. All rights reserved.
+    </p>
+</footer>
+</body>
