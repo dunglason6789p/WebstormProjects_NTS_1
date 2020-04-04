@@ -21,6 +21,8 @@ import MathView from './mathview';
 
 import '../../theme/mathform.css';
 
+import MathquillInputTextView from "../nts_mathquill/MathquillInputTextView";
+
 export default class MainFormView extends View {
 	constructor( locale, engine, previewEnabled, previewUid ) {
 		super( locale );
@@ -89,7 +91,7 @@ export default class MainFormView extends View {
 					},
 					children
 				},
-				{
+				/*{
 					tag: 'span',
 					attributes: {
 						id:'ntsmathquillx_id',
@@ -110,7 +112,7 @@ export default class MainFormView extends View {
 							text: 'click now'
 						},
 					]
-				},
+				},*/
 				this.saveButtonView,
 				this.cancelButtonView,
 			],
@@ -183,45 +185,11 @@ export default class MainFormView extends View {
 		} );
 	}
 
-	_createMathQuillInput() {
-		const t = this.locale.t;
-
-		// Create equation input
-		const mathInput = new LabeledInputView( this.locale, InputTextView );
-		const inputView = mathInput.inputView;
-		mathInput.infoText = t( 'Insert equation in TeX format.' );
-		inputView.on( 'input', () => {
-			if ( this.previewEnabled ) {
-				const equationInput = inputView.element.value.trim();
-
-				// If input has delimiters
-				if ( hasDelimiters( equationInput ) ) {
-					// Get equation without delimiters
-					const params = extractDelimiters( equationInput );
-
-					// Remove delimiters from input field
-					inputView.element.value = params.equation;
-
-					// update display button and preview
-					this.displayButtonView.isOn = params.display;
-					if ( this.previewEnabled ) {
-						// Update preview view
-						this.mathView.value = params.equation;
-					}
-				} else {
-					this.mathView.value = equationInput;
-				}
-			}
-		} );
-
-		return mathInput;
-	}
-
 	_createMathInput() {
 		const t = this.locale.t;
 
 		// Create equation input
-		const mathInput = new LabeledInputView( this.locale, InputTextView );
+		const mathInput = new LabeledInputView( this.locale, MathquillInputTextView );
 		const inputView = mathInput.inputView;
 		mathInput.infoText = t( 'Insert equation in TeX format.' );
 		inputView.on( 'input', () => {

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5e5ce4a-6130-4b45-a866-607fa391037f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/MathJax/MathJax.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/MathJax/MathJax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/build/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/build/ckeditor.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/math_plug/src/ui/mainformview.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/math_plug/src/ui/mainformview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/math_plug/src/ui/mathview.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/math_plug/src/ui/mathview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/math_plug/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/math_plug/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ckeditor5__nts_custombuild__mathjax__1_/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react1_" beforeDir="false" afterPath="$PROJECT_DIR$/../react1_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_react_1_" beforeDir="false" afterPath="$PROJECT_DIR$/../try_react_1_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_vue_1_" beforeDir="false" afterPath="$PROJECT_DIR$/../try_vue_1_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../try_vue_2_" beforeDir="false" afterPath="$PROJECT_DIR$/../try_vue_2_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/src/components/cke/MyCkEditorB.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/src/components/cke/MyCkEditorB.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/src/components/cke/modal/MyModalCkEditorB.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/src/components/cke/modal/MyModalCkEditorB.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/src/components/vatgia/VGLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue_ckeditor_mathjax_try1_/src/components/vatgia/VGLayout.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Z3qrUA4h8gnmYw6LpsPLEYgQ9s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5e5ce4a-6130-4b45-a866-607fa391037f" name="Default Changelist" comment="" />
+      <created>1584078323350</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584078323350</updated>
+      <workItem from="1584078325367" duration="569000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

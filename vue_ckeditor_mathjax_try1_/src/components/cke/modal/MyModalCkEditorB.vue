@@ -7,16 +7,19 @@
                     <div class="modal-header">
                         <h3>
                             Trình soạn thảo
-                            <button class="modal-default-button" @click="$emit('close')">
+                            <!--Reverse order:-->
+                            <button class="modal-default-button" @click="$emit('close_MyModalCkEditorB')">
                                 Đóng
                             </button>
+                            <button class="modal-default-button" @click="$emit('open_MyModalGeogebra')">
+                                Vẽ hình
+                            </button>
                         </h3>
-
                     </div>
 
                     <div class="modal-body">
                         <slot name="body">
-                            <MyCkEditorB/>
+                            <MyCkEditorB ref="myCkEditorB1"/>
                         </slot>
                     </div>
 
@@ -35,7 +38,12 @@
     import MyCkEditorB from "../MyCkEditorB";
     export default {
         name: "MyModalCkEditorB",
-        components: {MyCkEditorB}
+        components: {MyCkEditorB},
+        methods:{
+            setImageToCkEComponent(imageContentAsUrl){
+                this.$refs.myCkEditorB1.insertImage(imageContentAsUrl)
+            }
+        }
     }
 </script>
 

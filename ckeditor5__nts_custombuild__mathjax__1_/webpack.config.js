@@ -11,9 +11,9 @@ const path = require( 'path' );
 const webpack = require( 'webpack' );
 const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
 const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
-const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
 
 module.exports = {
+	mode: 'development',
 	devtool: 'source-map',
 	performance: { hints: false },
 
@@ -27,21 +27,6 @@ module.exports = {
 		filename: 'ckeditor.js',
 		libraryTarget: 'umd',
 		libraryExport: 'default'
-	},
-
-	optimization: {
-		minimizer: [
-			new TerserWebpackPlugin( {
-				sourceMap: true,
-				terserOptions: {
-					output: {
-						// Preserve CKEditor 5 license comments.
-						comments: /^!/
-					}
-				},
-				extractComments: false
-			} )
-		]
 	},
 
 	plugins: [
@@ -78,7 +63,7 @@ module.exports = {
 							themeImporter: {
 								themePath: require.resolve( '@ckeditor/ckeditor5-theme-lark' )
 							},
-							minify: true
+							minify: false
 						} )
 					},
 				]

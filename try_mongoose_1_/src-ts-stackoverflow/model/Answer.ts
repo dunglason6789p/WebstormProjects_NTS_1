@@ -1,13 +1,14 @@
-import {$cn} from "../common/KnownClasses";
+import {$package, $cn} from "../common/KnownClasses";
 
 const mongoose = require('mongoose');
 const {Mixed,ObjectId} = mongoose.Schema.Types;
 import {
-    $$,schemaFromType,schemaFromTypeWithExclude,SomePropName
+    $$,SomePropName
 } from "../common/Commons";
 import {Mgoose} from "../common/Mgoose";
 import {Question} from "./Question";
 import {User} from "./User";
+import {schemaFromType, schemaFromTypeWithExclude} from "../common/CommonMongoose";
 export class Answer implements Mgoose.POJO {
     _id?:any;
     tldr?:string;
@@ -18,6 +19,8 @@ export class Answer implements Mgoose.POJO {
     questionId:any;
     author?:User;
     authorId:any;
+    upvote?:number=0;
+    downvote?:number=0;
     setAuthor?(author:User){
         this.author = author;
         this.authorId = author._id;
@@ -32,6 +35,8 @@ export class Answer implements Mgoose.POJO {
 }
 export namespace Answer {
     export const schema = new mongoose.Schema(schemaFromTypeWithExclude<Answer,{_id}>({
+        downvote: Number,
+        upvote: Number,
         authorId: ObjectId,
         commentList: Mixed,
         content: String,
@@ -43,14 +48,14 @@ export namespace Answer {
         toObject: { virtuals: true }
     });
     schema.virtual($$<Answer>("author"), {
-        ref: $cn("User"), // The model to use
+        ref: $cn($package.model,"User"), // The model to use
         localField: $$<Answer>("authorId"), // Find people where `localField`
         foreignField: $$<User>("_id"), // is equal to `foreignField`
         justOne: true,// If `justOne` is true, 'members' will be a single doc as opposed toan array. `justOne` is false by default.
         options: { /*sort: { name: -1 }, limit: 5*/ } // Query options, see http://bit.ly/mongoose-query-options
     });
     schema.virtual($$<Answer>("question"), {
-        ref: $cn("Question"), // The model to use
+        ref: $cn($package.model,"Question"), // The model to use
         localField: $$<Answer>("authorId"), // Find people where `localField`
         foreignField: $$<Question>("_id"), // is equal to `foreignField`
         justOne: true,// If `justOne` is true, 'members' will be a single doc as opposed toan array. `justOne` is false by default.

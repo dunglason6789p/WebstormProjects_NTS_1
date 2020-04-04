@@ -385,105 +385,105 @@
         "version": "5d295a8e3502d95eafc4a30c360c327dfff7f6b4cd89279681c754c7294d32b2",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
+      "./src-ts-stackoverflow/common/const.ts": {
+        "version": "20a6b69f0dc92c8468ada03033e8b36623bc2cd2c0360c9f8c0ec13ecdfe3d25",
+        "signature": "4594c815ca605f35bf68b5091faf472ecc3ca14a84435217061d562508b86d9d"
+      },
       "./src-ts-stackoverflow/common/commons.ts": {
-        "version": "85272aa5c4cc849424f625c4d5c00ec2fb3e1d85258f589b2875b7a995c50e0f",
-        "signature": "2a78830992f5b1d4afb45f0a22abad06dad0a56057044532ff36e7c2ca6f16cd"
+        "version": "3733345296a81ba452c255496e7b9d943335a8c8ea8027b70663aa17c962c380",
+        "signature": "6de23ccdd968559172df16be2d21ed25068d5e758ba299d2a4c66908d9a4351a"
+      },
+      "./src-ts-stackoverflow/common/commonmongoose.ts": {
+        "version": "2e04a4b78cc7ac5e0872b7431b4c321f8c5aaefd7fe02fc5a1a305161449204f",
+        "signature": "3736fcbc4b419faf73ab0b5c0c7d9afe53593c4e2a6a45df518afa69052173fc"
       },
       "./src-ts-stackoverflow/common/dateutils.ts": {
-        "version": "282e84366cb69b265594de1e6ddfd2b26ff8654e30e533cc2dbd83b2ab1b6fe9",
-        "signature": "04f775246e07f5a7fdaac5c9137daea4a9827169e0949ace19686250d1f86f09"
+        "version": "7a9517b22bafee45e9fed027a230dd1300fef8b2a0ed7cf28644a4734663e943",
+        "signature": "9ea505fb99bedd8409198208c5a6a0565da14ada8594a8a2d9e90befb8e28484"
       },
       "./src-ts-stackoverflow/common/knownclasses.ts": {
-        "version": "2b0f64935000a5bfe42b5c14b637914202deddaa29440e5917d2034679670e1f",
-        "signature": "0dec4bb4f1ceedd09d1e4512017d6a76422db08925ab398f698255715e61a112"
+        "version": "011a300363239fba2a32e2c40cfdcd92039a90d2fa6559273a8b3e4834c09a73",
+        "signature": "6ce937881809546544cae86eea0d3871e27597589c9f3d04d1b88e716b3af523"
       },
       "./src-ts-stackoverflow/common/mgoose.ts": {
-        "version": "3330d6061e69dee25d992002e404a1998368f35b3fe7aea063aa819358e68eed",
-        "signature": "47914a1963c90210bb32f54ea3877786cb611a7cdedd34533834e1e7e0538885"
+        "version": "825259548f2d04493bd2ef526b4a5b9b5b9f863507dde421499adb6ec5debcbd",
+        "signature": "33ef420bc1dafdd92caefb7b43f77cbf4165d5e99f69f9b74013569f46e480fd"
+      },
+      "./src-ts-stackoverflow/common/mylogger.ts": {
+        "version": "5bfa726e74e484dc0e8c3990242b3b9d8c6c8755c766acdcc9bc5b610acd052d",
+        "signature": "a521ad7daf29fa2bd229184ba4d98bbc2415abe721a049eef85858627a903fa2"
+      },
+      "./src-ts-stackoverflow/common/uuid.ts": {
+        "version": "7e9f977f597b6d03bcf4763f0e5e41f352e76520887b46c49c179bed1ed3d010",
+        "signature": "68ba08d20e3968d6168483f81bab2440de984b4925205ba2c12556cadea99753"
+      },
+      "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts": {
+        "version": "4154eaa99eedab45d5e54992e34ad5c64020959d45a3a6d20ad11cd616df612a",
+        "signature": "f62ca5fd27de96864a3b2f0b88277c85dfcec05e343a07bb184ad8b16826fa04"
+      },
+      "./src-ts-stackoverflow/common/jsonprune/testforprune.ts": {
+        "version": "4af1cc9b7c44f500ff5a0748002485ea35e092d18aefd2266f9e3b28c33e8ce3",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/common/jsonprune/testforprune_v2_.ts": {
+        "version": "d0d62f115286cbe9a0f8505dbdcc9e28046a2bc60018ab507c7017eb52c607cd",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/common/testz/testforcommons.ts": {
+        "version": "dde332559c7a7490c7731d7e38c5fdd888842379508734ddd215773be7ead9bb",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/common/testz/testforcommons_v2_.ts": {
+        "version": "7cbf0e6aeecee0709aad3a7bcbb27abe5ce8d789bc39c384c9bdba74fe73fe8d",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/common/testz/testforcommons_v3_.ts": {
+        "version": "5a5de0d9b89c61fdb28e898d5104880ba17106d00290b6f2b03df74b95ad7fa3",
+        "signature": "8cc7948e7e1371bd55f629ec5bc83c740b3266be9843933d7913a8af14fd09b1"
+      },
+      "./src-ts-stackoverflow/common/testz/testforcommons_v4_.ts": {
+        "version": "7bc21441cf43c92004c3fa7b3791b4a9af17663d7d5478d163089b3d8da694d1",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "./src-ts-stackoverflow/model/user.ts": {
-        "version": "571a3917f01fdde66416cb8765db227e1691ff53abcd8b119ab65887fac7415a",
-        "signature": "41f6cc12a35042b2e0351ffd3b1665e1f7171ecc6d4bf0a32474541a463624b1"
+        "version": "d88ae802195b905e0ed2b9071657f7148c7993c9e2388e05452c128f7c12497b",
+        "signature": "aa3faa5f3bf32346d3fc603755de2bab872f5264dad1a031b3f3c479d522d944"
       },
       "./src-ts-stackoverflow/model/answer.ts": {
-        "version": "2a917497606d726081d230244a1516ac13c7e6e2fb4256a5462241c2c066d223",
-        "signature": "088c726caa4084f3821a1e5333193e349af8fb25ca8995206f0f23b3a39ec13e"
+        "version": "d8d640780bc73b7ec976768a9da0361965c2747cd2191145825c21882c417191",
+        "signature": "7ffc1b6fc5d9f4795d1490e2e332115eb61b83504ea8607bc99f39fa662fd172"
+      },
+      "./src-ts-stackoverflow/model/micro/category.ts": {
+        "version": "f4cd2ed3fbca75fdbd4e094262f0b3a716627c395b8abb38dbde60499e1ea942",
+        "signature": "901f7c8d0ccd1b82f1b7f7c61a1c084ceeb6c298be719f1e73cd5c14656e2c33"
       },
       "./src-ts-stackoverflow/model/question.ts": {
-        "version": "da9821c6c5d384d6437579a8b26e0b918e1f7ff8e7e8696332e978a14bac0946",
-        "signature": "53dd9d797607b8ae86d729deb20c8c56b25faa030ed5c6ce5790ac4e3ae88c10"
+        "version": "3de097836d3b3a6e720f5c6e4e497a0bd180ecd24ffe21fbd7a03592da078b83",
+        "signature": "4b4f40efe2ac716b550ae1a05c3872516a7c971f12e8a69f419c476f49b89698"
+      },
+      "./src-ts-stackoverflow/common/testz/trytype_populate.ts": {
+        "version": "b4496e7dd7c134be8313340ae5cb36a6170e56ed65efaf920006dada540d2760",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/common/testz/trytype_populate_v2_.ts": {
+        "version": "d064213cad2a5f2934329c20f482fb05e5ab38761c4196d26a4487c177f295e2",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/common/testz/trytype_populate_v3_.ts": {
+        "version": "96fa91f50734babfb401bc6af562cee733529510f24e59103b01c78e63f54185",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "./src-ts-stackoverflow/ctrler/ctrlerone.ts": {
-        "version": "dd67b9aae5979e564bd903554d79dcb82dacee3bd2d9086d99df81b63f64a905",
+        "version": "156fc9c1e1f0b1b0c2f45c7d9e69939cedfaa8209a16c7c5fc7212af110f7218",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ctrler/ctrlertwo.ts": {
+        "version": "8b3db241d51abacc2b099bf19113d08d2288ed82e9a2496039a4a6e1fbb58beb",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "./src-ts-stackoverflow/model/comment.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-      },
-      "./src-ts-stackoverflow/temp/get_all_props_of_class.ts": {
-        "version": "4c3f42091e9c303f74b35ac4282fca9f33172771748e322fb96d566971b0be97",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "./src-ts-stackoverflow/temp/test_common.ts": {
-        "version": "442609e8bb56a8ffcbc79d5d9b58bfa66deb7dc64e7269a4301e84f56758cf1f",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "./src-ts-stackoverflow/temp/try_call_function_on_object.ts": {
-        "version": "9c76f1eaeb99c77e3eea6cb670c5186df73c9d3d9dd01453c8979ef2418256c1",
-        "signature": "1dddbcf30322f1db6b1b6d2f273ef18e9d85600b333f84d9eae9786667f50507"
-      },
-      "./src-ts-stackoverflow/temp/try_enum_in_class.ts": {
-        "version": "d7492662a595dd68c0fdff4f1cb28994b905b52d54ced81bc74e1d7002aec85f",
-        "signature": "12a8ce12dda9328b46f6e9fc8c5b9e0aed66439ccc9820e53a96f564a6cf3556"
-      },
-      "./src-ts-stackoverflow/temp/try_exactfunargtype.ts": {
-        "version": "8d5ee94cd6089b4a24c43c50b8fdf95772f28ade9f3a27b5ed44037924dbea77",
-        "signature": "40ddf00f71f1e9e5415e632c91fdc03d77c741e9b50db19ae0c0c53783fbacb6"
-      },
-      "./src-ts-stackoverflow/temp/try_exclude_property.ts": {
-        "version": "32870b0b1bb5fa09b7fc5312c2a6325191ed772241ed060b7285f22bccc4c096",
-        "signature": "cd6f05368fd32b93e7814a9155d15afa60623e462934f926d49c1ca8b778a2ca"
-      },
-      "./src-ts-stackoverflow/temp/try_find.ts": {
-        "version": "812c9c5547c3f2798d5fd27371c56d0afa7e3413ed3151e8e257fc26938bb897",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "./src-ts-stackoverflow/temp/try_limit_property_inclass.ts": {
-        "version": "9e91f3967184208de963ce937153e29eab2ca29b0150214085f9bb943ddbe800",
-        "signature": "82273e77acfc8fb03872e0523f101e2ea3e40ec10bae605b3558fe0c4d9bf27b"
-      },
-      "./src-ts-stackoverflow/temp/try_nameof_class.ts": {
-        "version": "57b9672d62602b38df927f639f476dada0aba267b5e471a18c59f522a341eba3",
-        "signature": "61ee58b1ef8682c23b52eb5e772b8dc7afe33d7c088fc3ac6929e5fc05f794f9"
-      },
-      "./src-ts-stackoverflow/temp/try_object_assign_setter.ts": {
-        "version": "986f72b46d05ef0b81957dd2feb5f73d7b40ad37048797f0030d3b8c68228325",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "./src-ts-stackoverflow/temp/try_optional_getter.ts": {
-        "version": "0b5adc8177382b7349b6c31c0c5fe2a8b3acaa67911799412675abb086e0febc",
-        "signature": "3a32916c468b6bc250fdacdc17df7e778d02b5a7db7f576d00b47ff4a95fcde9"
-      },
-      "./src-ts-stackoverflow/temp/try_push_array_elastic.ts": {
-        "version": "0f0e2cfe31d58e9581414ecc652c2958ca5c51979df558b1151a8341ca868959",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "./src-ts-stackoverflow/temp/try_static_method.ts": {
-        "version": "40051fcddd542502efc5fb51e522b758d30d1361b90b332287cfcb92f9a797c8",
-        "signature": "cbcb66fc41adadf83cd649d39915cee3a33b7062db78360956778829e3d15478"
-      },
-      "./src-ts-stackoverflow/temp/try_static_method2.ts": {
-        "version": "05a44786a48837d47b4da9380b935e5c5c2c10971f7b4060b7b3ebd6b436130e",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
-      },
-      "./src-ts-stackoverflow/temp/try_circular_dependency/bclass.ts": {
-        "version": "2c01d72676304de4f2248ba6aecc9c552ae33b3d8194cbd6f548c497f2cc3f13",
-        "signature": "f44a0a0778dd21bcdf7e6be991441a8f1aefc4c9b39e0ee8788dd106c2c09d6b"
-      },
-      "./src-ts-stackoverflow/temp/try_circular_dependency/aclass.ts": {
-        "version": "31c5f1f25342d87766a80a9597a16f1f77ebc4379aeae98a36321143d077768e",
-        "signature": "c8eef0159ecf0f07194f106c9fb4920d9d0ae04bf581c960e27eda7afda244bd"
       },
       "./src-ts-stackoverflow/try_populate/schemaas.ts": {
         "version": "db1dcd361cbfd83c80a83f8083484978d29aa82bc6e33f7d9f06144d118b5045",
@@ -516,6 +516,98 @@
       "./src-ts-stackoverflow/try_populate_virtual/dooit.ts": {
         "version": "891e4200d8916a083b29f0997badad8ce7f18ea77ff3ba3ba9f5ebd894787441",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/get_all_props_of_class.ts": {
+        "version": "4c3f42091e9c303f74b35ac4282fca9f33172771748e322fb96d566971b0be97",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/testcategory.ts": {
+        "version": "978ec85f379137e60a31d467d1ccc3439d43e0e4074f66d35032e79914e9ac59",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/test_common.ts": {
+        "version": "442609e8bb56a8ffcbc79d5d9b58bfa66deb7dc64e7269a4301e84f56758cf1f",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/trynamedcapturegroupregex.ts": {
+        "version": "b9d443f097f0a2c8e8d59ec491c1b50e8ca88eb14dc2da9a64a7c80248414b7e",
+        "signature": "6c5138a8c474dd43292fddc2eca9e7a0ced386f4322912d7e4a85711c63e9762"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/tryworkerthread.ts": {
+        "version": "c05cdcd8f6730b00f40e5aa6d511d84c89fb2adfacfe24dedc9e88872c179797",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/tryworkerthread_v2_.ts": {
+        "version": "3f9776a4d152373ff45fb249e46bfcc8bd1705f2206d509aa003a2b0b808976e",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_call_function_on_object.ts": {
+        "version": "9c76f1eaeb99c77e3eea6cb670c5186df73c9d3d9dd01453c8979ef2418256c1",
+        "signature": "1dddbcf30322f1db6b1b6d2f273ef18e9d85600b333f84d9eae9786667f50507"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_classname.ts": {
+        "version": "6bd244e264ddaf442b6ace5397b2de2709f76c989e88ba6455ed1d23e32ad3c5",
+        "signature": "f0a35ba43d1f11f6878edd624485c600d72fc4264f3bef81f49e185e95033da8"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_classname_variablename_lambda.ts": {
+        "version": "ce5228e3d533f048ec625f4963f856eef0f05ce2a33a549c52ac8318ae0d0eab",
+        "signature": "ef9591fd775bb1fbc74258f87ebe36a8bb19aee002c32f1630de1225a07573f1"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_enum_in_class.ts": {
+        "version": "d7492662a595dd68c0fdff4f1cb28994b905b52d54ced81bc74e1d7002aec85f",
+        "signature": "12a8ce12dda9328b46f6e9fc8c5b9e0aed66439ccc9820e53a96f564a6cf3556"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_exactfunargtype.ts": {
+        "version": "8d5ee94cd6089b4a24c43c50b8fdf95772f28ade9f3a27b5ed44037924dbea77",
+        "signature": "40ddf00f71f1e9e5415e632c91fdc03d77c741e9b50db19ae0c0c53783fbacb6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_exclude_property.ts": {
+        "version": "32870b0b1bb5fa09b7fc5312c2a6325191ed772241ed060b7285f22bccc4c096",
+        "signature": "cd6f05368fd32b93e7814a9155d15afa60623e462934f926d49c1ca8b778a2ca"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_find.ts": {
+        "version": "812c9c5547c3f2798d5fd27371c56d0afa7e3413ed3151e8e257fc26938bb897",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_keyof_concat.ts": {
+        "version": "e63ec6daf13983189b6558fc0e9167c337fe990dda6184587b79fd02e9226d36",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_limit_property_inclass.ts": {
+        "version": "9e91f3967184208de963ce937153e29eab2ca29b0150214085f9bb943ddbe800",
+        "signature": "82273e77acfc8fb03872e0523f101e2ea3e40ec10bae605b3558fe0c4d9bf27b"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_nameof_class.ts": {
+        "version": "57b9672d62602b38df927f639f476dada0aba267b5e471a18c59f522a341eba3",
+        "signature": "61ee58b1ef8682c23b52eb5e772b8dc7afe33d7c088fc3ac6929e5fc05f794f9"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_object_assign_setter.ts": {
+        "version": "986f72b46d05ef0b81957dd2feb5f73d7b40ad37048797f0030d3b8c68228325",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_optional_getter.ts": {
+        "version": "0b5adc8177382b7349b6c31c0c5fe2a8b3acaa67911799412675abb086e0febc",
+        "signature": "3a32916c468b6bc250fdacdc17df7e778d02b5a7db7f576d00b47ff4a95fcde9"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_push_array_elastic.ts": {
+        "version": "0f0e2cfe31d58e9581414ecc652c2958ca5c51979df558b1151a8341ca868959",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_static_method.ts": {
+        "version": "40051fcddd542502efc5fb51e522b758d30d1361b90b332287cfcb92f9a797c8",
+        "signature": "cbcb66fc41adadf83cd649d39915cee3a33b7062db78360956778829e3d15478"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_static_method2.ts": {
+        "version": "05a44786a48837d47b4da9380b935e5c5c2c10971f7b4060b7b3ebd6b436130e",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/bclass.ts": {
+        "version": "2c01d72676304de4f2248ba6aecc9c552ae33b3d8194cbd6f548c497f2cc3f13",
+        "signature": "f44a0a0778dd21bcdf7e6be991441a8f1aefc4c9b39e0ee8788dd106c2c09d6b"
+      },
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/aclass.ts": {
+        "version": "31c5f1f25342d87766a80a9597a16f1f77ebc4379aeae98a36321143d077768e",
+        "signature": "c8eef0159ecf0f07194f106c9fb4920d9d0ae04bf581c960e27eda7afda244bd"
       },
       "./src-ts-stackoverflow_try_1_/common/commons.ts": {
         "version": "7dda88cae58b1c5d2d94e0802b91906040d90447d359a4f87a427527a66e069e",
@@ -554,7 +646,7 @@
       "experimentalDecorators": true,
       "module": 1,
       "target": 1,
-      "sourceMap": false,
+      "sourceMap": true,
       "incremental": true,
       "skipLibCheck": true,
       "watch": true,
@@ -1254,8 +1346,22 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
+      "./src-ts-stackoverflow/common/const.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
       "./src-ts-stackoverflow/common/commons.ts": [
+        "./src-ts-stackoverflow/common/const.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/commonmongoose.ts": [
         "./node_modules/@types/mongoose/index.d.ts",
+        "./src-ts-stackoverflow/common/commons.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -1281,10 +1387,71 @@
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
+      "./src-ts-stackoverflow/common/mylogger.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/uuid.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/jsonprune/testforprune.ts": [
+        "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/jsonprune/testforprune_v2_.ts": [
+        "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/testz/testforcommons.ts": [
+        "./src-ts-stackoverflow/common/commonmongoose.ts",
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/testz/testforcommons_v2_.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/testz/testforcommons_v3_.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/testz/testforcommons_v4_.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
       "./src-ts-stackoverflow/model/user.ts": [
         "./src-ts-stackoverflow/common/dateutils.ts",
-        "./src-ts-stackoverflow/common/commons.ts",
         "./src-ts-stackoverflow/common/mgoose.ts",
+        "./src-ts-stackoverflow/common/commonmongoose.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -1296,6 +1463,14 @@
         "./src-ts-stackoverflow/common/mgoose.ts",
         "./src-ts-stackoverflow/model/question.ts",
         "./src-ts-stackoverflow/model/user.ts",
+        "./src-ts-stackoverflow/common/commonmongoose.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/model/micro/category.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -1307,6 +1482,32 @@
         "./src-ts-stackoverflow/common/mgoose.ts",
         "./src-ts-stackoverflow/common/knownclasses.ts",
         "./src-ts-stackoverflow/model/answer.ts",
+        "./src-ts-stackoverflow/model/micro/category.ts",
+        "./src-ts-stackoverflow/common/commonmongoose.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/testz/trytype_populate.ts": [
+        "./src-ts-stackoverflow/model/question.ts",
+        "./src-ts-stackoverflow/model/answer.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/testz/trytype_populate_v2_.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./src-ts-stackoverflow/model/question.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/common/testz/trytype_populate_v3_.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -1318,117 +1519,30 @@
         "./src-ts-stackoverflow/model/question.ts",
         "./src-ts-stackoverflow/model/user.ts",
         "./src-ts-stackoverflow/model/answer.ts",
+        "./src-ts-stackoverflow/model/micro/category.ts",
+        "./src-ts-stackoverflow/common/mylogger.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ctrler/ctrlertwo.ts": [
+        "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts",
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./src-ts-stackoverflow/common/mgoose.ts",
+        "./src-ts-stackoverflow/model/question.ts",
+        "./src-ts-stackoverflow/model/user.ts",
+        "./src-ts-stackoverflow/model/answer.ts",
+        "./src-ts-stackoverflow/common/uuid.ts",
+        "./src-ts-stackoverflow/common/dateutils.ts",
+        "./src-ts-stackoverflow/model/micro/category.ts",
+        "./src-ts-stackoverflow/common/mylogger.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
         "./node_modules/@types/node/ts3.5/util.d.ts"
       ],
       "./src-ts-stackoverflow/model/comment.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/get_all_props_of_class.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/test_common.ts": [
-        "./src-ts-stackoverflow/common/commons.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_call_function_on_object.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_enum_in_class.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_exactfunargtype.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_exclude_property.ts": [
-        "./node_modules/@types/mongoose/index.d.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_find.ts": [
-        "./src-ts-stackoverflow/common/commons.ts",
-        "./node_modules/@types/mongoose/index.d.ts",
-        "./src-ts-stackoverflow/model/question.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_limit_property_inclass.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_nameof_class.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_object_assign_setter.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_optional_getter.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_push_array_elastic.ts": [
-        "./src-ts-stackoverflow/common/commons.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_static_method.ts": [
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_static_method2.ts": [
-        "./src-ts-stackoverflow/common/commons.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_circular_dependency/bclass.ts": [
-        "./src-ts-stackoverflow/temp/try_circular_dependency/aclass.ts",
-        "./node_modules/@types/node/fs.d.ts",
-        "./node_modules/@types/node/ts3.5/fs.d.ts",
-        "./node_modules/@types/node/util.d.ts",
-        "./node_modules/@types/node/ts3.5/util.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_circular_dependency/aclass.ts": [
-        "./src-ts-stackoverflow/temp/try_circular_dependency/bclass.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -1487,6 +1601,155 @@
       ],
       "./src-ts-stackoverflow/try_populate_virtual/dooit.ts": [
         "./node_modules/@types/mongoose/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/get_all_props_of_class.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/testcategory.ts": [
+        "./src-ts-stackoverflow/model/micro/category.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/test_common.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/trynamedcapturegroupregex.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/tryworkerthread.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/tryworkerthread_v2_.ts": [
+        "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_call_function_on_object.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_classname.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_classname_variablename_lambda.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_enum_in_class.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_exactfunargtype.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_exclude_property.ts": [
+        "./node_modules/@types/mongoose/index.d.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_find.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/mongoose/index.d.ts",
+        "./src-ts-stackoverflow/model/question.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_keyof_concat.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_limit_property_inclass.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_nameof_class.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_object_assign_setter.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_optional_getter.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_push_array_elastic.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_static_method.ts": [
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_static_method2.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/bclass.ts": [
+        "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/aclass.ts",
+        "./node_modules/@types/node/fs.d.ts",
+        "./node_modules/@types/node/ts3.5/fs.d.ts",
+        "./node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/node/ts3.5/util.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/aclass.ts": [
+        "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/bclass.ts",
         "./node_modules/@types/node/fs.d.ts",
         "./node_modules/@types/node/ts3.5/fs.d.ts",
         "./node_modules/@types/node/util.d.ts",
@@ -2161,7 +2424,8 @@
       "./src-ts-doit/model/employee.ts": [
         "./src-ts-doit/model/favourite.ts"
       ],
-      "./src-ts-stackoverflow/common/commons.ts": [
+      "./src-ts-stackoverflow/common/commonmongoose.ts": [
+        "./src-ts-stackoverflow/common/commons.ts",
         "./node_modules/@types/mongoose/index.d.ts"
       ],
       "./src-ts-stackoverflow/common/mgoose.ts": [
@@ -2177,21 +2441,22 @@
         "./src-ts-stackoverflow/common/mgoose.ts"
       ],
       "./src-ts-stackoverflow/model/question.ts": [
+        "./src-ts-stackoverflow/model/micro/category.ts",
         "./src-ts-stackoverflow/model/answer.ts",
         "./src-ts-stackoverflow/model/user.ts",
         "./src-ts-stackoverflow/common/mgoose.ts"
       ],
-      "./src-ts-stackoverflow/temp/try_exclude_property.ts": [
-        "./node_modules/@types/mongoose/index.d.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_circular_dependency/bclass.ts": [
-        "./src-ts-stackoverflow/temp/try_circular_dependency/aclass.ts"
-      ],
-      "./src-ts-stackoverflow/temp/try_circular_dependency/aclass.ts": [
-        "./src-ts-stackoverflow/temp/try_circular_dependency/bclass.ts"
-      ],
       "./src-ts-stackoverflow/try_populate_2_/try_populate_.ts": [
         "./node_modules/@types/mongoose/index.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_exclude_property.ts": [
+        "./node_modules/@types/mongoose/index.d.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/bclass.ts": [
+        "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/aclass.ts"
+      ],
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/aclass.ts": [
+        "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/bclass.ts"
       ],
       "./src-ts-stackoverflow_try_1_/common/commons.ts": [
         "./node_modules/@types/mongoose/index.d.ts"
@@ -2320,30 +2585,14 @@
       "./src-ts-doit/temp/temp.ts",
       "./src-ts-playground/try_nameof_class.ts",
       "./src-ts-playground/try_typed_query.ts",
-      "./src-ts-stackoverflow/common/commons.ts",
+      "./src-ts-stackoverflow/common/const.ts",
       "./src-ts-stackoverflow/common/dateutils.ts",
       "./src-ts-stackoverflow/common/knownclasses.ts",
-      "./src-ts-stackoverflow/common/mgoose.ts",
-      "./src-ts-stackoverflow/model/user.ts",
-      "./src-ts-stackoverflow/model/answer.ts",
-      "./src-ts-stackoverflow/model/question.ts",
+      "./src-ts-stackoverflow/common/uuid.ts",
+      "./src-ts-stackoverflow/common/jsonprune/testforprune.ts",
+      "./src-ts-stackoverflow/common/jsonprune/testforprune_v2_.ts",
+      "./src-ts-stackoverflow/common/testz/testforcommons_v3_.ts",
       "./src-ts-stackoverflow/model/comment.ts",
-      "./src-ts-stackoverflow/temp/get_all_props_of_class.ts",
-      "./src-ts-stackoverflow/temp/test_common.ts",
-      "./src-ts-stackoverflow/temp/try_call_function_on_object.ts",
-      "./src-ts-stackoverflow/temp/try_enum_in_class.ts",
-      "./src-ts-stackoverflow/temp/try_exactfunargtype.ts",
-      "./src-ts-stackoverflow/temp/try_exclude_property.ts",
-      "./src-ts-stackoverflow/temp/try_find.ts",
-      "./src-ts-stackoverflow/temp/try_limit_property_inclass.ts",
-      "./src-ts-stackoverflow/temp/try_nameof_class.ts",
-      "./src-ts-stackoverflow/temp/try_object_assign_setter.ts",
-      "./src-ts-stackoverflow/temp/try_optional_getter.ts",
-      "./src-ts-stackoverflow/temp/try_push_array_elastic.ts",
-      "./src-ts-stackoverflow/temp/try_static_method.ts",
-      "./src-ts-stackoverflow/temp/try_static_method2.ts",
-      "./src-ts-stackoverflow/temp/try_circular_dependency/bclass.ts",
-      "./src-ts-stackoverflow/temp/try_circular_dependency/aclass.ts",
       "./src-ts-stackoverflow/try_populate/schemaas.ts",
       "./src-ts-stackoverflow/try_populate/create-save.ts",
       "./src-ts-stackoverflow/try_populate/findnow.ts",
@@ -2352,6 +2601,25 @@
       "./src-ts-stackoverflow/try_populate_2_/findonly.ts",
       "./src-ts-stackoverflow/try_populate_2_/try_populate_.ts",
       "./src-ts-stackoverflow/try_populate_virtual/dooit.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/get_all_props_of_class.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/testcategory.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/trynamedcapturegroupregex.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/tryworkerthread.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/tryworkerthread_v2_.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_call_function_on_object.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_classname.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_classname_variablename_lambda.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_enum_in_class.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_exactfunargtype.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_exclude_property.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_keyof_concat.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_limit_property_inclass.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_nameof_class.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_object_assign_setter.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_optional_getter.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_static_method.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/bclass.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_circular_dependency/aclass.ts",
       "./src-ts-stackoverflow_try_1_/common/commons.ts",
       "./src-ts-stackoverflow_try_1_/common/dateutils.ts",
       "./src-ts-stackoverflow_try_1_/common/mgoose.ts",
@@ -2360,7 +2628,27 @@
       "./src-ts-stackoverflow_try_1_/ctrler/ctrlerone.ts",
       "../../node_modules/@types/minimatch/index.d.ts",
       "../../node_modules/@types/glob/index.d.ts",
-      "./src-ts-stackoverflow/ctrler/ctrlerone.ts"
+      "./src-ts-stackoverflow/common/commons.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_static_method2.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_push_array_elastic.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/try_find.ts",
+      "./src-ts-stackoverflow/ts-js-try-ideas/test_common.ts",
+      "./src-ts-stackoverflow/ctrler/ctrlertwo.ts",
+      "./src-ts-stackoverflow/ctrler/ctrlerone.ts",
+      "./src-ts-stackoverflow/common/testz/trytype_populate_v3_.ts",
+      "./src-ts-stackoverflow/common/testz/trytype_populate_v2_.ts",
+      "./src-ts-stackoverflow/model/question.ts",
+      "./src-ts-stackoverflow/model/micro/category.ts",
+      "./src-ts-stackoverflow/model/answer.ts",
+      "./src-ts-stackoverflow/common/testz/testforcommons_v4_.ts",
+      "./src-ts-stackoverflow/common/testz/testforcommons_v2_.ts",
+      "./src-ts-stackoverflow/common/testz/testforcommons.ts",
+      "./src-ts-stackoverflow/common/jsonprune/jsonprune.ts",
+      "./src-ts-stackoverflow/common/mgoose.ts",
+      "./src-ts-stackoverflow/common/commonmongoose.ts",
+      "./src-ts-stackoverflow/common/mylogger.ts",
+      "./src-ts-stackoverflow/model/user.ts",
+      "./src-ts-stackoverflow/common/testz/trytype_populate.ts"
     ]
   },
   "version": "3.7.5"

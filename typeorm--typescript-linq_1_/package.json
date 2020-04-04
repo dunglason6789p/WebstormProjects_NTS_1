@@ -1,0 +1,26 @@
+{
+  "name": "typeorm--typescript-linq_1_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.7.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.22",
+    "typeorm-linq-repository": "^1.1.0"
+  },
+  "scripts": {
+    "start": "tsc && node src/index.js",
+    "compileonly": "tsc --incremental",
+    "runonly": "node src/index.js",
+    "compile_run": "tsc --incremental && node src/index.js",
+    "typeorm": "./node_modules/.bin/typeorm "
+  }
+}

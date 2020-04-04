@@ -1,0 +1,115 @@
+<!DOCTYPE html><!--
+	Copyright (c) 2014-2020, CKSource - Frederico Knabben. All rights reserved.
+	This file is licensed under the terms of the MIT License (see LICENSE.md).
+-->
+
+<html lang="en" dir="ltr"></html>
+<head>
+	<title>CKEditor 5 ClassicEditor build</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../mathquill-0.10.1/mathquill.css"/>
+	<script src="../jquery/jquery.min.js"></script>
+	<script src="../mathquill-0.10.1/mathquill.js"></script>
+	<script>
+		var MQ = MathQuill.getInterface(2);
+	</script>
+
+	<link rel="icon" type="image/png" href="https://c.cksource.com/a/1/logos/ckeditor5.png">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<main>
+		<div class="centered">
+			<div class="row row-editor">
+				<div class="editor"></div>
+			</div>
+		</div>
+		<button onclick="dosth()">DoSth</button>
+	</main>
+
+	<div>
+		<div id="targetMathQuill1"></div>
+	</div>
+
+	<script>
+		function dosth() {
+			var answerSpan = document.getElementById('ntsmathquillx_id');
+			var answerMathField = MQ.MathField(answerSpan, {
+				handlers: {
+					edit: function() {
+						var enteredMath = answerMathField.latex(); // Get entered math in LaTeX format
+						//checkAnswer(enteredMath);
+					}
+				}
+			});
+		}
+	</script>
+
+	<script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script>
+		MathJax.Ajax.config.path["external_libs_path"] = "../try-external";
+		MathJax.Hub.Config({
+			showMathMenu: false,
+			TeX: {
+				extensions: [ "[external_libs_path]/mhchem.js" ]
+			},
+			messageStyle: "none",
+			tex2jax: {
+				preview: "none"
+			}
+		});
+	</script>
+
+	<script src="../build/ckeditor.js"></script>
+	<script>ClassicEditor
+			.create( document.querySelector( '.editor' ), {
+				toolbar: {
+					items: [
+						'heading',
+						'|',
+						'bold',
+						'italic',
+						'link',
+						'bulletedList',
+						'numberedList',
+						'|',
+						'indent',
+						'outdent',
+						'|',
+						'imageUpload',
+						'blockQuote',
+						'insertTable',
+						'mediaEmbed',
+						'undo',
+						'redo',
+						'CKFinder',
+						'math'
+					]
+				},
+				language: 'en',
+				image: {
+					toolbar: [
+						'imageTextAlternative',
+						'imageStyle:full',
+						'imageStyle:side'
+					]
+				},
+				table: {
+					contentToolbar: [
+						'tableColumn',
+						'tableRow',
+						'mergeTableCells'
+					]
+				},
+				licenseKey: '',
+			} )
+			.then( editor => {
+				window.editor = editor;
+			} )
+			.catch( error => {
+				console.error( error );
+			} );
+	</script>
+</body>

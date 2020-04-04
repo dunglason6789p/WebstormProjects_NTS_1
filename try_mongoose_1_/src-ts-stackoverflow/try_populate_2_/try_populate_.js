@@ -59,3 +59,4 @@ mongoose.connect('mongodb://localhost/' + commonThings_1.DBNAME, { useNewUrlPars
         });
     });
 });
+//# sourceMappingURL=try_populate_.js.map

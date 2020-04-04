@@ -14,3 +14,4 @@ mongoose.connect('mongodb://localhost/' + commonThings_1.DBNAME, { useNewUrlPars
         console.log(story);
     });
 });
+//# sourceMappingURL=findOnly.js.map

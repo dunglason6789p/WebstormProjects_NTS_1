@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build_serve": "vue-cli-service build && vue-cli-service serve dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -12,7 +13,8 @@
     "bootstrap-vue": "^2.4.0",
     "core-js": "^3.4.4",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.5"
+    "vue-router": "^3.1.5",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
@@ -35,7 +37,8 @@
     "rules": {
       "no-unused-vars": "warn",
       "no-undef": "warn",
-      "no-console": "warn"
+      "no-console": "warn",
+      "no-extra-semi": "warn"
     },
     "parserOptions": {
       "parser": "babel-eslint"

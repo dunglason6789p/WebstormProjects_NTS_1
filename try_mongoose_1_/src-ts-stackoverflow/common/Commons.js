@@ -13,28 +13,100 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-function schemaFromType(value) {
+var Const_1 = require("./Const");
+/**Return `value` if `value!=avoidValue`, else return `defau`. (avoidValue is set to `null` if not specified.)*/
+function elvis(value, defau, avoidValue) {
+    if (avoidValue === void 0) { avoidValue = null; }
+    if (value == avoidValue)
+        return defau;
     return value;
 }
-exports.schemaFromType = schemaFromType;
-/**exclude props in Exclu.*/
-function schemaFromTypeWithExclude(value) {
+exports.elvis = elvis;
+/**Return `value` if `value!=avoidValue`, else return `defau()`. (avoidValue is set to `null` if not specified.)*/
+function elvisLazy(value, defau, avoidValue) {
+    if (avoidValue === void 0) { avoidValue = null; }
+    if (value == avoidValue)
+        return defau();
     return value;
 }
-exports.schemaFromTypeWithExclude = schemaFromTypeWithExclude;
-/**exclude props in Exclu, then include props in Extraa.*/
-function schemaFromTypeWithExcludeThenInclude(value) {
-    return value;
+exports.elvisLazy = elvisLazy;
+function ternary(test, value, elseValue) {
+    if (test)
+        return value;
+    else
+        return elseValue;
 }
-exports.schemaFromTypeWithExcludeThenInclude = schemaFromTypeWithExcludeThenInclude;
-/**optional version of `schemaFromType`*/
-function schemaFromTypePartial(value) {
-    return value;
+exports.ternary = ternary;
+function ternaryLazy(test, value, elseValue) {
+    if (test) {
+        if (value != null) {
+            return value();
+        }
+        else {
+            return value;
+        }
+    }
+    else {
+        if (elseValue != null) {
+            return elseValue();
+        }
+        else {
+            return elseValue;
+        }
+    }
 }
-exports.schemaFromTypePartial = schemaFromTypePartial;
-exports.nameof = function (p) { return p; };
+exports.ternaryLazy = ternaryLazy;
+function ternaryLazyWith(value, test, elseValue) {
+    if (test(value) == true)
+        return value;
+    else
+        return elseValue();
+}
+exports.ternaryLazyWith = ternaryLazyWith;
+exports.nameofFactory = function () { return function (name) { return name; }; };
+/**Name of anything (variable,class,...). VD:nameof({SuperMan}) == "SuperMan".
+ * <br> DO NOT write: nameof(SuperMan) ! (Must have curly brackets!)*/
+function nameof(v) {
+    return Object.keys(v)[0];
+}
+//export const nameof = <T>(p: Extract<keyof T, string>): string => p;
+/**nameof property*/
 exports.$$ = function (p) { return p; };
-//export const nameof2 = <T>(name: Extract<T, string>): string => name;
+/**nameof class*/
+exports.$$c = function (clazz) { return clazz.name; };
+/**nameof property, using lambda.*/
+function $$l(lambda) {
+    var lambdaAsString = lambda.toString();
+    var lastIndexOfDot = lambdaAsString.lastIndexOf(".");
+    if (lastIndexOfDot < 0) {
+        console.log("[WARN](nameof)There are no dot in lambda:" + lambdaAsString);
+    }
+    var lastSemicolonOrSpace = ternaryLazyWith(lambdaAsString.lastIndexOf(";"), function (it) { return it > lastIndexOfDot; }, function () { return ternaryLazyWith(lambdaAsString.lastIndexOf(Const_1._1Space), function (it) { return it > lastIndexOfDot; }, function () { return lambdaAsString.lastIndexOf("}"); }); });
+    return lambdaAsString.substring(lastIndexOfDot + 1, lastSemicolonOrSpace);
+}
+exports.$$l = $$l;
+/**nameof property, using lambda. Start from first dot.*/
+function $$l2(lambda) {
+    var lambdaAsString = lambda.toString();
+    var firstIndexOfDot = lambdaAsString.indexOf(".");
+    if (firstIndexOfDot < 0) {
+        console.log("[WARN](nameof)There are no dot in lambda:" + lambdaAsString);
+    }
+    var lastSemicolonOrSpace = ternaryLazyWith(lambdaAsString.lastIndexOf(";"), function (it) { return it > firstIndexOfDot; }, function () { return ternaryLazyWith(lambdaAsString.lastIndexOf(Const_1._1Space), function (it) { return it > firstIndexOfDot; }, function () { return lambdaAsString.lastIndexOf("}"); }); });
+    return lambdaAsString.substring(firstIndexOfDot + 1, lastSemicolonOrSpace);
+}
+exports.$$l2 = $$l2;
+/**nameof property, using lambda. Start from first dot. Allow using list by using "[0]" (this func will remove "[0]" in the final string).*/
+function $$l3(lambda) {
+    var lambdaAsString = lambda.toString();
+    var firstIndexOfDot = lambdaAsString.indexOf(".");
+    if (firstIndexOfDot < 0) {
+        console.log("[WARN](nameof)There are no dot in lambda:" + lambdaAsString);
+    }
+    var lastSemicolonOrSpace = ternaryLazyWith(lambdaAsString.lastIndexOf(";"), function (it) { return it > firstIndexOfDot; }, function () { return ternaryLazyWith(lambdaAsString.lastIndexOf(Const_1._1Space), function (it) { return it > firstIndexOfDot; }, function () { return lambdaAsString.lastIndexOf("}"); }); });
+    return lambdaAsString.substring(firstIndexOfDot + 1, lastSemicolonOrSpace).replace("[0]", "");
+}
+exports.$$l3 = $$l3;
 /* class decorator: It must implement static methods that come from some interface T (in T, the method is NOT static!).
 * Example: @mustImpStatMethFrom<ComparableStatic<TableCell>>()*/
 function mustImpStatMethFrom() {
@@ -62,31 +134,21 @@ function $create(tipe, v) {
     return Object.assign(new tipe(), v);
 }
 exports.$create = $create;
+function $createExclude(tipe, v) {
+    return Object.assign(new tipe(), v);
+}
+exports.$createExclude = $createExclude;
 /**NTS: Instantiate new object from given class and given object,
  * then execute the callback, then return this object.*/
-function $createThenExec(tipe, obj, callback) {
+function $createAndDo(tipe, obj, fun) {
     var newObj = Object.assign(new tipe(), obj);
-    callback(newObj);
+    fun(newObj);
     return newObj;
 }
-exports.$createThenExec = $createThenExec;
+exports.$createAndDo = $createAndDo;
 /*export function $buildNewExcluded<T extends {Excl}>(tipe:{new():T},v:Omit<T,keyof T["Excl"]>):T{
     return Object.assign(new tipe(),v);
 }*/
-var MyLogger = /** @class */ (function () {
-    function MyLogger() {
-    }
-    Object.defineProperty(MyLogger.prototype, "log", {
-        set: function (value) {
-            console.log("[TRACE]log:");
-            console.log(value);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return MyLogger;
-}());
-exports.MyLogger = MyLogger;
 var ArrayExtended = /** @class */ (function (_super) {
     __extends(ArrayExtended, _super);
     function ArrayExtended(items) {
@@ -171,14 +233,21 @@ function $getKeys(obj, isClass) {
     }
 }
 exports.$getKeys = $getKeys;
-function $logKeyValue(obj, stringify) {
+/**To overcome the issue of JSON.stringify (:only 1 level). (???)*/
+function $logKeyValue(obj, stringify, beauty) {
     if (stringify === void 0) { stringify = false; }
+    if (beauty === void 0) { beauty = false; }
     try {
         console.log("[INFO]object key-value pairs:");
         console.log("{");
         for (var _i = 0, _a = Object.keys(obj); _i < _a.length; _i++) {
             var key = _a[_i];
             //.map(key => obj[key]);
+            /*if(stringify){
+                if(beauty){
+                    console.log(`    "${key}":${stringify?JSON.stringify(obj[key]):obj[key]}`);
+                }
+            }*/
             console.log("    \"" + key + "\":" + (stringify ? JSON.stringify(obj[key]) : obj[key]));
         }
         console.log("}");
@@ -188,44 +257,56 @@ function $logKeyValue(obj, stringify) {
     }
 }
 exports.$logKeyValue = $logKeyValue;
-var ATest = /** @class */ (function () {
-    function ATest() {
+/**Access the given property of the object, set default value if that property is currently null, then return the value of that property.<br>
+ * It is OK to use null as value of key-value pair in `defau` e.g: {prop1:null}, when so, nothing will change, the function just return
+ * the property!*/
+function $a(obj, defau) {
+    var key = Object.keys(defau)[0];
+    if (obj[key] == null) {
+        obj[key] = defau[key]; //OK even if `defau[key]==null`.
     }
-    return ATest;
-}());
-var theName1 = exports.nameof("aPropx");
-var theName1b = exports.nameof("ATest");
-// const theName2 = nameof2<ATest>("aPropx");
-var theName9 = exports.$$("aPropx");
-var theName9b = exports.$$("ATest");
-var nameofFactory = function () { return function (name) { return name; }; };
-var theName3 = nameofFactory();
-console.log(theName3);
-var Company = /** @class */ (function () {
-    function Company() {
+    return obj[key];
+}
+exports.$a = $a;
+function initLater() {
+    return undefined;
+}
+exports.initLater = initLater;
+function randomPick(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+exports.randomPick = randomPick;
+/**VD:
+whenEqual(x,
+    {value:0,fun:()=>{
+    }},{value:0,fun:()=>{
+    }}
+);
+ */
+function whenEqual(mainValue) {
+    var cases = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        cases[_i - 1] = arguments[_i];
     }
-    return Company;
-}());
-//region try `schemaFromTypeWithExclude`
-var x1 = schemaFromTypeWithExclude({
-    age: 0,
-    fullName: "",
-    strength: 123
-});
-var x2 = schemaFromTypeWithExcludeThenInclude({
-    isBad: undefined,
-    age: 0,
-    fullName: "",
-    strength: 123
-});
-// prop name (not string) is also POSSIBLE:
-var x1b = schemaFromTypeWithExclude({
-    fullName: ""
-});
-//endregion
-var Car = /** @class */ (function () {
-    function Car() {
+    for (var _a = 0, cases_1 = cases; _a < cases_1.length; _a++) {
+        var caze = cases_1[_a];
+        if (caze.value === mainValue) {
+            return caze.fun(caze.value);
+        }
     }
-    return Car;
-}());
-var car1 = $buildExclude({ age: undefined, speed: undefined });
+}
+exports.whenEqual = whenEqual;
+function when() {
+    var cases = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        cases[_i] = arguments[_i];
+    }
+    for (var _a = 0, cases_2 = cases; _a < cases_2.length; _a++) {
+        var caze = cases_2[_a];
+        if (caze.test === true) {
+            return caze.fun();
+        }
+    }
+}
+exports.when = when;
+//# sourceMappingURL=Commons.js.map

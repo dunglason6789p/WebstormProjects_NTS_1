@@ -37,3 +37,4 @@ mongoose.connect('mongodb://localhost/' + schemaas_1.DBNAME, { useNewUrlParser: 
             }*!/
         });*/
 });
+//# sourceMappingURL=findnow.js.map

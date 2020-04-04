@@ -1,30 +1,143 @@
-import {Document, Model, SchemaDefinition} from "mongoose";
+import {_1Space} from "./Const";
+
 export type AllPropName<T> = {
     [P in keyof T]: any;
 };
 export type SomePropName<T> = {
     [P in keyof T]?: any;
 };
-export function schemaFromType<T>(value:AllPropName<T>):SchemaDefinition{
-    return value as unknown as SchemaDefinition;
+
+
+/**Type of given property of given class. VD: PropType<ABC,"xyz">*/
+export type PropType<T,P extends keyof T> = T[P]
+/**Type of first item of given array type. VD: ArrayItemType<number[]>*/
+export type ArrayItemType<A extends any[]> = A[0]
+/**Type of item in array, only if the given type arg (A) is truly an array. If not, then the type is never. */
+export type ArrayItemTypeOrNever<A> = A extends (infer _ArrayItemType_)[]? _ArrayItemType_ : never
+/**Type of item in array, only if the given type arg (A) is truly an array. If not, then the type is the type of A. */
+export type ArrayItemTypeOrItself<A> = A extends (infer _ArrayItemType_)[]? _ArrayItemType_ : A
+/**If A is array then return `keyof` item_type of A. Else return `keyof` A.*/
+export type Keyof_or_ItemKeyof<A> = A extends (infer _ArrayItemType_)[]? keyof _ArrayItemType_ : keyof A
+/**If A is array then return true type of {item_type_of_A}_dot_P (AKA: A[0][P]). Else return true type of prop "P" of A (AKA: A[P]).*/
+//@ts-ignore
+export type PropType_or_ItemPropType<A,P extends Keyof_or_ItemKeyof<A>> = A extends (infer _ArrayItemType_)[]? _ArrayItemType_[P] : A[P]
+
+
+/**Return `value` if `value!=avoidValue`, else return `defau`. (avoidValue is set to `null` if not specified.)*/
+export function elvis<T>(value:T,defau:T,avoidValue:T=null):T {
+    if(value==avoidValue) return defau;
+    return value;
 }
-/**exclude props in Exclu.*/
-export function schemaFromTypeWithExclude<T,Exclu extends SomePropName<T>>(value:Omit<AllPropName<T>,keyof Exclu>):SchemaDefinition{
-    return value as unknown as SchemaDefinition;
+/**Return `value` if `value!=avoidValue`, else return `defau()`. (avoidValue is set to `null` if not specified.)*/
+export function elvisLazy<T>(value:T,defau:()=>T,avoidValue:T=null):T {
+    if(value==avoidValue) return defau();
+    return value;
 }
-/**exclude props in Exclu, then include props in Extraa.*/
-export function schemaFromTypeWithExcludeThenInclude<T,Exclu extends SomePropName<T>,Extraa>(value:Omit<AllPropName<T>,keyof Exclu> & Extraa):SchemaDefinition{
-    return value as unknown as SchemaDefinition;
+export function ternary<T>(test:Boolean,value:T,elseValue:T):T {
+    if(test) return value;
+    else return elseValue
 }
-/**optional version of `schemaFromType`*/
-export function schemaFromTypePartial<T>(value:SomePropName<T>):SchemaDefinition{
-    return value as unknown as SchemaDefinition;
+export function ternaryLazy<T>(test:Boolean,value:()=>T,elseValue:()=>T):T {
+    if(test){
+        if(value != null){
+            return value()
+        }else{
+            return value as unknown as T;
+        }
+    }
+    else{
+        if(elseValue != null){
+            return elseValue()
+        }else{
+            return elseValue as unknown as T;
+        }
+    }
+}
+export function ternaryLazyWith<T>(value:T, test:(value:T)=>Boolean, elseValue:()=>T):T {
+    if(test(value)==true) return value;
+    else return elseValue()
 }
 
 
-export const nameof = <T>(p: Extract<keyof T, string>): string => p;
+export const nameofFactory = <T>() => (name: keyof T) => name;
+
+type HasAtLeastOneProp<T, Keys extends keyof T = keyof T> =
+    Pick<T, Exclude<keyof T, Keys>>
+    & {
+    [K in Keys]-?: Required<Pick<T, K>> & Partial<Pick<T, Exclude<Keys, K>>>
+}[Keys]
+/**Name of anything (variable,class,...). VD:nameof({SuperMan}) == "SuperMan".
+ * <br> DO NOT write: nameof(SuperMan) ! (Must have curly brackets!)*/
+function nameof(v:HasAtLeastOneProp<any>) {
+    return Object.keys(v)[0];
+}
+
+//export const nameof = <T>(p: Extract<keyof T, string>): string => p;
+/**nameof property*/
 export const $$ = <T>(p: Extract<keyof T, string>): string => p;
-//export const nameof2 = <T>(name: Extract<T, string>): string => name;
+/**nameof class*/
+export const $$c = <T>(clazz:{new():T}): string => clazz.name;
+/**nameof property, using lambda.*/
+export function $$l<T>(lambda:(t:T)=>any):string {
+    const lambdaAsString = lambda.toString();
+    const lastIndexOfDot = lambdaAsString.lastIndexOf(".");
+    if(lastIndexOfDot<0){
+        console.log("[WARN](nameof)There are no dot in lambda:"+lambdaAsString);
+    }
+    const lastSemicolonOrSpace
+    = ternaryLazyWith(
+        lambdaAsString.lastIndexOf(";"),
+        it=>it>lastIndexOfDot,
+        ()=>ternaryLazyWith(
+            lambdaAsString.lastIndexOf(_1Space),
+            it=>it>lastIndexOfDot,
+            ()=>lambdaAsString.lastIndexOf("}")
+        )
+    );
+    return lambdaAsString.substring(lastIndexOfDot+1,lastSemicolonOrSpace);
+}
+/**nameof property, using lambda. Start from first dot.*/
+export function $$l2<T>(lambda:(t:T)=>any):string {
+    const lambdaAsString = lambda.toString();
+    const firstIndexOfDot = lambdaAsString.indexOf(".");
+    if(firstIndexOfDot<0){
+        console.log("[WARN](nameof)There are no dot in lambda:"+lambdaAsString);
+    }
+    const lastSemicolonOrSpace
+        = ternaryLazyWith(
+        lambdaAsString.lastIndexOf(";"),
+        it=>it>firstIndexOfDot,
+        ()=>ternaryLazyWith(
+            lambdaAsString.lastIndexOf(_1Space),
+            it=>it>firstIndexOfDot,
+            ()=>lambdaAsString.lastIndexOf("}")
+        )
+    );
+    return lambdaAsString.substring(firstIndexOfDot+1,lastSemicolonOrSpace);
+}
+/**nameof property, using lambda. Start from first dot. Allow using list by using "[0]" (this func will remove "[0]" in the final string).*/
+export function $$l3<T>(lambda:(t:T)=>any):string {
+    const lambdaAsString = lambda.toString();
+    const firstIndexOfDot = lambdaAsString.indexOf(".");
+    if(firstIndexOfDot<0){
+        console.log("[WARN](nameof)There are no dot in lambda:"+lambdaAsString);
+    }
+    const lastSemicolonOrSpace
+        = ternaryLazyWith(
+        lambdaAsString.lastIndexOf(";"),
+        it=>it>firstIndexOfDot,
+        ()=>ternaryLazyWith(
+            lambdaAsString.lastIndexOf(_1Space),
+            it=>it>firstIndexOfDot,
+            ()=>lambdaAsString.lastIndexOf("}")
+        )
+    );
+    return lambdaAsString.substring(firstIndexOfDot+1,lastSemicolonOrSpace).replace("[0]","");
+}
+
+
+
+
 
 /* class decorator: It must implement static methods that come from some interface T (in T, the method is NOT static!).
 * Example: @mustImpStatMethFrom<ComparableStatic<TableCell>>()*/
@@ -49,24 +162,19 @@ export function $buildExclude<T,Exclu extends SomePropName<T>>(v:Omit<T,keyof Ex
 export function $create<T>(tipe:{new():T}, v:T):T{
     return Object.assign(new tipe(),v);
 }
+export function $createExclude<T,Exclu extends SomePropName<T>>(tipe:{new():T}, v:Omit<AllPropName<T>,keyof Exclu>):T{
+    return Object.assign(new tipe(),v);
+}
 /**NTS: Instantiate new object from given class and given object,
  * then execute the callback, then return this object.*/
-export function $createThenExec<T>(tipe:{new():T}, obj:T, callback:(thisObj:T)=>void):T {
+export function $createAndDo<T>(tipe:{new():T}, obj:T, fun:(thisObj:T)=>void):T {
     const newObj = Object.assign(new tipe(),obj);
-    callback(newObj);
+    fun(newObj);
     return newObj;
 }
 /*export function $buildNewExcluded<T extends {Excl}>(tipe:{new():T},v:Omit<T,keyof T["Excl"]>):T{
     return Object.assign(new tipe(),v);
 }*/
-
-export class MyLogger{
-    private _log:any;
-    set log(value: any) {
-        console.log("[TRACE]log:");
-        console.log(value);
-    }
-}
 
 class ArrayExtended<T> extends Array<T> {
     private constructor(items?: Array<T>) {
@@ -130,12 +238,18 @@ export function $getKeys(obj:any,isClass=false){
         return [];
     }
 }
-export function $logKeyValue(obj:any,stringify=false){
+/**To overcome the issue of JSON.stringify (:only 1 level). (???)*/
+export function $logKeyValue(obj:any,stringify=false,beauty=false){
     try{
         console.log("[INFO]object key-value pairs:");
         console.log("{");
         for(let key of Object.keys(obj)){
             //.map(key => obj[key]);
+            /*if(stringify){
+                if(beauty){
+                    console.log(`    "${key}":${stringify?JSON.stringify(obj[key]):obj[key]}`);
+                }
+            }*/
             console.log(`    "${key}":${stringify?JSON.stringify(obj[key]):obj[key]}`);
         }
         console.log("}");
@@ -146,50 +260,50 @@ export function $logKeyValue(obj:any,stringify=false){
 
 
 
-
-
-class ATest{
-    aPropx;
-}
-const theName1 = nameof<ATest>("aPropx");
-const theName1b = nameof<{ATest}>("ATest");
-// const theName2 = nameof2<ATest>("aPropx");
-
-const theName9 = $$<ATest>("aPropx");
-const theName9b = $$<{ATest}>("ATest");
-
-const nameofFactory = <T>() => (name: keyof T) => name;
-const theName3 = nameofFactory<ATest>();
-console.log(theName3);
-
-class Company{
-    fullName:string;
-    age:number;
-    isGood:boolean;
-    strength:number;
+/**Access the given property of the object, set default value if that property is currently null, then return the value of that property.<br>
+ * It is OK to use null as value of key-value pair in `defau` e.g: {prop1:null}, when so, nothing will change, the function just return
+ * the property!*/
+export function $a<T,P extends Partial<T>>(obj:T, defau:P):P[keyof P]{
+    const key = Object.keys(defau)[0];
+    if(obj[key]==null){
+        obj[key] = defau[key]//OK even if `defau[key]==null`.
+    }
+    return obj[key]
 }
 
-//region try `schemaFromTypeWithExclude`
-const x1 = schemaFromTypeWithExclude<Company,{"isGood"/*,"age"*/}>({
-    age: 0,
-    fullName: "",
-    strength: 123
-});
-const x2 = schemaFromTypeWithExcludeThenInclude<Company,{"isGood"/*,"age"*/},{"isBad"}>({
-    isBad: undefined,
-    age: 0,
-    fullName: "",
-    strength: 123
-});
-// prop name (not string) is also POSSIBLE:
-const x1b = schemaFromTypeWithExclude<Company,{isGood,age,strength:any}>({
-    fullName: ""
-});
-//endregion
-
-class Car{
-    fullName;
-    age;
-    speed;
+export function initLater():any {
+    return undefined
 }
-const car1 = $buildExclude<Car,{fullName}>({age: undefined, speed: undefined});
+export type StringIn<T> = Extract<keyof T,string>
+
+export function randomPick<T>(array:T[]):T {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+/**VD:
+whenEqual(x,
+    {value:0,fun:()=>{
+    }},{value:0,fun:()=>{
+    }}
+);
+ */
+export function whenEqual<T,R>(mainValue:T,...cases:{value:T,fun:(value?:T)=>R}[]):R {
+    for(let caze of cases){
+        if(caze.value === mainValue){
+            return caze.fun(caze.value)
+        }
+    }
+}
+
+export function when<R>(...cases:{test:boolean,fun:()=>R}[]):R {
+    for(let caze of cases){
+        if(caze.test === true){
+            return caze.fun()
+        }
+    }
+}
+
+
+
+
+

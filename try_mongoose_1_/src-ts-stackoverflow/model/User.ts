@@ -1,10 +1,8 @@
 import {appxNowYear} from "../common/DateUtils";
 const mongoose = require('mongoose');
 
-import {
-    schemaFromType, schemaFromTypeWithExclude,
-} from "../common/Commons";
 import {Mgoose} from "../common/Mgoose";
+import {schemaFromType, schemaFromTypeWithExclude} from "../common/CommonMongoose";
 export class User implements Mgoose.POJO{
     _id?: any;
     userName:string;
@@ -13,10 +11,10 @@ export class User implements Mgoose.POJO{
     dateOfBirth?:Date;
     schoolName?:string;
     private _yearStudyStart?:number;
-    get yearStudyStart(): number {
+    getYearStudyStart?(): number {
         return this._yearStudyStart;
     }
-    //grade.
+    /**Học lớp mấy.*/
     get grade(): number {
         return appxNowYear-this._yearStudyStart;
     }
@@ -25,13 +23,14 @@ export class User implements Mgoose.POJO{
     }
 }
 export namespace User {
-    export const schema = new mongoose.Schema(schemaFromTypeWithExclude<User,{grade}>({
+    export const schema = new mongoose.Schema(schemaFromTypeWithExclude<User,{}>({
         dateOfBirth: Date,
         fullName: String,
         passwordEncrypted: String,
         schoolName: String,
         userName: String,
-        yearStudyStart: Number
+        //yearStudyStart: Number
+        grade:Number
     }));
     //region scemx
     export const MonModel = mongoose.model(User.name, User.schema);

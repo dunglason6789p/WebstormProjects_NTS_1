@@ -15,3 +15,4 @@ var storySchema = new Schema({
 });
 exports.Story = mongoose.model('Story', storySchema);
 exports.Person = mongoose.model('Person', personSchema);
+//# sourceMappingURL=schemaas.js.map

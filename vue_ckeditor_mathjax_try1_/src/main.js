@@ -1,3 +1,5 @@
+//require('dotenv').config();
+
 import Vue from 'vue';
 Vue.config.productionTip = false;
 

@@ -4,10 +4,13 @@ var KnownClasses_1 = require("../common/KnownClasses");
 var mongoose = require('mongoose');
 var _a = mongoose.Schema.Types, Mixed = _a.Mixed, ObjectId = _a.ObjectId;
 var Commons_1 = require("../common/Commons");
+var CommonMongoose_1 = require("../common/CommonMongoose");
 var Answer = /** @class */ (function () {
     function Answer() {
         this.featuredList = [];
         this.commentList = [];
+        this.upvote = 0;
+        this.downvote = 0;
     }
     Answer.prototype.setAuthor = function (author) {
         this.author = author;
@@ -25,7 +28,9 @@ var Answer = /** @class */ (function () {
 }());
 exports.Answer = Answer;
 (function (Answer) {
-    Answer.schema = new mongoose.Schema(Commons_1.schemaFromTypeWithExclude({
+    Answer.schema = new mongoose.Schema(CommonMongoose_1.schemaFromTypeWithExclude({
+        downvote: Number,
+        upvote: Number,
         authorId: ObjectId,
         commentList: Mixed,
         content: String,
@@ -37,14 +42,14 @@ exports.Answer = Answer;
         toObject: { virtuals: true }
     });
     Answer.schema.virtual(Commons_1.$$("author"), {
-        ref: KnownClasses_1.$cn("User"),
+        ref: KnownClasses_1.$cn(KnownClasses_1.$package.model, "User"),
         localField: Commons_1.$$("authorId"),
         foreignField: Commons_1.$$("_id"),
         justOne: true,
         options: { /*sort: { name: -1 }, limit: 5*/} // Query options, see http://bit.ly/mongoose-query-options
     });
     Answer.schema.virtual(Commons_1.$$("question"), {
-        ref: KnownClasses_1.$cn("Question"),
+        ref: KnownClasses_1.$cn(KnownClasses_1.$package.model, "Question"),
         localField: Commons_1.$$("authorId"),
         foreignField: Commons_1.$$("_id"),
         justOne: true,
@@ -65,3 +70,4 @@ exports.Answer = Answer;
     //endregion
 })(Answer = exports.Answer || (exports.Answer = {}));
 exports.Answer = Answer;
+//# sourceMappingURL=Answer.js.map

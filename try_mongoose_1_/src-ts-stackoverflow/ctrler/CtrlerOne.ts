@@ -1,8 +1,10 @@
-import {$create, $createThenExec, $logKeyValue, MyLogger} from "../common/Commons";
+import {$create, $createAndDo, $logKeyValue} from "../common/Commons";
 import {Mgoose} from "../common/Mgoose";
 import {Question} from "../model/Question";
 import {User} from "../model/User";
 import {Answer} from "../model/Answer";
+import {Category} from "../model/micro/Category";
+import {MyLogger} from "../common/MyLogger";
 
 const l = new MyLogger();
 const mongoose = require('mongoose');
@@ -37,16 +39,17 @@ const writeFileAsync = util.promisify(fs.writeFile);
                     userName: "user_2",
                     passwordEncrypted: "222",
                 }as User);
-                const question1 = $createThenExec(Question,{
+                const question1 = $createAndDo(Question,{
                     _id: new mongoose.Types.ObjectId(),
                     authorId: undefined,
                     title: "cau hoi 1",
                     content: "noi dung cau hoi 1",
-                    tagList:["a tag"]
+                    tagList:["a tag"],
+                    category:[Category.math]
                 },(thiz)=>{
                     thiz.setAuthor(user1);
                 });
-                const answer1 = $createThenExec(Answer,{
+                const answer1 = $createAndDo(Answer,{
                     _id: new mongoose.Types.ObjectId(),
                     authorId: undefined,questionId: undefined,
                     content: "tra loi 1",
@@ -54,7 +57,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
                     thiz.setAuthor(user1);
                     thiz.setQuestion(question1,true);
                 });
-                const answer2 = $createThenExec(Answer,{
+                const answer2 = $createAndDo(Answer,{
                     _id: new mongoose.Types.ObjectId(),
                     authorId: undefined,questionId: undefined,
                     content: "tra loi 2",
@@ -77,7 +80,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
                     title:/hoi/i
                 },
                 {
-                    populateSimple:["author","answerList"],
+                    populateSimples:["author","answerList"],
                     lean:true,
                 }
             ).exec((err,questionResults)=>{

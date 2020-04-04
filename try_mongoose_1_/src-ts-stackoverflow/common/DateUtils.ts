@@ -1,2 +1,2 @@
-const appxNowTime = new Date();
+export const appxNowTime = new Date();
 export const appxNowYear = appxNowTime.getFullYear();

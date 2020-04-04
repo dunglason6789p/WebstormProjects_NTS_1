@@ -108,7 +108,7 @@
                                 </a>
                             </div>
 
-                            <div class="group_like_cart">
+                            <div class="group_like_cart" style="z-index: 0;">
                                 <div class="fr">
                                     <button @click="showCkE" class="post_hd">
                                         <i class="flaticon-edit"></i>
@@ -711,292 +711,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-                                <!--<div class="qa_item item_708806 " id="item_708806">
-                                    <div class="top_qa_item">
-                                        <div class="img_qua_item">
-                                            <a class="tooltip_user" idata="708806" iuse="7258126" href="https://vatgia.com/hoidap/type_user.php?iUse=7258126">
-                                                <img src="./vatgias/avatar.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <h2 title="Tư vấn giúp mua máy giặt mini?">
-                                                <a class="tooltip" href="https://vatgia.com/hoidap/6568/708806/tu-van-giup-mua-may-giat-mini.html" title="Tư vấn giúp mua máy giặt mini?" target="_blank">Tư vấn giúp mua
-                                                                                                                                                                                                          máy giặt mini?
-                                                </a>
-                                            </h2>
-                                            <p> 22/02/2020 - 21:12
-                                                <span>•</span>
-                                                trong
-                                                <a class="text_link_pale" href="https://vatgia.com/hoidap/6568/may-giat.html"> Máy giặt
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <div class="teaser show_708806 no-image">Chị gái mới mới sinh cháu nhỏ, đang muốn
-                                                                                 tìm mua một cái máy giặt mini để chuyên
-                                                                                 giặt quần áo cho em bé chứ chị mới sinh,
-                                                                                 vẫn kiêng cữ nên k giặt tay được. Chưa hãng
-                                                                                 máy giặt nào chất lượng tốt mà mua. Mọi
-                                                                                 người có ai sử dụng loại...
-                                            <a class="" href="https://vatgia.com/hoidap/6568/708806/tu-van-giup-mua-may-giat-mini.html">
-                                                (Xem thêm)
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="bot_qa_item">
-                                        <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="708806" status="1">
-                                            <i class="flaticon-pencil"></i>
-                                            <span>Trả lời</span>
-                                        </a>
-                                        <a class="btn_condone" onclick="condone(this)" record_id="708806">
-                                            <span>Bỏ qua</span>
-                                        </a>
-                                        <a class="">
-                                            <span>Lượt xem</span>
-                                            <span>24</span>
-                                        </a>
-                                        <div class="box_share">
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/6568/708806/tu-van-giup-mua-may-giat-mini.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook">
-                                                <i class="flaticon-facebook"></i>
-                                            </a>
-                                            <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/6568/708806/tu-van-giup-mua-may-giat-mini.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter">
-                                                <i class="flaticon-twitter"></i>
-                                            </a>
-                                            <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/6568/708806/tu-van-giup-mua-may-giat-mini.html" target="_blank" title="Chia sẻ lên Google+">
-                                                <i class="flaticon-ggplus"></i>
-                                            </a>
-                                            <a>
-                                                <i class="flaticon-three-dots" onclick="moreActionList(this)">
-                                                    <ul class="box-more">
-                                                        <li onclick="windowPrompt({ href: &#39;/ajax_v2/load_send_error_hoidap.php?record_id=708806&#39;, iframe: true, width: &#39;50%&#39;, height: &#39;80%&#39; });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm
-                                                        </li>
-                                                        <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn
-                                                                                                                         câu
-                                                                                                                         hỏi
-                                                        </li>
-                                                    </ul>
-                                                </i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="box_comment show_comment_708806" id="show_comment_708806" record_id="708806" last_up="1582618710">
-                                        <div class="comment_description">
-                                            <textarea id="conten_reply_708806" class="conten_reply conten_reply_708806" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
-                                            <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
-                                            <div class="box_capcha">
-                                                <div class="box_capcha_708806" id="box_capcha_708806"></div>
-                                                <img class="img_loading" src="./vatgias/loading(1).gif">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list_reply_hoidap" onclick="window.location.href = &#39;/hoidap/6568/708806/tu-van-giup-mua-may-giat-mini.html&#39;;">
-                                        <div class="reply_comment_box">
-                                            <div class="avatar_reply">
-                                                <a href="https://vatgia.com/home/detail_user.php?iUse=7678844">
-                                                    <img src="./vatgias/1582681965-epc.jpg">
-                                                </a>
-                                            </div>
-                                            <div class="description_reply">
-                                                <div class="info_user_reply">
-                                                    <p>Bùi Ngọc Linh</p>
-                                                    <div class="text_comment_reply"> Tớ có mẫu này mà rẻ hơn website 100k,
-                                                                                     khá ổn bạn ạ!
-                                                                                     https://huonganhgroup.vn/may-giat-toshiba-aw-a800sv-wb
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qa_item item_708833 " id="item_708833">
-                                    <div class="top_qa_item">
-                                        <div class="img_qua_item">
-                                            <a class="tooltip_user" idata="708833" iuse="7160782" href="https://vatgia.com/hoidap/type_user.php?iUse=7160782">
-                                                <img src="./vatgias/avatar.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <h2 title="Cho hỏi lotion của hada labo dùng có tốt không mọi người?">
-                                                <a class="tooltip" href="https://vatgia.com/hoidap/3922/708833/cho-hoi-lotion-cua-hada-labo-dung-co-tot-khong-moi-nguoi.html" title="Cho hỏi lotion của hada labo dùng có tốt không mọi người?" target="_blank">Cho hỏi lotion của hada labo dùng có tốt không mọi người?
-                                                </a>
-                                            </h2>
-                                            <p> 23/02/2020 - 16:14
-                                                <span>•</span>
-                                                trong
-                                                <a class="text_link_pale" href="https://vatgia.com/hoidap/3922/cham-soc-da.html"> Chăm sóc da
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <div class="teaser show_708833 no-image">cho hỏi lotion của hada labo dùng có tốt
-                                                                                 không mọi người?
-                                        </div>
-                                    </div>
-                                    <div class="bot_qa_item">
-                                        <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="708833" status="1">
-                                            <i class="flaticon-pencil"></i>
-                                            <span>Trả lời</span>
-                                        </a>
-                                        <a class="btn_condone" onclick="condone(this)" record_id="708833">
-                                            <span>Bỏ qua</span>
-                                        </a>
-                                        <a class="">
-                                            <span>Lượt xem</span>
-                                            <span>22</span>
-                                        </a>
-                                        <div class="box_share">
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/3922/708833/cho-hoi-lotion-cua-hada-labo-dung-co-tot-khong-moi-nguoi.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook">
-                                                <i class="flaticon-facebook"></i>
-                                            </a>
-                                            <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/3922/708833/cho-hoi-lotion-cua-hada-labo-dung-co-tot-khong-moi-nguoi.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter">
-                                                <i class="flaticon-twitter"></i>
-                                            </a>
-                                            <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/3922/708833/cho-hoi-lotion-cua-hada-labo-dung-co-tot-khong-moi-nguoi.html" target="_blank" title="Chia sẻ lên Google+">
-                                                <i class="flaticon-ggplus"></i>
-                                            </a>
-                                            <a>
-                                                <i class="flaticon-three-dots" onclick="moreActionList(this)">
-                                                    <ul class="box-more">
-                                                        <li onclick="windowPrompt({ href: &#39;/ajax_v2/load_send_error_hoidap.php?record_id=708833&#39;, iframe: true, width: &#39;50%&#39;, height: &#39;80%&#39; });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm
-                                                        </li>
-                                                        <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn
-                                                                                                                         câu
-                                                                                                                         hỏi
-                                                        </li>
-                                                    </ul>
-                                                </i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="box_comment show_comment_708833" id="show_comment_708833" record_id="708833" last_up="1582604202">
-                                        <div class="comment_description">
-                                            <textarea id="conten_reply_708833" class="conten_reply conten_reply_708833" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
-                                            <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
-                                            <div class="box_capcha">
-                                                <div class="box_capcha_708833" id="box_capcha_708833"></div>
-                                                <img class="img_loading" src="./vatgias/loading(1).gif">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list_reply_hoidap" onclick="window.location.href = &#39;/hoidap/3922/708833/cho-hoi-lotion-cua-hada-labo-dung-co-tot-khong-moi-nguoi.html&#39;;">
-                                        <div class="reply_comment_box">
-                                            <div class="avatar_reply">
-                                                <a href="https://vatgia.com/home/detail_user.php?iUse=3389839">
-                                                    <img src="./vatgias/avatar.jpg">
-                                                </a>
-                                            </div>
-                                            <div class="description_reply">
-                                                <div class="info_user_reply">
-                                                    <p>Do Ngoc</p>
-                                                    <div class="text_comment_reply"> Em dùng cái này, chai màu đỏ á, bị dị
-                                                                                     ứng 2 năm í chị, mặt nổi mụn tùm lum,
-                                                                                     em đi spa nó cho cái chai caramel
-                                                                                     essance trị hết mà đắt kinh khủng
-                                                                                     980.000, nên em tự mua dùng, giờ bán
-                                                                                     luôn vì tự tin mình từng trải nghiệm -
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qa_item item_708875 " id="item_708875">
-                                    <div class="top_qa_item">
-                                        <div class="img_qua_item">
-                                            <a class="tooltip_user" idata="708875" iuse="7160782" href="https://vatgia.com/hoidap/type_user.php?iUse=7160782">
-                                                <img src="./vatgias/avatar.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <h2 title="dùng máy rửa mặt có đẩy được nhân mụn lên không mọi người?">
-                                                <a class="tooltip" href="https://vatgia.com/hoidap/3922/708875/dung-may-rua-mat-co-day-duoc-nhan-mun-len-khong-moi-nguoi.html" title="dùng máy rửa mặt có đẩy được nhân mụn lên không mọi người?" target="_blank">dùng máy rửa mặt có đẩy được nhân mụn lên không mọi
-                                                                                                                                                                                                                                                                  người?
-                                                </a>
-                                            </h2>
-                                            <p> 24/02/2020 - 14:42
-                                                <span>•</span>
-                                                trong
-                                                <a class="text_link_pale" href="https://vatgia.com/hoidap/3922/cham-soc-da.html"> Chăm sóc da
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <div class="teaser show_708875 no-image">dùng máy rửa mặt có đẩy được nhân mụn lên
-                                                                                 không mọi người?
-                                        </div>
-                                    </div>
-                                    <div class="bot_qa_item">
-                                        <a class="btn_reply_fast" onclick="openReplyFast(this)" record_id="708875" status="1">
-                                            <i class="flaticon-pencil"></i>
-                                            <span>Trả lời</span>
-                                        </a>
-                                        <a class="btn_condone" onclick="condone(this)" record_id="708875">
-                                            <span>Bỏ qua</span>
-                                        </a>
-                                        <a class="">
-                                            <span>Lượt xem</span>
-                                            <span>14</span>
-                                        </a>
-                                        <div class="box_share">
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.vatgia.com/hoidap/3922/708875/dung-may-rua-mat-co-day-duoc-nhan-mun-len-khong-moi-nguoi.html&amp;t=TITLE" target="_blank" title="Chia sẻ lên Facebook">
-                                                <i class="flaticon-facebook"></i>
-                                            </a>
-                                            <a href="https://twitter.com/share?url=https://www.vatgia.com/hoidap/3922/708875/dung-may-rua-mat-co-day-duoc-nhan-mun-len-khong-moi-nguoi.html&amp;via=TWITTER_HANDLE&amp;text=TEXT" target="_blank" title="Chia sẻ lên Twitter">
-                                                <i class="flaticon-twitter"></i>
-                                            </a>
-                                            <a href="https://plus.google.com/share?url=https://www.vatgia.com/hoidap/3922/708875/dung-may-rua-mat-co-day-duoc-nhan-mun-len-khong-moi-nguoi.html" target="_blank" title="Chia sẻ lên Google+">
-                                                <i class="flaticon-ggplus"></i>
-                                            </a>
-                                            <a>
-                                                <i class="flaticon-three-dots" onclick="moreActionList(this)">
-                                                    <ul class="box-more">
-                                                        <li onclick="windowPrompt({ href: &#39;/ajax_v2/load_send_error_hoidap.php?record_id=708875&#39;, iframe: true, width: &#39;50%&#39;, height: &#39;80%&#39; });" title="Gửi báo cáo vi phạm đến ban quản trị.">Báo vi phạm
-                                                        </li>
-                                                        <li class="hide-rely" title="Ẩn câu hỏi" onclick="condone(this)">Ẩn
-                                                                                                                         câu
-                                                                                                                         hỏi
-                                                        </li>
-                                                    </ul>
-                                                </i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="box_comment show_comment_708875" id="show_comment_708875" record_id="708875" last_up="1582604380">
-                                        <div class="comment_description">
-                                            <textarea id="conten_reply_708875" class="conten_reply conten_reply_708875" name="conten_reply" placeholder="Nhập câu trả lời của bạn tại đây" type="text" onclick="checkReply(this)" onkeypress="checkDataReply(event)"></textarea>
-                                            <a class="btn_reply" onclick="replyFastAction(this)">Gửi</a>
-                                            <div class="box_capcha">
-                                                <div class="box_capcha_708875" id="box_capcha_708875"></div>
-                                                <img class="img_loading" src="./vatgias/loading(1).gif">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list_reply_hoidap" onclick="window.location.href = &#39;/hoidap/3922/708875/dung-may-rua-mat-co-day-duoc-nhan-mun-len-khong-moi-nguoi.html&#39;;">
-                                        <div class="reply_comment_box">
-                                            <div class="avatar_reply">
-                                                <a href="https://vatgia.com/home/detail_user.php?iUse=3389839">
-                                                    <img src="./vatgias/avatar.jpg">
-                                                </a>
-                                            </div>
-                                            <div class="description_reply">
-                                                <div class="info_user_reply">
-                                                    <p>Do Ngoc</p>
-                                                    <div class="text_comment_reply"> Serum Caramel Essance - Serum Da liễu
-                                                                                     Nhật - Được Chứng nhận FDA Phù hợp mọi
-                                                                                     loại da - đặc biệt da nhạy cảm - phục
-                                                                                     hồi làn da nhiễm Corticoid - Làm dày bề
-                                                                                     mặt da -
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
                             </div>
                         </div>
                         <div id="pagination" icat="0" sort="2" page="2" url="/ajax_v3/ajax_hoidap_load_content.php"></div>
@@ -1130,21 +844,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div id="vatgia_hoidap_right_230x460">
-
-                        </div>
-                        <!--<center>
-                            <div style="margin-bottom: 15px; text-align: center; width: 100%; overflow: hidden;" id="vatgia_pc_hoidap_home_4">
-                                <ins class="adsbygoogle" style="display: block; width: 100%; height: 600px;" data-ad-client="ca-pub-2979760623205174" data-ad-slot="4270701122" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done">
-                                    <ins id="aswift_4_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:234px;background-color:transparent;">
-                                        <ins id="aswift_4_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:234px;background-color:transparent;">
-                                            <iframe width="234" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 234px; height: 600px; overflow: visible;" src="./vatgias/saved_resource(7).html"></iframe>
-                                        </ins>
-                                    </ins>
-                                </ins>
-
-                            </div>
-                        </center>-->
+                        <div id="vatgia_hoidap_right_230x460"></div>
                     </div>
                 </div>
 
@@ -1162,8 +862,8 @@
 
             </div>
         </div>
-        <MyModalCkEditorB v-show="showCkEModal" @close="showCkEModal = false">
-        </MyModalCkEditorB>
+        <MyModalCkEditorB ref="myModalCkEditorB1" v-show="showCkEModal" @close_MyModalCkEditorB="showCkEModal = false" @open_MyModalGeogebra="switchCkeToGgb()"></MyModalCkEditorB>
+        <MyModalGeogebra ref="myModalGeogebra1" v-show="showGgbModal" @close_MyModalGeogebra="showGgbModal = false" @imageCapturedEvent1="switchGgbToCke"></MyModalGeogebra>
     </div>
 </template>
 
@@ -1230,15 +930,18 @@
 
     // import MyCkEditorB from "../cke/MyCkEditorB";
     import MyModalCkEditorB from "../cke/modal/MyModalCkEditorB";
+    import MyModalGeogebra from "../geogb/modal/MyModalGeogebra"
     export default {
         name: "VGLayout",
         components: {
             // MyCkEditorB,
-            MyModalCkEditorB
+            MyModalCkEditorB,
+            MyModalGeogebra
         },
         data(){
             return{
                 showCkEModal: false,
+                showGgbModal: false,
                 /**@type {SearchResultItem[]}*/
                 searchResultList:genFakeData(5)
             }
@@ -1247,6 +950,16 @@
             showCkE(){
                 // this.$refs.myCkE1.showCk();
                 this.showCkEModal = true;
+            },
+            switchCkeToGgb(){
+                this.showCkEModal = false;
+                this.showGgbModal = true;
+            },
+            switchGgbToCke(imageContentUrl){
+                console.log("VGLayout received image:"+imageContentUrl);
+                this.$refs.myModalCkEditorB1.setImageToCkEComponent(imageContentUrl);
+                this.showCkEModal = true;
+                this.showGgbModal = false;
             }
         }
     }

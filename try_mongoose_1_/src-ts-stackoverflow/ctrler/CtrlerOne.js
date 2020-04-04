@@ -41,7 +41,9 @@ var Mgoose_1 = require("../common/Mgoose");
 var Question_1 = require("../model/Question");
 var User_1 = require("../model/User");
 var Answer_1 = require("../model/Answer");
-var l = new Commons_1.MyLogger();
+var Category_1 = require("../model/micro/Category");
+var MyLogger_1 = require("../common/MyLogger");
+var l = new MyLogger_1.MyLogger();
 var mongoose = require('mongoose');
 var fs = require('fs');
 var util = require('util');
@@ -88,16 +90,17 @@ var writeFileAsync = util.promisify(fs.writeFile);
                                         userName: "user_2",
                                         passwordEncrypted: "222",
                                     });
-                                    question1_1 = Commons_1.$createThenExec(Question_1.Question, {
+                                    question1_1 = Commons_1.$createAndDo(Question_1.Question, {
                                         _id: new mongoose.Types.ObjectId(),
                                         authorId: undefined,
                                         title: "cau hoi 1",
                                         content: "noi dung cau hoi 1",
-                                        tagList: ["a tag"]
+                                        tagList: ["a tag"],
+                                        category: [Category_1.Category.math]
                                     }, function (thiz) {
                                         thiz.setAuthor(user1_1);
                                     });
-                                    answer1 = Commons_1.$createThenExec(Answer_1.Answer, {
+                                    answer1 = Commons_1.$createAndDo(Answer_1.Answer, {
                                         _id: new mongoose.Types.ObjectId(),
                                         authorId: undefined, questionId: undefined,
                                         content: "tra loi 1",
@@ -105,7 +108,7 @@ var writeFileAsync = util.promisify(fs.writeFile);
                                         thiz.setAuthor(user1_1);
                                         thiz.setQuestion(question1_1, true);
                                     });
-                                    answer2 = Commons_1.$createThenExec(Answer_1.Answer, {
+                                    answer2 = Commons_1.$createAndDo(Answer_1.Answer, {
                                         _id: new mongoose.Types.ObjectId(),
                                         authorId: undefined, questionId: undefined,
                                         content: "tra loi 2",
@@ -140,7 +143,7 @@ var writeFileAsync = util.promisify(fs.writeFile);
                                     Mgoose_1.Mgoose.find(Question_1.Question, {
                                         title: /hoi/i
                                     }, {
-                                        populateSimple: ["author", "answerList"],
+                                        populateSimples: ["author", "answerList"],
                                         lean: true,
                                     }).exec(function (err, questionResults) {
                                         console.log("[DEBUG]populateSimple():");
@@ -161,3 +164,4 @@ var writeFileAsync = util.promisify(fs.writeFile);
         });
     });
 })(); //Execute top level async function.
+//# sourceMappingURL=CtrlerOne.js.map

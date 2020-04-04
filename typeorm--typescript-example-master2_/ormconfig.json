@@ -5,9 +5,9 @@
   "port": 3306,
   "username": "admin",
   "password": "123456",
-  "database": "typeorm2",
+  "database": "typeorm3",
   "synchronize": true,
-  "logging": false,
+  "logging": ["query"],
   "entities": [
     "src/entity/*.js"
   ],

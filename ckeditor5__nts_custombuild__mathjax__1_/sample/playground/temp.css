@@ -1,0 +1,192 @@
+/*! CSS Used from: Embedded */
+.ck.ck-reset_all * {
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    position: static;
+}
+
+.ck.ck-reset_all * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: none;
+    word-wrap: break-word;
+}
+
+.ck.ck-reset_all * {
+    border-collapse: collapse;
+    font: normal normal normal var(--ck-font-size-base)/var(--ck-line-height-base) var(--ck-font-face);
+    color: var(--ck-color-text);
+    text-align: left;
+    white-space: nowrap;
+    cursor: auto;
+    float: none;
+}
+
+.ck.ck-reset_all textarea {
+    white-space: pre-wrap;
+}
+
+.ck.ck-reset_all textarea {
+    cursor: text;
+}
+
+/*! CSS Used from: http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/mathquill-0.10.1/mathquill.css */
+.mq-editable-field {
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+.mq-editable-field {
+    border: 1px solid gray;
+}
+
+.mq-root-block, .mq-math-mode .mq-root-block {
+    display: -moz-inline-box;
+    display: inline-block;
+    width: 100%;
+    padding: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.mq-math-mode {
+    font-variant: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 115%;
+    line-height: 1;
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+.mq-math-mode .mq-non-leaf, .mq-math-mode .mq-scaled {
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+.mq-math-mode var {
+    font-family: "Times New Roman", Symbola, serif;
+    line-height: .9;
+}
+
+.mq-math-mode * {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    border-color: black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.mq-math-mode var {
+    font-style: italic;
+}
+
+.mq-math-mode .mq-binary-operator {
+    padding: 0 0.2em;
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+.mq-math-mode .mq-fraction {
+    font-size: 90%;
+    text-align: center;
+    vertical-align: -0.4em;
+    padding: 0 .2em;
+}
+
+.mq-math-mode .mq-fraction {
+    display: -moz-groupbox;
+}
+
+.mq-math-mode .mq-fraction {
+    display: inline-block;
+}
+
+.mq-math-mode .mq-numerator, .mq-math-mode .mq-denominator {
+    display: block;
+}
+
+.mq-math-mode .mq-numerator {
+    padding: 0 0.1em;
+}
+
+.mq-math-mode .mq-denominator {
+    border-top: 1px solid;
+    float: right;
+    width: 100%;
+    padding: 0.1em;
+}
+
+.mq-math-mode .mq-sqrt-prefix {
+    padding-top: 0;
+    position: relative;
+    top: 0.1em;
+    vertical-align: top;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+}
+
+.mq-math-mode .mq-sqrt-stem {
+    border-top: 1px solid;
+    margin-top: 1px;
+    padding-left: .15em;
+    padding-right: .2em;
+    margin-right: .1em;
+    padding-top: 1px;
+}
+
+.mq-math-mode {
+    cursor: text;
+    font-family: Symbola, "Times New Roman", serif;
+}
+
+.mq-editable-field .mq-textarea, .mq-math-mode .mq-textarea {
+    position: relative;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+}
+
+.mq-editable-field .mq-textarea *, .mq-math-mode .mq-textarea * {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    position: absolute;
+    clip: rect(1em 1em 1em 1em);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    resize: none;
+    width: 1px;
+    height: 1px;
+}
+
+/*! CSS Used from: http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/sample/styles.css */
+body * {
+    box-sizing: border-box;
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: Symbola;
+    src: url(http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/mathquill-0.10.1/font/Symbola.eot);
+    src: local("Symbola Regular"), local("Symbola"), url(http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/mathquill-0.10.1/font/Symbola.woff2) format("woff2"), url(http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/mathquill-0.10.1/font/Symbola.woff) format("woff"), url(http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/mathquill-0.10.1/font/Symbola.ttf) format("truetype"), url(http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/mathquill-0.10.1/font/Symbola.otf) format("opentype"), url(http://localhost:43872/ckeditor5__nts_custombuild__mathjax__1_/mathquill-0.10.1/font/Symbola.svg#Symbola) format("svg");
+}

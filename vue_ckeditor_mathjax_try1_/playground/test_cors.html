@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        async function sendGeoTextToServer(){
+            try{
+                const response = await fetch("http://localhost:8082/GeoGebra/HTML5/5.0/web3d/deferredjs/18EBAFF235EE31DFDA1EE52C35151A34/14.cache.js", {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    // mode: 'no-cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'same-origin', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'text/plain; charset=utf-8',
+                    },
+                    redirect: 'follow', // manual, *follow, error
+                    referrerPolicy: 'no-referrer', // no-referrer, *client
+                });
+                console.log("=============================================");
+                console.log("response (test_cors):");
+                console.log(response);
+            }catch (e) {
+                console.log(e);
+            }
+        }
+        window.onload = function(){
+            sendGeoTextToServer()
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

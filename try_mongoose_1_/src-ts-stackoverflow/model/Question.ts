@@ -4,11 +4,13 @@ export {};
 const mongoose = require('mongoose');
 const {Mixed,ObjectId} = mongoose.Schema.Types;
 import {
-    $$, $array, schemaFromType, schemaFromTypeWithExclude, SomePropName
+    $$, $array, SomePropName, StringIn
 } from "../common/Commons";
 import {Mgoose} from "../common/Mgoose";
-import {$cn} from "../common/KnownClasses";
+import {$cn, $package} from "../common/KnownClasses";
 import {Answer} from "./Answer";
+import {Category} from "./micro/Category";
+import {schemaFromType, schemaFromTypeWithExclude} from "../common/CommonMongoose";
 
 export class Question implements Mgoose.POJO {
     _id?:any;
@@ -16,11 +18,14 @@ export class Question implements Mgoose.POJO {
     content?:string;
     featuredList?:{type:"formula"|"image",content:string}[]=[];
     tagList?:string[]=[];
+    category:Category[];
     commentList?:Comment[]=[];
     answerList?:Answer[]=[];
     answerIdList?:any[]=[];
     author?:User;
     authorId:any;
+    upvote?:number=0;
+    downvote?:number=0;
     setAuthor?(author:User){
         this.author = author;
         this.authorId = author._id;
@@ -34,6 +39,9 @@ export class Question implements Mgoose.POJO {
 }
 export namespace Question {
     export const schema = new mongoose.Schema(schemaFromTypeWithExclude<Question,{author,answerList}>({
+        downvote: Number,
+        upvote: Number,
+        category: [String],
         answerIdList:[ObjectId],
         commentList: Mixed,
         content: String,
@@ -46,14 +54,14 @@ export namespace Question {
         toObject: { virtuals: true }
     });
     schema.virtual($$<Question>("author"), {
-        ref: $cn("User"),
+        ref: $cn($package.model,"User"),
         localField: $$<Question>("authorId"),
         foreignField: $$<User>("_id"),
         justOne: true,
         options: {}
     });
     schema.virtual($$<Question>("answerList"), {
-        ref: $cn("Answer"),
+        ref: $cn($package.model,"Answer"),
         localField: $$<Question>("answerIdList"),
         foreignField: $$<Answer>("_id"),
         justOne: false,

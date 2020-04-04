@@ -33,22 +33,10 @@
             this.$nextTick(()=>{
                 //language=HTML
                 const theEditor = this.$refs.editorDiv1.innerHTML = `
-                <h2>Bilingual Personality Disorder</h2>
-                <figure class="image image-style-side">
-                    <img src="./imgs/anh_hinh_hoc.png">
-                    <figcaption>One language, one person.</figcaption>
-                </figure>
-                <p>This may be the first time you hear about this made-up disorder but it actually isn’t so far from the
-                   truth. Even the studies that were conducted almost half a century show that
-                    <strong>the language you speak has more effects on you than you realise</strong>
-                   .
-                </p>
-                <p>One of the very first experiments conducted on this topic dates back to 1964.
-                    <a href="https://www.researchgate.net/publication/9440038_Language_and_TAT_content_in_bilinguals">In
-                                                                                                                      the
-                                                                                                                      experiment
-                    </a>
-                   designed by linguist Ervin-Tripp who is an authority &nbsp;&nbsp; expert in psycholinguistic and sociolinguistic studies, adults who are bilingual in English in French were showed series of pictures and were asked to create 3-minute stories.</p>`;
+                <h2>Bài toán số 1</h2>
+                <p>Trong mặt phẳng tọa độ Oxy, cho...</p>
+                <p>Tính diện tích tam giác <strong>ABC</strong> và chiều cao.</p>
+                `;
                 const theCkEditor = ClassicEditor
                     .create(this.$refs.editorDiv1, {
                         toolbar: {
@@ -120,6 +108,10 @@
             },
             showCk(){
                 this.shouldShow = true;
+            },
+            insertImage(contentUrl){
+                console.log("CkE comp received image:"+contentUrl);
+                compVars.editor.execute( 'imageInsert', { source: contentUrl } );
             }
         }
     }

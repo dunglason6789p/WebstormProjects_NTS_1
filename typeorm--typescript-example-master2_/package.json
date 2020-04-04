@@ -29,13 +29,14 @@
   "dependencies": {
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.22"
+    "typeorm": "^0.2.22",
+    "typeorm-linq-repository": "^1.1.0"
   },
   "scripts": {
     "start": "tsc && node src/index.js",
-    "compileonly": "tsc",
+    "compileonly": "tsc --incremental",
     "runonly": "node src/index.js",
-    "compile_run": "tsc && node src/index.js",
+    "compile_run": "tsc --incremental && node src/index.js",
     "typeorm": "./node_modules/.bin/typeorm "
   }
 }

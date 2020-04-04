@@ -2,19 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var DateUtils_1 = require("../common/DateUtils");
 var mongoose = require('mongoose');
-var Commons_1 = require("../common/Commons");
+var CommonMongoose_1 = require("../common/CommonMongoose");
 var User = /** @class */ (function () {
     function User() {
     }
-    Object.defineProperty(User.prototype, "yearStudyStart", {
-        get: function () {
-            return this._yearStudyStart;
-        },
-        enumerable: true,
-        configurable: true
-    });
+    User.prototype.getYearStudyStart = function () {
+        return this._yearStudyStart;
+    };
     Object.defineProperty(User.prototype, "grade", {
-        //grade.
+        /**Học lớp mấy.*/
         get: function () {
             return DateUtils_1.appxNowYear - this._yearStudyStart;
         },
@@ -28,13 +24,14 @@ var User = /** @class */ (function () {
 }());
 exports.User = User;
 (function (User) {
-    User.schema = new mongoose.Schema(Commons_1.schemaFromTypeWithExclude({
+    User.schema = new mongoose.Schema(CommonMongoose_1.schemaFromTypeWithExclude({
         dateOfBirth: Date,
         fullName: String,
         passwordEncrypted: String,
         schoolName: String,
         userName: String,
-        yearStudyStart: Number
+        //yearStudyStart: Number
+        grade: Number
     }));
     //region scemx
     User.MonModel = mongoose.model(User.name, User.schema);
@@ -51,3 +48,4 @@ exports.User = User;
     //endregion
 })(User = exports.User || (exports.User = {}));
 exports.User = User;
+//# sourceMappingURL=User.js.map

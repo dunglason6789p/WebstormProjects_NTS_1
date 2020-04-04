@@ -1,4 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var appxNowTime = new Date();
-exports.appxNowYear = appxNowTime.getFullYear();
+exports.appxNowTime = new Date();
+exports.appxNowYear = exports.appxNowTime.getFullYear();
+//# sourceMappingURL=DateUtils.js.map
