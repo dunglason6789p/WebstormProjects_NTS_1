@@ -28,7 +28,7 @@
     "@ckeditor/ckeditor5-core": "^16.0.0",
     "@ckeditor/ckeditor5-clipboard": "^16.0.0",
     "@ckeditor/ckeditor5-undo": "^16.0.0",
-    "@ckeditor/ckeditor5-engine": "^16.0.0",
+    "@ckeditor/ckeditor5-engine": "^27.0.0",
     "@ckeditor/ckeditor5-utils": "^16.0.0",
     "@ckeditor/ckeditor5-widget": "^16.0.0",
     "@ckeditor/ckeditor5-ui": "^16.0.0",
